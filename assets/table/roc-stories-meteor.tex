@@ -1,0 +1,24 @@
+\begin{table}
+\centering
+\caption{METEOR scores across the tested models. 3-shot performs significantly better than zero shot. No stark differences in specifying one-sentence answers.}
+\label{tab:roc-stories-meteor}
+% \renewcommand{\arraystretch}{.25} 
+    % \begin{tabular}{l *{3}{>{\raggedleft}p{2cm}}}
+    \begin{tabular}{l|rrr}
+            \toprule
+        \multicolumn{4}{c}{\thead{METEOR}} \\
+        \midrule
+       \thead{Model name}  & \thead{0-shot} & \thead{3-shot} & \thead{3-shot \\ that specifies one sentence answer}\\
+\midrule
+Falcon 7B & {\cellcolor[HTML]{FEE3D7}} \color[HTML]{000000} 0.03 & {\cellcolor[HTML]{D21F20}} \color[HTML]{F1F1F1} 0.10 & {\cellcolor[HTML]{F5533B}} \color[HTML]{F1F1F1} 0.09 \\
+Falcon 40B Instruct & {\cellcolor[HTML]{F85D42}} \color[HTML]{F1F1F1} 0.08 & {\cellcolor[HTML]{FB6D4D}} \color[HTML]{F1F1F1} 0.08 & {\cellcolor[HTML]{DC2924}} \color[HTML]{F1F1F1} 0.10 \\
+Gpt 3 & {\cellcolor[HTML]{F14331}} \color[HTML]{F1F1F1} 0.09 & {\cellcolor[HTML]{F34935}} \color[HTML]{F1F1F1} 0.09 & {\cellcolor[HTML]{C8171C}} \color[HTML]{F1F1F1} 0.11 \\
+Gpt 4 & {\cellcolor[HTML]{FC8F6F}} \color[HTML]{000000} 0.07 & {\cellcolor[HTML]{F85D42}} \color[HTML]{F1F1F1} 0.08 & {\cellcolor[HTML]{F03F2E}} \color[HTML]{F1F1F1} 0.09 \\
+Mpt 7B & {\cellcolor[HTML]{FFF5F0}} \color[HTML]{000000} 0.02 & {\cellcolor[HTML]{E83429}} \color[HTML]{F1F1F1} 0.10 & {\cellcolor[HTML]{FB7050}} \color[HTML]{F1F1F1} 0.08 \\
+Mpt 30B Chat & {\cellcolor[HTML]{FCA285}} \color[HTML]{000000} 0.06 & {\cellcolor[HTML]{F96044}} \color[HTML]{F1F1F1} 0.08 & {\cellcolor[HTML]{ED392B}} \color[HTML]{F1F1F1} 0.09 \\
+Vicuna 13B V1 & {\cellcolor[HTML]{FDD4C2}} \color[HTML]{000000} 0.04 & {\cellcolor[HTML]{FCBBA1}} \color[HTML]{000000} 0.05 & {\cellcolor[HTML]{EE3A2C}} \color[HTML]{F1F1F1} 0.09 \\
+Vicuna 33B V1 & {\cellcolor[HTML]{FEE9DF}} \color[HTML]{000000} 0.03 & {\cellcolor[HTML]{E32F27}} \color[HTML]{F1F1F1} 0.10 & {\cellcolor[HTML]{D82422}} \color[HTML]{F1F1F1} 0.10 \\
+Wizard Vicuna 13B Uncensored HF & {\cellcolor[HTML]{FFF2EC}} \color[HTML]{000000} 0.02 & {\cellcolor[HTML]{67000D}} \color[HTML]{F1F1F1} 0.14 & {\cellcolor[HTML]{DB2824}} \color[HTML]{F1F1F1} 0.10 \\
+\bottomrule
+\end{tabular}
+\end{table}

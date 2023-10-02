@@ -1,0 +1,339 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Template for Master degrees
+% DISI - Dipartimento di Ingegneria e Scienza dell’Informazione
+% DISI - Department of Information Engineering and Computer Science
+%
+% update 2020-08-30
+%
+% To generate pdf 
+% pdflatex __filename__.tex
+% bibtex __file_name__.aux
+% pdflatex __file_name__.tex
+% pdflatex __file_name__.tex
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 2 side format
+\documentclass[epsfig,a4paper,11pt,titlepage,twoside,openany]{book}
+
+\usepackage{epsfig}
+\usepackage{plain}
+\usepackage{setspace}
+\usepackage[paperheight=29.7cm,paperwidth=21cm,outer=1.5cm,inner=2.5cm,top=2cm,bottom=2cm]{geometry} % layout setting
+\usepackage{titlesec} % custom setup title of chanpter
+\usepackage{newtxtext,newtxmath} % times new roman
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{diagbox}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{longtable}
+\usepackage{tabularray}
+\usepackage{tabularx}
+\usepackage{floatrow}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{luacolor}
+\usepackage{soul}
+\usepackage{makecell}
+\usepackage{titlesec}
+
+% hyperlinks for toc
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+% % babel multi language support
+% \usepackage{fontspec}
+% % \setmainfont{Times New Roman}
+% \usepackage{iftex}
+
+% \ifluatex
+%   \usepackage[bidi=basic]{babel}
+%   \usepackage{fontspec}
+%   \defaultfontfeatures{ Scale=MatchLowercase,
+%                         Ligatures=TeX,
+%                         Renderer=HarfBuzz }
+% \else
+%   \usepackage[bidi=default]{babel}
+%   \usepackage{fontspec}
+%   \defaultfontfeatures{ Scale=MatchLowercase,
+%                         Ligatures=TeX }
+% \fi
+
+% \babelprovide[import, onchar=ids fonts]{chinese-simplified}
+% \babelprovide[import, onchar=ids fonts]{chinese-traditional}
+
+% \babelfont{rm}
+%           [Scale=1.0, Ligatures=Common]{Latin Modern Roman}
+% \babelfont{sf}
+%           [Ligatures=Common]{Latin Modern Sans}
+% \babelfont[chinese-simplified]{rm}
+%           % {Noto Serif CJK SC}
+%           % {Kai}
+%           {FandolKai}
+% \babelfont[chinese-simplified]{sf}
+%           % {Noto Sans CJK SC}
+%           % {Kai}
+%           {FandolKai}
+% \babelfont[chinese-traditional]{rm}
+%           {Noto Serif CJK TC}
+% \babelfont[chinese-traditional]{sf}
+%           {Noto Sans CJK TC}
+
+% colors for highlight
+\definecolor{highlightred}{RGB}{247,122,123}
+\definecolor{highlightgreen}{RGB}{154,242,136}
+
+\DeclareRobustCommand{\hlred}[1]{{\sethlcolor{highlightred}\hl{#1}}}
+\DeclareRobustCommand{\hlgreen}[1]{{\sethlcolor{highlightgreen}\hl{#1}}}
+
+\newcommand{\redbg}[1]{%
+  \mbox{\vphantom{#1}\smash{\colorbox{highlightred}{#1}}}%
+}
+\newcommand{\greenbg}[1]{%
+  \mbox{\vphantom{#1}\smash{\colorbox{highlightgreen}{#1}}}%
+}
+
+%abstract 
+\DeclareFloatFont{small}{\small}% "scriptsize" is defined by floatrow, "tiny" not
+\floatsetup[table]{font=small}
+\usepackage[font={small}]{caption}
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+\definecolor{lightgray}{gray}{0.9}
+
+% subsubsubsection
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
+  {3.25ex \@plus1ex \@minus.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+  {3.25ex \@plus1ex \@minus .2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{11em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{14em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{18em}{6em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%%%%%%%%%%%%%%
+% support for accented letters
+%
+%\usepackage[latin1]{inputenc} % Windows;
+% \usepackage[utf8x]{inputenc} % Linux (unicode package is required);
+
+%\usepackage[applemac]{inputenc} % Mac.
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Keywords---}} #1
+}
+\singlespacing
+
+% italian language
+%\usepackage[italian]{babel}
+
+\begin{document}
+
+  % no page number
+  \pagenumbering{gobble} 
+  \input{front}
+
+  \clearpage
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Note
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Thanks/ Acknowledgements section is optional
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \input{acknowledgements}
+  \clearpage
+  \pagestyle{plain} % no heading, footer with centered page number
+
+  
+  % page number with Arabic format
+  \mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Note
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Length: approximately 70 pages.
+%% These 70 pages include:
+%%   table of contents
+%%   abstract
+%%   chapters
+%% Exclude:
+%%   title page
+%%   acknowledgments
+%%   attachments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    % index
+    \tableofcontents
+    \clearpage
+% add to index
+  \listoffigures
+  \addcontentsline{toc}{chapter}{List of Figures}
+  \cleardoublepage
+  \listoftables
+  \addcontentsline{toc}{chapter}{List of Tables}
+  \cleardoublepage
+      
+      % summary / abstract
+    \clearpage
+    
+    
+          
+    % group to define space between chapters
+    \begingroup
+      % no page break between chapters
+      % override clear page commands
+      \renewcommand{\cleardoublepage}{} 
+      \renewcommand{\clearpage}{} 
+      % override format of title chapter
+      % from
+      %   Chapter X
+      %   Title
+      % to
+      %   X   Title
+      
+      \titleformat{\chapter}
+        {\normalfont\Huge\bfseries}{\thechapter}{1em}{}
+        
+      \titlespacing*{\chapter}{0pt}{0.59in}{0.02in}
+      \titlespacing*{\section}{0pt}{0.20in}{0.02in}
+      \titlespacing*{\subsection}{0pt}{0.10in}{0.02in}
+      
+      % summary / abstract
+      \input{abstract}
+      \clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Note
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The first chapter of the final thesis must contain a summary of a 
+%% maximum length of 3 pages, introducing the context and motivations,
+%% resuming the problem faced by the student, the techniques used for the
+%% investigation and the reached outcomes.
+%% If the final thesis is developed in collaboration with other students,
+%% the personal contribution of the student has to be underlined.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      
+      
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      % chapters
+      %
+      % \input or \include
+      %
+      \newpage
+      \input{chapter1}
+    \clearpage
+      \newpage
+      \input{chapter2}
+      \newpage
+            \clearpage
+      
+      \input{chapter3}
+      \newpage
+            \clearpage
+      
+      \input{chapter4}
+      \newpage
+            \clearpage
+      
+      \input{conclusion}
+      \newpage
+            \clearpage
+    
+      
+      
+    \endgroup
+
+
+    % bibliography - bibtex format
+    %
+    % add chapter to index
+    \addcontentsline{toc}{chapter}{Bibliography}
+    % alphabetical order of authors
+    \bibliographystyle{plain}
+    \bibliography{biblio}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Nota
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% In the bibliography, all the sources consulted for the dissertation 
+%% have to be cited and listed in alphabetical order by the 
+%% first author's surname.
+%%
+%% According to the source material, the quotation has to be as follows:
+%%
+%% BOOKS
+%% Surname and initial/s of the name/s of the author/s, date of edition,
+%% publishing house and (if applicable) number of edition.
+%% 
+%% JOURNAL ARTICLES 
+%% Surname and initial/s of the first name/s of the author/s,
+%% title of the article, name of the journal, volume number, issue number
+%% and page numbers.
+%% 
+%% CONFERENCE PAPERS
+%% Surname and initial/s of the name/s of the author/s,
+%% year of the conference, title of the article, name of the conference,
+%% place of the conference, conference dates, page numbers.
+%% 
+%% CITING WEB RESOURCES
+%% The consulted webpages have to be listed in alphabetical order. 
+%% It is necessary to:
+%%   - Copy the specific URL (the web address) of the consulted webpage
+%%   - If available, indicate the surname and first name of the author/s,
+%%     the title and subtitle of the text
+%%   - If available, indicate the last date you retrieved the webpage
+%%     (day/month/year).   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+
+    \titleformat{\chapter}
+        {\normalfont\Huge\bfseries}{Appendix \thechapter}{1em}{}
+    % Appendix / attachment section - optional
+    \appendix
+    \input{attachments}
+
+\end{document}

@@ -1,0 +1,48 @@
+\chapter{Evaluation}
+\label{cha:evaluation}
+% \section{Evaluation}
+
+In this section, we will evaluate the results we obtained from the previous chapter \ref{cha:methodology}. In particular, the results obtained from \ref{cha:methodology-personal-narrative-elicitation} and \ref{cha:methodology-data-collection}. 
+Previously we have collected a dataset of narratives, for which elicitations were collected both through crowdsourcing and LLM prompting.
+Two detailed analyses were conducted on both the crowdsourcing and LLM-generated data were analyzed. 
+After that, we determined that the best results were achieved through the experimental setup with guidelines, without colour information with 5 shot examples. 
+
+
+In this experimental setup, we chose 4 models to apply human evaluation:
+\begin{itemize}
+    \item Falcon 7B. This model has subpar performance and it is going to be our reference.
+    \item Gpt 3.5 turbo. Although Gpt 4 should perform better, we ultimately opted for Gpt 3.5 turbo as it displayed better behaviour with the increasing number of examples. Furthermore, it's token distribution is slightly more similar to the human reference data. With all the analysis done so far, we expect this model to perform extremely well.
+    \item Wizard Vicuna 13B Uncensored HF. This model performed very well compared to others, especially with few shots.
+    \item Vicuna 33B V1. Last model. It has some examples that are decent.
+\end{itemize}
+
+The human evaluation is done according to \cite{human}. We decided to apply all 4 metrics, although in the literature many models are evaluated only for Correctness and Appropriateness. Since we are interested in narrative elicitation, we considered that Contextualization and Listening were also important criteria. 
+
+We changed one thing, which lies in the fact that we are applying the evaluation to narratives instead of dialogues.
+
+For the actual evaluation process, we used the same UI as in Mahed et al. 
+We had 3 workers, each of whom we assigned a batch of narratives to evaluate. 
+Each of these batches contained a number from 5 to 8 narratives. Each narrative contained the elicitations from the 4 models and the human elicitation. 
+
+We set up the batches with the first acting as training. For this reason, all narratives for all annotators were exactly the same in this batch. This allowed us to compute agreement metrics and determine if issues in the annotators' comprehension of the task were present.
+
+After this initial training task, the next batches contained only 2 and 1 narrative in common. 
+
+Each batch was done daily to prevent annotation fatigue.
+
+\subsection{Results}
+Initially, we computed the Fleiss-Kappa \cite{fleiss} agreement metric for both individual batches and overall metrics. In Table \ref{} are reported the metrics. We observe that most of the annotators have a high score on all metrics, except for Correctness. Upon further investigation, we found that the low score is due to the fact that the Fleiss-Kappa metric also accounts for the distributions of the annotations labels. Since most models have correct answers, the very few instances of not correct values heavily penalize the metric.
+
+In order to solve this issue, we decided to compute the overlap, which accounts for how many answers are shared across annotators. This metric did show that in fact, the annotators agree on correctness with a similar ratio to the other metrics measured.
+
+We found that one annotator disagrees with the other two because some examples are ambiguous. In \ref{} are reported the problematic examples. It is possible to see that those examples have extra characters such as \emph{"} or \emph{a.} which for one annotator are marked as incorrect and the others as correct.
+
+Nevertheless, we found that the annotators do mostly agree.
+
+\input{assets/table/human-evaluation-scores}
+With those numbers, we computed the scores for each model, assigning points for each correct or incorrect label according to the annotators. In the case of narratives annotated by all three annotators, the majority vote was taken as valid. These results are shown in Table \ref{tab:human-evaluation-scores}.
+Interestingly, Gpt 3 follows very similar characteristics to humans. All other models are not on par. This is sad, as we expected much more from those models.
+
+It is not surprising to see that human data is not 100 in all categories, because it was collected through crowdsourcing, and neither the guidelines nor the inspection considered the criteria present in the human evaluation protocol. The one metric that is mentioned is correctness. Considering the examples that are deemed incorrect, as shown in \ref{} we have to consider the subtleties of the Italian language and the fact that for most people, those examples do sound correct. 
+
+From these results, we can conclude that Gpt 3 presents qualities that are very close to human, and human annotators do not evaluate its results differently from human real elicitations. 

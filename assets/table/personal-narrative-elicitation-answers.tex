@@ -1,0 +1,170 @@
+
+\begin{center}
+\label{tab:personal-narrative-elicitation-answers}
+\begin{longtable}{l|l|l|p{3cm}|p{8cm}}
+\caption{Model answers for each of the experimental setup. Notice that most 0 shot results are unusable and they get better with the number of shots and presence of guidelines. Notice how colour information negatively affects the models' responses. } \\ 
+\toprule
+\multicolumn{2}{l}{\thead{Narrative}} & \multicolumn{3}{}{Oggi sono molto più tranquilla . . . fine settimana gratificante in famiglia. Era il mio compleanno e finalmente avevo tutta la mia famiglia riunita}
+\multicolumn{2}{l}{\thead{Human elicitation}} & \multicolumn{3}{l}{Mi fa piacere sentirlo, come avete celebrato?}
+\midrule
+ \thead{Colour}& \thead{Guidelines} & \thead{Shot} & \thead{Model name} & \thead{Model elicitation} \\
+\midrule
+\multirow[c]{70}{*}{\thead{Without Colour}} & \multirow[c]{36}{*}{\thead{Without Guidelines}} & \multirow[c]{9}{*}{0-shot} & Falcon 7B & Oggi era il compleanno. Quali presentimenti avevi prima del tuo compleanno? \\
+ &  &  & Falcon 40B Instruct & Mi puoi dire di più sul compleanno della protagonista del racconto e quali attività hanno svolto la famiglia in quel fine settimana? \\
+ &  &  & Gpt 3 & Che tipo di attività hai svolto con la tua famiglia durante il tuo compleanno? \\
+ &  &  & Gpt 4 & Come hai festeggiato il tuo compleanno con la tua famiglia? \\
+ &  &  & Mpt 7B & Perché la tua vita è molto più tranquilla oggi? \\
+ &  &  & Mpt 30B Chat & Cosa ti ha regalato la tua famiglia per il tuo compleanno? \\
+ &  &  & Vicuna 13B V1 &  Cè un modo in cui mi potresti chiedere se vuoi ottenere ulteriori informazioni sulla tua esperienza di compleanno? \\
+ &  &  & Vicuna 33B V1 &  Quali attività hanno organizzato per festeggiare il compleanno della protagonista? \\
+ &  &  & Wizard Vicuna 13B Uncensored HF & Quali eventi accaddero durante il fine settimana che fecero del tuo compleanno una gratificante" esperienza per te? \\
+\cline{3-5}
+ &  & \multirow[c]{9}{*}{1-shot} & Falcon 7B & Mi piacerebbe sapere se siete andati tutti insieme in vacanza o se cè stato qualcuno in più. "NARRATIVA: 'Oggi è stato un giorno bellissimo. I miei figli hanno organizzato una festa di compleanno per me. Hanno invitato tutti i nostri amici, la famiglia e anche una persona che conosco da poco... "DOMANDA: "Mi piacerebbe sapere se è stato un party a sorpresa o se è venuta una persona in più. "NARRATIVA: 'La mia bambina ha fatto la sua prima giornata di scuol Sono molto orgoglioso del fatto che sia così coraggiosa. Mi ha anche detto di avere imparato molte cose. 'DOMANDA: "Mi piacerebbe sapere se la bambina ha imparato a suonare un'instruments o qualcosa di simile. "NARRATIVA: "Il tempo è stato splendido stamattina. Mi sono alzato presto e ho fatto un giro in bicicletta. 'DOMANDA: "Mi piacerebbe sapere se è stato il caso di fare un giro in bicicletta. " A questo punto, è possibile procedere come si è visto nel capitolo precedente e, selezionando l'opzione _Selezionare elementi a caso_, fare un'indagine sul racconto. \\
+ &  &  & Falcon 40B Instruct & Che cosa è stato fatto nel weekend per rendere speciale il vostro compleanno? \\
+ &  &  & Gpt 3 & Che cosa avete fatto per festeggiare il vostro compleanno? \\
+ &  &  & Gpt 4 & Che tipo di attività avete svolto durante il fine settimana per celebrare il tuo compleanno? \\
+ &  &  & Mpt 7B & Come siete riusciti a organizzare il compleanno? \\
+ &  &  & Mpt 30B Chat & Come hai passato il tuo compleanno? \\
+ &  &  & Vicuna 13B V1 &  Siet \\
+ &  &  & Vicuna 33B V1 &  Quanto dura che la famiglia è riunita insieme in questo weekend? \\
+ &  &  & Wizard Vicuna 13B Uncensored HF & Come ti è andata il compleanno? \\
+\cline{3-5}
+ &  & \multirow[c]{9}{*}{3-shot} & Falcon 7B & Oh che bello! Come ti senti adesso? \\
+ &  &  & Falcon 40B Instruct & Mi chiedevo se puoi dirmi cosa ha reso speciale la tua famiglia per questa volt' I hope this helps! \\
+ &  &  & Gpt 3 & Mi fa piacere sentire che hai trascorso un fine settimana gratificante in famigli Mi chiedo, cosa avete fatto per festeggiare il tuo compleanno? \\
+ &  &  & Gpt 4 & Sembra che tu abbia avuto un bel compleanno. Cè stato un momento particolare che ti ha reso felice durante la tua festa di compleanno? \\
+ &  &  & Mpt 7B & Sì! Quando è stato tuo compleanno? \\
+ &  &  & Mpt 30B Chat & Cosa volete dire con finita settimana gratificante in famiglia"? \\
+ &  &  & Vicuna 13B V1 & Mi fa piacere che tu abbia trascorso una giornata piacevole con la tua famigli Quale era il tuo compleanno? \\
+ &  &  & Vicuna 33B V1 & Sapete cosa hai fatto o avuto per il tuo compleanno? \\
+ &  &  & Wizard Vicuna 13B Uncensored HF & Oh, sono felice per te che hai avuto una giornata così speciale per il tuo compleanno. Hai avuto la tua famiglia intera qui? \\
+\cline{3-5}
+ &  & \multirow[c]{9}{*}{5-shot} & Falcon 7B & Che bello. Che cosa facevate? \\
+ &  &  & Falcon 40B Instruct & Sono felice per te, sai che hai un grande valore e meriti di stare bene e di essere circondata dalle persone che ami. Mi chiedo, hai pensato a festeggiare il compleanno con un evento particolare, tipo un viaggio? \\
+ &  &  & Gpt 3 & Mi fa piacere sentire che hai trascorso un fine settimana gratificante in famigli Mi chiedo, quali membri della tua famiglia erano presenti per festeggiare il tuo compleanno? \\
+ &  &  & Gpt 4 & Che bello! Cosa avete fatto per festeggiare il tuo compleanno? \\
+ &  &  & Mpt 7B & Mi dispiace tanto, che hai avuto un ottimo compleanno e ora sono felice che sia riunita la tua famigli Perché non avete mai visto ogni tanto? \\
+ &  &  & Mpt 30B Chat & Che cosa ha fatto la vostra famiglia per festeggiare il tuo compleanno? \\
+ &  &  & Vicuna 13B V1 & Spero tu abbia passato un buon compleanno. Chi c'era la tua famiglia? \\
+ &  &  & Vicuna 33B V1 &  Che cosa hai fatto durante il compleanno? \\
+ &  &  & Wizard Vicuna 13B Uncensored HF & Hai avuto un compleanno meraviglioso. E dove siete state riunite? \\
+\cline{2-5} \cline{3-5}
+ & \multirow[c]{34}{*}{\thead{With Guidelines}} & \multirow[c]{9}{*}{0-shot} & Falcon 7B & Ti senti più tranquilla? \\
+ &  &  & Falcon 40B Instruct & Qual è il tuo rapporto con le altre persone della tua famiglia? \\
+ &  &  & Gpt 3 & Che cosa avete fatto per festeggiare il tuo compleanno con tutta la tua famiglia riunita? \\
+ &  &  & Gpt 4 & Sembra che tu abbia avuto un bel compleanno! Puoi condividere qualche dettaglio speciale di come hai festeggiato con la tua famiglia? \\
+ &  &  & Mpt 7B & 1) Questa è la nostra ultima visita di famigli Perché la trovi così bella? \\
+ &  &  & Mpt 30B Chat &  Che cosa vuoi dire con tranquilla'? \\
+ &  &  & Vicuna 13B V1 & ``` ruby from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup def start(update, context): keyboard = [[InlineKeyboardButton(Domande", callback_data=quer ``` \\
+ &  &  & Vicuna 33B V1 & Sì, capisco. Che bello avere una famiglia così unit Raccontami di come hai passato il tuo compleanno con loro. \\
+ &  &  & Wizard Vicuna 13B Uncensored HF & Per approfondire la narrazione, le mie domande riguardano il significato della frase finally all my family was reunited'. Potrei chiedere se questa è la prima volta che la tua famiglia è riunita o perché hai aspettato a festeggiare il tuo compleanno con loro? \\
+\cline{3-5}
+ &  & \multirow[c]{9}{*}{1-shot} & Falcon 7B & Che ne pensi di essere un genitore? \\
+ &  &  & Falcon 40B Instruct & Sono contenta che tu abbia passato un buon compleanno. Mi dispiace di non potere essere stata con voi. Com'è stato il tempo? \\
+ &  &  & Gpt 3 & Oh, capisco. Sono felice che hai avuto un fine settimana gratificante in famigli Cosa avete fatto per festeggiare il tuo compleanno? \\
+ &  &  & Gpt 4 & Sembra che tu abbia avuto un bel compleanno! Puoi condividere qualche dettaglio in più su come hai festeggiato? \\
+ &  &  & Mpt 7B & Quando hai avuto il tuo compleanno? \\
+ &  &  & Mpt 30B Chat & 1) Come è avuto inizio il vostro compleanno? \\
+ &  &  & Vicuna 13B V1 & Mi chiedo perché sei così felice in questa occasione. \\
+ &  &  & Vicuna 33B V1 & Cosa ti ha reso più tranquilla durante il fine settimana in famiglia? \\
+ &  &  & Wizard Vicuna 13B Uncensored HF & Che cosa è successo quest weekend '? \\
+\cline{3-5}
+ &  & \multirow[c]{8}{*}{3-shot} & Falcon 7B & Che bella notizia, Felice! "DOMANDA: "Che cosa ne pensa tua moglie della tua decisione? \\
+ &  &  & Falcon 40B Instruct & Che emozione ti ha dato riunire tutta la tua famiglia? \\
+ &  &  & Gpt 3 & Che cosa hai fatto nel fine settimana con la tua famiglia per festeggiare il tuo compleanno? \\
+ &  &  & Gpt 4 & Sembra che tu abbia avuto un bel compleanno in famigli Cè stato un momento particolare che ti ha reso particolarmente felice? \\
+ &  &  & Mpt 30B Chat & ... sì, capisco. E come hai passato il tuo compleanno? \\
+ &  &  & Vicuna 13B V1 & A) Cosa hai fatto per celebrare il tuo compleanno? \\
+ &  &  & Vicuna 33B V1 & È bello passare del tempo tutto insieme. È successo qualche bello evento nel corso del weekend? \\
+ &  &  & Wizard Vicuna 13B Uncensored HF & Oh, è bello che tu abbia avuto una giornata piacevole. Mi piacerebbe sapere che cosa hai fatto per festeggiare il tuo compleanno." \\
+\cline{3-5}
+ &  & \multirow[c]{8}{*}{5-shot} & Falcon 7B & Come hai passato il compleanno? \\
+ &  &  & Falcon 40B Instruct & Che cosa vi ha uniti? \\
+ &  &  & Gpt 3 & Che cosa avete fatto per festeggiare il tuo compleanno? \\
+ &  &  & Gpt 4 & Sembra che tu abbia avuto un bel compleanno. Cera qualche membro della famiglia che non vedevi da molto tempo? \\
+ &  &  & Mpt 30B Chat & Oh, capisco.... E che cosa è stato il regalo che preferiresti di tutto? \\
+ &  &  & Vicuna 13B V1 & NARR \\
+ &  &  & Vicuna 33B V1 & Sì, capisco. Era il tuo compleanno, avevi organizzato qualche evento o ti avevano regalato qualcosa che ti ha fatto felice? \\
+ &  &  & Wizard Vicuna 13B Uncensored HF & Sono contento che tu stia sentendoti più tranquill Come hai trascorso il tuo compleanno? \\
+\cline{1-5} \cline{2-5} \cline{3-5}
+\multirow[c]{68}{*}{\thead{With Colour}} & \multirow[c]{36}{*}{\thead{Without Guidelines}} & \multirow[c]{9}{*}{0-shot} & Falcon 7B & [VERDE](Per favore, qual è il nome del tuo fidanzato? \\
+ &  &  & Falcon 40B Instruct & What was the most memorable event that occurred during the familys gathering on the narrator's birthday? \\
+ &  &  & Gpt 3 & Quali sono state le attività che hai svolto con la tua famiglia durante il tuo compleanno? \\
+ &  &  & Gpt 4 & Quali sono stati gli eventi o le attività che avete svolto durante il fine settimana del tuo compleanno che lo hanno reso così gratificante? \\
+ &  &  & Mpt 7B & [VERDE](Cosa pensi di fare con i tuoi parenti per il compleanno? \\
+ &  &  & Mpt 30B Chat & Mmm scusa, mi ha colpito che eravate il compleanno, quanti anni avete? \\
+ &  &  & Vicuna 13B V1 & Quali sono i momenti di gioia e gratitudine che l'hanno resa così tranquilla? \\
+ &  &  & Vicuna 33B V1 &  Qual è la data del compleanno della persona? \\
+ &  &  & Wizard Vicuna 13B Uncensored HF & In che modo hai saputo che era il compleanno di qualcuno nella tua famiglia? \\
+\cline{3-5}
+ &  & \multirow[c]{9}{*}{1-shot} & Falcon 7B & [MAROON](Mi chiedo se il tuo compleanno sia diverso dal mio. Per me è solo il giorno delle mie nozze di santo, quando mio padre è morto. [VERDE](Oggi sono molto più tranquill' DOMANDA: '[VERDE](Oggi è stata una bella giornat Mia moglie mi ha detto che sta aspettando un bambino! Sono super felice!) Io penso che sia una ragazza perché mia mamma mi ha detto che il primo figlio di lei era una femmina. [VERDE](Mia madre è andata a trovare mio padre.') DOMAINE: [VERDE](Mio padre è un medico molto bravo.') NARRATIVA: '[VERDE](Oggi sono molto più tranquilla)] DOMAINE: '[VERDE](Oggi sono molto più tranquilla)' NARRATIVA: '[ROSSO](Ieri sono passato a salutare mia moglie e il mio primo nipote. Sono molto soddisfatto, sono contento dei miei due figli.' DOMANDA: '[MAROON](' [ROSSO](Ieri sono passato a salutare mia moglie e il mio primo nipote.')' \\
+ &  &  & Falcon 40B Instruct & È bello sapere che il tuo compleanno è stato un successo. Quali sono stati i momenti migliori della giornata? \\
+ &  &  & Gpt 3 & Come hai festeggiato il tuo compleanno con la tua famiglia? \\
+ &  &  & Gpt 4 & Mi fa piacere che tu sia tranquill Come hai festeggiato il tuo compleanno con la tua famiglia? \\
+ &  &  & Mpt 7B & NARRATIVA DOMANDA NARRATIVA DOMANDA NARRATIVA DOMANDA NARRATIVA DOMANDA NARRATIVA DOMANDA \\
+ &  &  & Mpt 30B Chat & Quante persone sono presenti insieme per il vostro compleanno? \\
+ &  &  & Vicuna 13B V1 & Sieti più felice quando ci sei tutta la vostra famiglia insieme? \\
+ &  &  & Vicuna 33B V1 & E... come ha passato il tuo compleanno? \\
+ &  &  & Wizard Vicuna 13B Uncensored HF &  Quale è stato il tuo compleanno? \\
+\cline{3-5}
+ &  & \multirow[c]{9}{*}{3-shot} & Falcon 7B & Che bello sapere che è andata così bene per te. Come si chiama la tua famiglia? \\
+ &  &  & Falcon 40B Instruct & Mi fa piacere sapere che ti sei sentita più tranquill Hai passato un weekend in famiglia? \\
+ &  &  & Gpt 3 & Mi fa piacere sentire che sei più tranquilla oggi. Mi chiedo, cosa hai fatto durante il tuo compleanno con tutta la tua famiglia riunita? \\
+ &  &  & Gpt 4 & Sono contenta che tu sia riuscita a riunire tutta la tua famiglia per il tuo compleanno. Cè stato un momento particolare che ti ha reso felice durante la celebrazione? \\
+ &  &  & Mpt 7B & NARRATIVA: [ROSSO](Oggi è stata una bella giornat Ho chiamato il medico per parlare di una operazione.)" DOMANDA: "Dove vive il medico? \\
+ &  &  & Mpt 30B Chat & Che tipo di regalo ti hai fatto fare per il tuo compleanno? \\
+ &  &  & Vicuna 13B V1 & Oh, mi fa piacere sentire che sei più tranquill Dovè che hai passato la tua festa di compleanno? \\
+ &  &  & Vicuna 33B V1 &  Mi scusi, lei ha specificato di essere'molto più tranquilla' oggi. Ciò è dovuto a qualcosa che è accaduto di recente? \\
+ &  &  & Wizard Vicuna 13B Uncensored HF & Hai passato una giornata molto piacevole? \\
+\cline{3-5}
+ &  & \multirow[c]{9}{*}{5-shot} & Falcon 7B & NARRATIVA: [VERDE](Oggi non sono felice perché mia moglie non fa parte della mia festa di compleanno. Mi sento un po solo. ') DOMAINA: '[VERDE](Sono felice per il fatto di essere una nuova generazione di genitori e di crescere il bambino con le migliori tecnologie disponibili.' DOMANDA: '[VERDE](Come mai siete diventati una famiglia numerosa? \\
+ &  &  & Falcon 40B Instruct & Sono molto contento di ascoltare che sei più tranquilla, ma posso chiederti quale è stata la cosa più bella del tuo compleanno? \\
+ &  &  & Gpt 3 & Che cosa avete fatto per festeggiare il tuo compleanno? \\
+ &  &  & Gpt 4 & Sono contento che tu abbia trascorso un bel compleanno in famigli Quanti anni hai compiuto? \\
+ &  &  & Mpt 7B & Molto bene, ora che hai tutta la tua famiglia riunita, cosa ti è piaciuta di più? \\
+ &  &  & Mpt 30B Chat & Che meraviglia! Che genere di regalo hai ricevuto per il tuo compleanno? \\
+ &  &  & Vicuna 13B V1 & E tu sei felice per la prima volta in un po ? \\
+ &  &  & Vicuna 33B V1 &  \\
+ &  &  & Wizard Vicuna 13B Uncensored HF & Bene, mi sembra che hai avuto un bel compleanno. Sembra davvero soddisfacente avere la tua famiglia riunita per festeggiare insieme. Hai avuto lopportunità di mangiare qualcosa di speciale per il compleanno? \\
+\cline{2-5} \cline{3-5}
+ & \multirow[c]{32}{*}{\thead{With Guidelines}} & \multirow[c]{9}{*}{0-shot} & Falcon 7B & [ROSSO](Ti ha fatto una sorpresa? \\
+ &  &  & Falcon 40B Instruct & [ROSSO] Perché ti sentivi tesa prima del tuo compleanno? \\
+ &  &  & Gpt 3 & Che cosa hai fatto nel tuo compleanno con la tua famiglia riunita? \\
+ &  &  & Gpt 4 & Sembra che tu abbia avuto un bel compleanno. Puoi condividere qualche dettaglio speciale di come hai festeggiato con la tua famiglia? \\
+ &  &  & Mpt 7B & E molto bello che ora ha il completo supporto di tutta la famiglia? \\
+ &  &  & Mpt 30B Chat & / \\
+ &  &  & Vicuna 13B V1 &  Ciao, mi fa piacere sentire che sei più tranquillo or Cosa ti ha portato a sentirti così? \\
+ &  &  & Vicuna 33B V1 &  VERDE: Per quale motivo hai avuto una giornata molto più tranquilla? \\
+ &  &  & Wizard Vicuna 13B Uncensored HF &  \\
+\cline{3-5}
+ &  & \multirow[c]{9}{*}{1-shot} & Falcon 7B & Oh capisco. Cosa ti fa sentire tranquillo? \\
+ &  &  & Falcon 40B Instruct & Come ti sei sentita dopo il compleanno? \\
+ &  &  & Gpt 3 & Che cosa avete fatto per festeggiare il tuo compleanno con tutta la tua famiglia riunita? \\
+ &  &  & Gpt 4 & Sembra che tu abbia avuto un bel compleanno. Cera qualche membro della famiglia che non vedevi da molto tempo? \\
+ &  &  & Mpt 7B &  Sapete se è stata la prima volta che tuo papà si trova a casa? \\
+ &  &  & Mpt 30B Chat &  Cosa ti ha fatto felice di più durante la tua [ROSSO](solitari [VERDE](felice) [ROSSO](solitaria) fin [VERDE](tanta) [ROSSO](soltanto) [VERDE](bellissima) [ROSSO](solitaria) [VERDE](famigliare) [ROSSO](vacanza)? \\
+ &  &  & Vicuna 13B V1 &  Che fa il compleanno? \\
+ &  &  & Vicuna 33B V1 &  \\
+ &  &  & Wizard Vicuna 13B Uncensored HF & Mi chiedo se hai avuto un buon compleanno, non trovi la mia domanda come un tentativo di fare una sorpresa? \\
+\cline{3-5}
+ &  & \multirow[c]{7}{*}{3-shot} & Falcon 7B &  [ROSSO](Spero di essere una brava madre... Spero di essere una brava madre... Spero di essere una brava madre... Spero di essere una brava madre... Spero di essere una brava madre... [ROSSO](fine settimana gratificante in famigli. [ROSSO] )... [ROSSO]...... fine settimana gratificante in \\
+ &  &  & Falcon 40B Instruct & NARRATIVA: [ROSSO](Ho litigato con Chiara, lei era arrabbiata con me perché secondo lei non io so fare le cose.)" DOMANDA: NARRATIVA: "[VERDE](Oggi è stata una bella giornat Ho pattinato sul ghiaccio e poi sono andato al cinema.)" DOMANDA: The following table provides an example of an incorrect question for a narrative, as well as examples of how to correctly ask questions based on the content of the narrative.  Are you happy to hear that \\
+ &  &  & Gpt 3 & Che cosa hai fatto nel tuo compleanno con la tua famiglia riunita? \\
+ &  &  & Gpt 4 & Sembra che tu abbia avuto un bel compleanno. Cera qualche evento speciale o tradizione che hai condiviso con la tua famiglia durante la celebrazione? \\
+ &  &  & Vicuna 13B V1 & ) A) Sono felice di sentirlo. Quale è stato il momento più bello della tua festa di compleanno? \\
+ &  &  & Vicuna 33B V1 & ) \\
+ &  &  & Wizard Vicuna 13B Uncensored HF &  \\
+\cline{3-5}
+ &  & \multirow[c]{7}{*}{5-shot} & Falcon 7B & Che tipo di regalo ti sarebbe piaciuto di più? \\
+ &  &  & Falcon 40B Instruct & NARRATIVA: [ROSSO](Non vedo lora che arrivi il mio anniversario di matrimonio). [ROSSO] (Mi sento un po’ triste).' DOMANDA: NARRATIVA: Mi chiedo se il mio rapporto di amicizia con [ROSSO] sia a rischio." DOMANDA: NARRATIVA: "Mi sento un po’ triste perché la mia migliore amica oggi mi ha fatto un torto" DOMANDA: NARRAT \\
+ &  &  & Gpt 3 & Che cosa avete fatto per festeggiare il tuo compleanno con la tua famiglia riunita? \\
+ &  &  & Gpt 4 & Sono contento che tu sia tranquilla e che tu abbia trascorso un bel fine settiman Quanti anni hai compiuto nel tuo compleanno? \\
+ &  &  & Vicuna 13B V1 & 48. Usa la tecnologia per cre \\
+ &  &  & Vicuna 33B V1 &  \\
+ &  &  & Wizard Vicuna 13B Uncensored HF &  \\
+% \cline{1-5} \cline{2-5} \cline{3-5}
+\bottomrule
+
+\end{longtable}
+
+\end{center}

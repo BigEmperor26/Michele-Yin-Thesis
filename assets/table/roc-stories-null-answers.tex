@@ -1,0 +1,23 @@
+\begin{table}
+    \centering
+    \caption{Percentage of null answers across different models. A null answer is an answer that contains only null or whitespace characters or punctuation marks. }
+    \label{tab:roc-stories-null-answers}
+\begin{tabular}{l|rrrr}
+            \toprule
+        \multicolumn{4}{c}{\thead{Null answers}} \\
+        \midrule
+       \thead{Model name}  & \thead{0-shot} & \thead{3-shot} & \thead{3-shot \\ that specifies one sentence answer} \\
+\midrule
+Falcon 7B & {\cellcolor[HTML]{E5E0AF}} \color[HTML]{000000} 0.14 & {\cellcolor[HTML]{FCFCF5}} \color[HTML]{000000} 0.02 & {\cellcolor[HTML]{FFFFFF}} \color[HTML]{000000} 0.00 \\
+Falcon 40B Instruct & {\cellcolor[HTML]{F8F8E9}} \color[HTML]{000000} 0.04 & {\cellcolor[HTML]{F8F8E9}} \color[HTML]{000000} 0.04 & {\cellcolor[HTML]{F4F4DD}} \color[HTML]{000000} 0.06 \\
+Gpt 3 & {\cellcolor[HTML]{FFFFFF}} \color[HTML]{000000} 0.00 & {\cellcolor[HTML]{FFFFFF}} \color[HTML]{000000} 0.00 & {\cellcolor[HTML]{FFFFFF}} \color[HTML]{000000} 0.00 \\
+Gpt 4 & {\cellcolor[HTML]{FFFFFF}} \color[HTML]{000000} 0.00 & {\cellcolor[HTML]{FFFFFF}} \color[HTML]{000000} 0.00 & {\cellcolor[HTML]{FFFFFF}} \color[HTML]{000000} 0.00 \\
+Mpt 7B & {\cellcolor[HTML]{D9C29F}} \color[HTML]{000000} 0.20 & {\cellcolor[HTML]{FFFFFF}} \color[HTML]{000000} 0.00 & {\cellcolor[HTML]{FFFFFF}} \color[HTML]{000000} 0.00 \\
+Mpt 30B Chat & {\cellcolor[HTML]{F8F8E9}} \color[HTML]{000000} 0.04 & {\cellcolor[HTML]{FCFCF5}} \color[HTML]{000000} 0.02 & {\cellcolor[HTML]{FFFFFF}} \color[HTML]{000000} 0.00 \\
+Vicuna 13B V1 & {\cellcolor[HTML]{E1D7AA}} \color[HTML]{000000} 0.16 & {\cellcolor[HTML]{1E0000}} \color[HTML]{F1F1F1} 0.48 & {\cellcolor[HTML]{EDEDC4}} \color[HTML]{000000} 0.10 \\
+Vicuna 33B V1 & {\cellcolor[HTML]{D9C29F}} \color[HTML]{000000} 0.20 & {\cellcolor[HTML]{FFFFFF}} \color[HTML]{000000} 0.00 & {\cellcolor[HTML]{F1F1D1}} \color[HTML]{000000} 0.08 \\
+Wizard Vicuna 13B Uncensored HF & {\cellcolor[HTML]{E9E9B5}} \color[HTML]{000000} 0.12 & {\cellcolor[HTML]{F8F8E9}} \color[HTML]{000000} 0.04 & {\cellcolor[HTML]{FCFCF5}} \color[HTML]{000000} 0.02 \\
+\bottomrule
+\end{tabular}
+            
+\end{table}

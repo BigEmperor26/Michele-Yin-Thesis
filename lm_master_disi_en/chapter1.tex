@@ -1,0 +1,91 @@
+\chapter{Introduction}
+\label{cha:intro}
+%[INTRODUCE TOPIC] 
+The advent of LLMs has changed many things \cite{}. They are now currently being used for tasks as \cite{}, \cite{} and \cite{} and many others. Their widespread use is due to their performance and ease of use, thanks to online tools to access it. Now \cite{} many models have also capabilities beyond simply text, thanks to extensions and other integrations with a plethora of other services \cite{}.
+
+Due to their abilities in various fields, we pose the query of whether Large Language Models (LLMs) can be used to elicit personal narratives.
+%[Background] 
+Personal Narratives are ... \cite{} and eliciting it is ...\cite{} and it is used to \cite{} because it has many benefits. 
+
+%[Similar research] 
+Similar tasks are \emph{story cloze test} \cite{} ... where a context of 4 sentences is used and the model is tasked to predict the final 5th sentence, but as far as we know, there are no specific applications for narrative elicitation. 
+
+%[Problems] 
+Although both story cloze test and eliciting personal narratives require an understanding of commonsense, they also have a few differences.
+Eliciting a personal narrative has a few challenges because of the inherent differences in the prose compared to story cloze test. In particular:
+\begin{itemize}
+    \item  Eliciting a narrative implies the comprehension of two people in the narration, with one person as the narrator and the other as the listener. Compare this to the story cloze test there is only one story without other roles.
+    \item  Eliciting requires a correct understanding of the context to propose appropriate topics that are both relevant and natural.
+    \item Eliciting requires understanding of concepts such as empathy, as the narrative may be of a sorrowful or joyful nature and it is required to show empathy to the narrator.
+    \item Narratives may not always use correct language syntax and grammar.
+    \item Narratives may be incoherent and/or not follow a clear order of events. It is up to the listener to piece together these inconsistencies and come to an understanding of the topic to elicit correctly.
+\end{itemize}
+% [GOALS]
+Our main goal is to prompt Large Language Models to elicit Personal Narratives and evaluate their performances compared to human crowdworkers. This evaluation is done through both automatic metrics, such as BLEU, METEOR and other relevant statistics, and human evaluation according to Mahed et al \cite{}. 
+
+% [MAP]
+In this thesis is presented a collection of the following steps that were necessary to reach our goal:
+\begin{itemize}
+    \item New dataset collection. Since there is no existing task of personal narrative elicitation we need to define this task with a new dataset.
+    \item Crowdsourcing. As our reference points we gathered elicitations for the new dataset through crowdsourcing.
+\end{itemize}
+- New dataset collection
+- Crwodsourcingn
+- LLM prompting
+- Evaluation
+
+
+% The advent of Large Language Models (LLMs) has ushered in a transformative era in technology, fundamentally altering the way people interact with and utilize digital tools. These AI-powered behemoths, including ChatGPT, LLama, Bard, and their counterparts, have swiftly become ubiquitous, orchestrating a paradigm shift in diverse domains. They have seamlessly transitioned from mere language processors to versatile autonomous agents capable of performing an array of tasks previously entrusted to human operators. From crafting engaging narratives, summarizing extensive documents, generating intricate source code, refining written text and even aiding in autocorrection, these LLMs have proven their mettle with a growing arsenal of plugins that extend their capabilities beyond the realm of mere text manipulation.
+
+% A \emph{personal narrative} is an account of an experience from the perspective of the narrator. It often uses a first-person point of view to tell a story, shares emotions and reflections, and may convey a lesson or insight. These narratives aim to engage readers by creating a vivid and meaningful portrayal of personal experiences. 
+% Narrative elicitation is a research or interview technique used to collect qualitative data in the form of narratives or stories from individuals. It involves prompting participants to share their personal experiences, perspectives, and insights by recounting a specific event or describing a particular aspect of their lives. Narrative elicitation techniques are commonly used in various fields, including psychology, anthropology, sociology, and qualitative research in general. It can help researchers explore topics such as personal experiences, cultural practices, identity, and the impact of certain events on individuals or communities. Additionally, narrative elicitation can be a valuable tool in clinical settings, where therapists may use it to help patients express their thoughts and emotions.
+
+% Since LLMs have proven their incredible abilities in various fields, this thesis embarks on a compelling exploration: 
+% \\\\
+% \centerline{Can LLMs elicit narratives just as effectively as human crowd-workers?}
+% \\\\
+% In order to investigate properly this question, we structure this thesis in the following sections:
+% \begin{itemize}
+%     \item Literature review
+%     \item \begin{itemize}
+%         \item Dataset: we prepare a new dataset of personal narratives.
+%         \item Crowdsourcing: elicitations for the personal narratives within the dataset are crowdsourced.
+%         \item Large Language Models Prompting: a selection of large language models is prompted to elicit the same set of personal narratives.
+%     \end{itemize}
+%     \item Evaluation: both automatic metrics and human evaluation are applied to both the crowdsourced and LLMs generated elicitations. 
+%     \item Conclusion: conclusions are drawn.
+% \end{itemize}
+
+Our findings suggest that at least in some cases, LLMs can match the performance of a human crowd-worker for the task of personal narrative elicitation.
+
+% \section{Large Language Models}
+
+% % \emph{Language Model (LM)}:
+% A Language Model (LM) is a computational tool used in the field of natural language processing (NLP) to understand and generate human language. It's like a statistical guide that learns language patterns from data. Think of the word suggestion feature on smartphones' keyboards – that's a simple example of a language model.
+
+% To make sense of words, various techniques and model architectures are used, like attention models with transformers, which have proven to be highly effective. When working with language models, the typical steps involve gathering a dataset (corpus), creating a dictionary of words, converting words to numbers (also known as vectorization), and designing a machine learning task (like predicting the next word). Through training, the model learns word meanings (embeddings) from the data. 
+
+% Afterwards, in order to use the embeddings the model has learned, typically a simple solution is to attach neural network layers to the embeddings in order to shape the output to the required needs and then fine tune on a the task required.
+
+% % \emph{Large Language Model (LLM)}:
+% A Large Language Model (LLM) is an AI system designed to understand and generate human language, built using deep learning techniques. LLMs are trained on extensive text data to grasp language patterns, context, grammar, and meaning exactly like Language Models. . They excel in various language tasks, including text generation, translation, summarization, and sentiment analysis, within the realm of Natural Language Processing (NLP).
+
+% LLMs consist of neural networks with many layers, allowing them to understand complex language nuances. The term "large" indicates their use of numerous parameters and data during training. Examples of prominent LLMs include OpenAI's GPT series and Google's BERT. LLMs predict the next word or token in a text sequence based on context, generating coherent responses. With training on diverse text sources, LLMs generate human-like text for communication, content creation, automation, and solving problems.
+
+% The main difference between LMs and LLMs is their scale. The massive scale at which LLMs operate allows them to perform many more tasks and with significantly higher accuracy than LMs. However due to their mastodontic size, both of the model and the data they are trained on, they exibhit some emergent properties.
+
+% One significant difference between LMs and LLMs is an emergent property of LLMs due to their size. Prompting.
+
+% Prompting refers to providing an initial input or instruction to guide the generation of text or a response from the model. A prompt is a starting point or a query that sets the context for the language model to generate a coherent and relevant output.
+
+% When you interact with a language model, such as giving a command to a virtual assistant or using a chatbot, you provide a prompt that outlines what you want the model to respond to or generate. The prompt can be a question, a statement, or any form of input that gives the model context about what is expected from it. The model then uses its trained knowledge and patterns to generate a response that is consistent with the given prompt.
+
+% The choice of prompt is crucial in guiding the language model's output. A well-crafted prompt can help the model generate accurate and contextually appropriate responses, while an ambiguous or unclear prompt might result in less accurate or relevant outputs. Researchers and users often experiment with different prompts to achieve the desired outcomes from language models.
+
+% This allows Large Language models to be used for various tasks without retraining, allowing much faster deployment and testing, which is a contributing factor for their now widespread usage.
+
+
+
+
+
+

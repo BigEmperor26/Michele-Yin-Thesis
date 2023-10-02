@@ -1,0 +1,53 @@
+\begin{table}
+    \centering
+    \caption{Averages Elicitations lengths across the tested models. Computed using the whitespace tokenizer}
+    \label{tab:personal-narrative-elicitation-token-length}
+\begin{tabular}{l|l|l|rrrr}
+\toprule
+\multicolumn{3}{r}{\thead{Average Reference Human \\ Elicitation Token Length}} & \multicolumn{4}{r}{{\cellcolor[HTML]{FEE9E6}} \color[HTML]{000000}  10.42 } \\
+\midrule
+\thead{Colour} & \thead{Guidelines} & \thead{Model name} & \thead{0-shot} & \thead{1-shot} & \thead{3-shot} & \thead{5-shot} \\
+\midrule
+\multirow[c]{18}{*}{\thead{Without\\ Colour}} & \multirow[c]{9}{*}{\thead{Without\\ Guidelines}} & Falcon 7B & {\cellcolor[HTML]{650171}} \color[HTML]{F1F1F1} 59.60 & {\cellcolor[HTML]{E7489B}} \color[HTML]{F1F1F1} 39.34 & {\cellcolor[HTML]{F871A4}} \color[HTML]{F1F1F1} 33.53 & {\cellcolor[HTML]{FBBBBD}} \color[HTML]{000000} 22.36 \\
+ &  & Falcon 40B Instruct & {\cellcolor[HTML]{FDD8D5}} \color[HTML]{000000} 15.29 & {\cellcolor[HTML]{FCCBC6}} \color[HTML]{000000} 18.84 & {\cellcolor[HTML]{FCBFBE}} \color[HTML]{000000} 21.59 & {\cellcolor[HTML]{FDD3CF}} \color[HTML]{000000} 16.67 \\
+ &  & Gpt 3 & {\cellcolor[HTML]{FDDEDB}} \color[HTML]{000000} 13.66 & {\cellcolor[HTML]{FDE1DE}} \color[HTML]{000000} 12.93 & {\cellcolor[HTML]{FCCECA}} \color[HTML]{000000} 18.03 & {\cellcolor[HTML]{FCC6C2}} \color[HTML]{000000} 20.10 \\
+ &  & Gpt 4 & {\cellcolor[HTML]{FCD1CD}} \color[HTML]{000000} 17.24 & {\cellcolor[HTML]{FDD4D0}} \color[HTML]{000000} 16.41 & {\cellcolor[HTML]{FCC6C1}} \color[HTML]{000000} 20.34 & {\cellcolor[HTML]{FCD0CC}} \color[HTML]{000000} 17.50 \\
+ &  & Mpt 7B & {\cellcolor[HTML]{FBB0BA}} \color[HTML]{000000} 24.43 & {\cellcolor[HTML]{FCC7C3}} \color[HTML]{000000} 19.83 & {\cellcolor[HTML]{FDE1DE}} \color[HTML]{000000} 13.14 & {\cellcolor[HTML]{FBBABD}} \color[HTML]{000000} 22.43 \\
+ &  & Mpt 30B Chat & {\cellcolor[HTML]{FCCECA}} \color[HTML]{000000} 17.98 & {\cellcolor[HTML]{FDE1DE}} \color[HTML]{000000} 13.12 & {\cellcolor[HTML]{FDE6E2}} \color[HTML]{000000} 11.36 & {\cellcolor[HTML]{FCD1CD}} \color[HTML]{000000} 17.09 \\
+ &  & Vicuna 13B V1 & {\cellcolor[HTML]{FDDDDA}} \color[HTML]{000000} 13.91 & {\cellcolor[HTML]{FDDFDC}} \color[HTML]{000000} 13.48 & {\cellcolor[HTML]{FDE0DD}} \color[HTML]{000000} 13.21 & {\cellcolor[HTML]{FDDDDA}} \color[HTML]{000000} 13.90 \\
+ &  & Vicuna 33B V1 & {\cellcolor[HTML]{FDE5E2}} \color[HTML]{000000} 11.69 & {\cellcolor[HTML]{FEE9E6}} \color[HTML]{000000} 10.28 & {\cellcolor[HTML]{FDE5E2}} \color[HTML]{000000} 11.59 & {\cellcolor[HTML]{FDE3E0}} \color[HTML]{000000} 12.43 \\
+ &  & Wizard Vicuna 13B Uncensored HF & {\cellcolor[HTML]{FDE1DE}} \color[HTML]{000000} 12.83 & {\cellcolor[HTML]{FDE5E2}} \color[HTML]{000000} 11.62 & {\cellcolor[HTML]{FDDDDA}} \color[HTML]{000000} 14.03 & {\cellcolor[HTML]{FDDBD7}} \color[HTML]{000000} 14.72 \\
+ \cmidrule{2-7}
+ & \multirow[c]{9}{*}{\thead{With\\ Guidelines}} &  Falcon 7B & {\cellcolor[HTML]{FCCDC9}} \color[HTML]{000000} 18.19 & {\cellcolor[HTML]{FBAFBA}} \color[HTML]{000000} 24.53 & {\cellcolor[HTML]{FBBABD}} \color[HTML]{000000} 22.47 & {\cellcolor[HTML]{FBB6BC}} \color[HTML]{000000} 23.10 \\
+ &  & Falcon 40B Instruct & {\cellcolor[HTML]{E84A9B}} \color[HTML]{F1F1F1} 38.97 & {\cellcolor[HTML]{FCBEBE}} \color[HTML]{000000} 21.93 & {\cellcolor[HTML]{FCC4C0}} \color[HTML]{000000} 20.71 & {\cellcolor[HTML]{FCC2BF}} \color[HTML]{000000} 20.88 \\
+ &  & Gpt 3 & {\cellcolor[HTML]{FCD0CC}} \color[HTML]{000000} 17.67 & {\cellcolor[HTML]{FCCCC7}} \color[HTML]{000000} 18.72 & {\cellcolor[HTML]{FCC6C2}} \color[HTML]{000000} 20.07 & {\cellcolor[HTML]{FCC6C1}} \color[HTML]{000000} 20.17 \\
+ &  & Gpt 4 & {\cellcolor[HTML]{FCC6C2}} \color[HTML]{000000} 20.03 & {\cellcolor[HTML]{FCC8C3}} \color[HTML]{000000} 19.57 & {\cellcolor[HTML]{FCC0BF}} \color[HTML]{000000} 21.31 & {\cellcolor[HTML]{FCCECA}} \color[HTML]{000000} 17.98 \\
+ &  & Mpt 7B & {\cellcolor[HTML]{FDD6D2}} \color[HTML]{000000} 16.02 & {\cellcolor[HTML]{FCC9C4}} \color[HTML]{000000} 19.40 & {\cellcolor[HTML]{000000}} \color[HTML]{F1F1F1} nan & {\cellcolor[HTML]{000000}} \color[HTML]{F1F1F1} nan \\
+ &  & Mpt 30B Chat & {\cellcolor[HTML]{FDD8D5}} \color[HTML]{000000} 15.21 & {\cellcolor[HTML]{FEE7E4}} \color[HTML]{000000} 11.10 & {\cellcolor[HTML]{FDD8D5}} \color[HTML]{000000} 15.34 & {\cellcolor[HTML]{FDD9D6}} \color[HTML]{000000} 15.12 \\
+ &  & Vicuna 13B V1 & {\cellcolor[HTML]{FDD5D1}} \color[HTML]{000000} 16.19 & {\cellcolor[HTML]{FCCDC9}} \color[HTML]{000000} 18.26 & {\cellcolor[HTML]{FDD7D4}} \color[HTML]{000000} 15.50 & {\cellcolor[HTML]{FDE0DD}} \color[HTML]{000000} 13.16 \\
+ &  & Vicuna 33B V1 & {\cellcolor[HTML]{FDE1DE}} \color[HTML]{000000} 12.81 & {\cellcolor[HTML]{FCCBC6}} \color[HTML]{000000} 18.81 & {\cellcolor[HTML]{FDDEDB}} \color[HTML]{000000} 13.83 & {\cellcolor[HTML]{FDD9D6}} \color[HTML]{000000} 15.12 \\
+ &  & Wizard Vicuna 13B Uncensored HF & {\cellcolor[HTML]{FFF3F0}} \color[HTML]{000000} 7.26 & {\cellcolor[HTML]{FEE7E4}} \color[HTML]{000000} 10.95 & {\cellcolor[HTML]{FCD1CD}} \color[HTML]{000000} 17.00 & {\cellcolor[HTML]{FDE4E0}} \color[HTML]{000000} 12.07 \\
+\midrule
+\multirow[c]{18}{*}{\thead{With \\Colour}} & \multirow[c]{9}{*}{\thead{Without\\ Guidelines}} & Falcon 7B & {\cellcolor[HTML]{49006A}} \color[HTML]{F1F1F1} 63.81 & {\cellcolor[HTML]{DC3397}} \color[HTML]{F1F1F1} 42.24 & {\cellcolor[HTML]{FBB8BC}} \color[HTML]{000000} 23.09 & {\cellcolor[HTML]{F98BAE}} \color[HTML]{000000} 30.31 \\
+ &  & Falcon 40B Instruct & {\cellcolor[HTML]{FCCECA}} \color[HTML]{000000} 17.93 & {\cellcolor[HTML]{FDD7D3}} \color[HTML]{000000} 15.81 & {\cellcolor[HTML]{FDD5D1}} \color[HTML]{000000} 16.22 & {\cellcolor[HTML]{FCCCC7}} \color[HTML]{000000} 18.72 \\
+ &  & Gpt 3 & {\cellcolor[HTML]{FDDCD8}} \color[HTML]{000000} 14.34 & {\cellcolor[HTML]{FDE4E0}} \color[HTML]{000000} 12.24 & {\cellcolor[HTML]{FCC1BF}} \color[HTML]{000000} 21.28 & {\cellcolor[HTML]{FCC4C0}} \color[HTML]{000000} 20.69 \\
+ &  & Gpt 4 & {\cellcolor[HTML]{FCD1CD}} \color[HTML]{000000} 17.17 & {\cellcolor[HTML]{FCD2CE}} \color[HTML]{000000} 16.78 & {\cellcolor[HTML]{FCC4C0}} \color[HTML]{000000} 20.71 & {\cellcolor[HTML]{FCD0CC}} \color[HTML]{000000} 17.62 \\
+ &  & Mpt 7B & {\cellcolor[HTML]{FBADB9}} \color[HTML]{000000} 24.97 & {\cellcolor[HTML]{EA4D9C}} \color[HTML]{F1F1F1} 38.67 & {\cellcolor[HTML]{FDE3E0}} \color[HTML]{000000} 12.33 & {\cellcolor[HTML]{FCD2CE}} \color[HTML]{000000} 16.83 \\
+ &  & Mpt 30B Chat & {\cellcolor[HTML]{FDD9D6}} \color[HTML]{000000} 15.16 & {\cellcolor[HTML]{FCCFCB}} \color[HTML]{000000} 17.78 & {\cellcolor[HTML]{FEE9E6}} \color[HTML]{000000} 10.41 & {\cellcolor[HTML]{FBB9BC}} \color[HTML]{000000} 22.81 \\
+ &  & Vicuna 13B V1 & {\cellcolor[HTML]{FDE0DD}} \color[HTML]{000000} 13.33 & {\cellcolor[HTML]{FDD7D3}} \color[HTML]{000000} 15.83 & {\cellcolor[HTML]{FEE9E6}} \color[HTML]{000000} 10.40 & {\cellcolor[HTML]{FDD7D3}} \color[HTML]{000000} 15.78 \\
+ &  & Vicuna 33B V1 & {\cellcolor[HTML]{FDDFDC}} \color[HTML]{000000} 13.59 & {\cellcolor[HTML]{FDD7D3}} \color[HTML]{000000} 15.69 & {\cellcolor[HTML]{FEEAE7}} \color[HTML]{000000} 10.03 & {\cellcolor[HTML]{FDDFDC}} \color[HTML]{000000} 13.40 \\
+ &  & Wizard Vicuna 13B Uncensored HF & {\cellcolor[HTML]{FDDFDC}} \color[HTML]{000000} 13.47 & {\cellcolor[HTML]{FEE9E6}} \color[HTML]{000000} 10.31 & {\cellcolor[HTML]{FEE7E4}} \color[HTML]{000000} 10.91 & {\cellcolor[HTML]{FDDDDA}} \color[HTML]{000000} 13.97 \\
+ \cmidrule{2-7}
+ & \multirow[c]{9}{*}{\thead{With\\ Guidelines}} & Falcon 7B & {\cellcolor[HTML]{FCD1CD}} \color[HTML]{000000} 17.26 & {\cellcolor[HTML]{FCBCBD}} \color[HTML]{000000} 22.14 & {\cellcolor[HTML]{FCD2CE}} \color[HTML]{000000} 16.78 & {\cellcolor[HTML]{FCD0CC}} \color[HTML]{000000} 17.50 \\
+ &  & Falcon 40B Instruct & {\cellcolor[HTML]{EA4F9C}} \color[HTML]{F1F1F1} 38.47 & {\cellcolor[HTML]{FA9EB5}} \color[HTML]{000000} 27.67 & {\cellcolor[HTML]{F25D9F}} \color[HTML]{F1F1F1} 36.38 & {\cellcolor[HTML]{E94B9C}} \color[HTML]{F1F1F1} 38.79 \\
+ &  & Gpt 3 & {\cellcolor[HTML]{FCCAC5}} \color[HTML]{000000} 19.22 & {\cellcolor[HTML]{FCC6C2}} \color[HTML]{000000} 20.02 & {\cellcolor[HTML]{FCC6C1}} \color[HTML]{000000} 20.22 & {\cellcolor[HTML]{FCC4C0}} \color[HTML]{000000} 20.67 \\
+ &  & Gpt 4 & {\cellcolor[HTML]{FCC6C2}} \color[HTML]{000000} 20.05 & {\cellcolor[HTML]{FCCAC5}} \color[HTML]{000000} 19.03 & {\cellcolor[HTML]{FCBEBE}} \color[HTML]{000000} 21.84 & {\cellcolor[HTML]{FCCAC5}} \color[HTML]{000000} 19.09 \\
+ &  & Mpt 7B & {\cellcolor[HTML]{FDD6D2}} \color[HTML]{000000} 15.91 & {\cellcolor[HTML]{FCD1CD}} \color[HTML]{000000} 17.19 & {\cellcolor[HTML]{000000}} \color[HTML]{F1F1F1} nan & {\cellcolor[HTML]{000000}} \color[HTML]{F1F1F1} nan \\
+ &  & Mpt 30B Chat & {\cellcolor[HTML]{FCC1BF}} \color[HTML]{000000} 21.17 & {\cellcolor[HTML]{FBBABD}} \color[HTML]{000000} 22.59 & {\cellcolor[HTML]{000000}} \color[HTML]{F1F1F1} nan & {\cellcolor[HTML]{000000}} \color[HTML]{F1F1F1} nan \\
+ &  & Vicuna 13B V1 & {\cellcolor[HTML]{FCD2CE}} \color[HTML]{000000} 16.95 & {\cellcolor[HTML]{FDDDDA}} \color[HTML]{000000} 14.03 & {\cellcolor[HTML]{FDE0DD}} \color[HTML]{000000} 13.28 & {\cellcolor[HTML]{FEECE9}} \color[HTML]{000000} 9.31 \\
+ &  & Vicuna 33B V1 & {\cellcolor[HTML]{FDD6D2}} \color[HTML]{000000} 16.05 & {\cellcolor[HTML]{FDE6E2}} \color[HTML]{000000} 11.38 & {\cellcolor[HTML]{FFF2EE}} \color[HTML]{000000} 7.66 & {\cellcolor[HTML]{FFF7F3}} \color[HTML]{000000} 5.91 \\
+ &  & Wizard Vicuna 13B Uncensored HF & {\cellcolor[HTML]{FEEEEB}} \color[HTML]{000000} 8.72 & {\cellcolor[HTML]{FEF1ED}} \color[HTML]{000000} 7.88 & {\cellcolor[HTML]{FDE3E0}} \color[HTML]{000000} 12.45 & {\cellcolor[HTML]{FEECE9}} \color[HTML]{000000} 9.48 \\
+\bottomrule
+\end{tabular}
+            
+\end{table}

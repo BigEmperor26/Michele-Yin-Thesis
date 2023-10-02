@@ -1,0 +1,15 @@
+\begin{table}
+\centering
+\caption{Example of a narrative highlighted text that shows the with a color to the user the valence. The LLMs are prompted with the highlighted section in parenthesis instead.}
+\label{tab:personal-narrative-elicitation-color-example}
+    \centering
+    \begin{tabularx}{\linewidth}{ X | X  }
+    % \begin{tabular}{p{1.5cm}|p{3cm}|p{5cm}|p{2.5cm}|p{2cm}}
+        \toprule
+       \thead{Context} & \thead{Model text context} \\
+        \midrule
+        \hlgreen{Oggi è stata una bella giornata.} Mia moglie mi ha detto che sta aspettando un bambino! Sono super felice! Mi chiedo se sarò un bravo padre. \hlred{Mio padre non è stato molto presente quando ero un bambino.} &  [VERDE](Oggi è stata una bella giornata. Mia moglie mi ha detto che sta aspettando un bambino! Sono super felice!) Mi chiedo se sarò un bravo padre. [ROSSO](Mio padre non è stato molto presente quando ero un bambino.) \\
+        \bottomrule
+
+    \end{tabularx}
+\end{table}

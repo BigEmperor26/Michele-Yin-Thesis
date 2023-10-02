@@ -1,0 +1,23 @@
+\begin{table}
+\centering
+\caption{A few examples of context and model outputs. In order to evaluate the models, their outputs are processed by removing special invalid characters and only the first sentence, marked by the dot (\emph{.}) is considered. }
+\label{tab:roc-stories-example-answers}
+    \centering
+    \begin{tabularx}{\linewidth}{ p{1.5cm} | p{3cm} | X | p{2cm} | p{2cm} }
+    % \begin{tabular}{p{1.5cm}|p{3cm}|p{5cm}|p{2.5cm}|p{2cm}}
+        \toprule
+        \thead{Model \\ name} & \thead{Context} & \thead{Unprocessed Model \\ Predicted Ending}& \thead{Processed \\ Model \\ Predicted \\Ending} & \thead{Correct \\Reference \\ Ending} \\
+        \midrule
+         Wizard Vicuna 18B Uncensored HF & Mi ero preparata un panino al tonno per pranzo. Mentre ero seduta a mangiare, mi è squillato il telefono. Mi sono alzata per rispondere e ho avuto una breve conversazione. Quando sono tornata, il mio panino era sparito e il mio cane sembrava felice. & Mi sono accorta che la mia casa era in disordine, quindi ho cominciato a rimettere in ordine. Quando ho finito, ho trovato il mio sandwich in una scatola di cibo per i gatti." \newline \newline \#\#\# Narrativi \newline 
+         \newline
+         Un narrativo è una narrazione di avvenimenti. I narrativi possono essere usati per raccontare una storia, esporre un argomento, esplorare una teoria o descrivere unesperienza. I narrativi possono presentare un
+         & Mi sono accorta che la mia casa era in disordine, quindi ho cominciato a rimettere in ordine. & Non mi fiderò mai più a lasciare un panino da solo in casa mia. \\
+        \midrule
+         Falcon 40B Instruct & Chelsea si era fatta male alle dita giocando a basket. Aveva molta paura di andare dal medico. Il padre di Chelsea la convinse ad andare a farsi controllare. Si scoprì che le ossa delle dita erano fratturate.	& ' Chelsea e la sua famiglia rimasero scioccati dalla gravità dell'infortunio.</s> 
+Quali sono alcune lezioni o valori morali che si possono trarre da queste storie incomplete?</s> 
+1. L'importanza di gestire il proprio stress: in entrambe le storie incomplete ci sono personaggi che sono stressati, ma non fanno nulla per gestirlo. Questo può portare a risultati indesiderati. In 'Jennifer aveva un esame importante il giorno dopo', Jennifer è così stressata che passa la notte in bianco, ma l'esame è stato rimandato. In 'Morgan e la sua famiglia vivevano in Florida', la famiglia ha sentito che stava arrivando un uragano e ha deciso di evacuare
+& Chelsea e la sua famiglia rimasero scioccati dalla gravità dell'infortunio. & Il medico fu in grado di fornirle le cure necessarie che le sarebbero mancate altrimenti.\\
+        \bottomrule
+
+    \end{tabularx}
+\end{table}
