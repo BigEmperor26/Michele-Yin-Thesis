@@ -44,7 +44,7 @@ The outcome of these efforts culminated in the creation of a refined dataset, be
 To gain further insights into the dataset's linguistic properties, an analysis of tokens was conducted using the Spacy Natural Language Processing (NLP) tokenizer. Punctuation marks, stop words, and numerical digits were excluded from this analysis, revealing the presence of 3,376 unique tokens within the dataset. On average, each narrative prompt spans 49.48 tokens, with a notably high standard deviation of 37.84. These statistics can be found in Table \ref{tab:dataset-coadapt-statistics}. 
 The token count in some prompts is as low as 5, while others extend well beyond 200 tokens, attesting to the dataset's diversity in terms of textual length. Example is shown in Table \ref{tab:dataset-coadapt-example-short-long}
 
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/dataset-top-30-prompt.png}
     \caption{Top 30 most frequent tokens in the dataset. Extracted using Spacy NLP \textit{it\_core\_news\_lg}.}
@@ -90,26 +90,26 @@ The reason why we decided to avoid these scenarios, is because, in the internal 
 \input{assets/table/dataset-crowdsourcing-guidelines}
 Table \ref{tab:dataset-crowdsourcing-guidelines} reports examples of good and bad elicitation for a given narrative. Those examples were part of the guidelines given to the crowdworkers.
 \subsection{User Interface (UI) Design for Crowdsourcing}
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/UI-guidelines.png}
     \caption{Web UI for the guidelines. Those are shown initially to the user and are available for later review with the press of a button.}
     \label{fig:data_collection_web:1}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/UI-examples-1.png}
     \caption{Web UI for the examples. After the guidelines, four examples like this are assigned to the crowdworkers.}
     \label{fig:data_collection_web:2}
 \end{figure}
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/UI-examples-completed-1.png}
     \caption{Web UI for the examples. After each answer, a correct answer is shown in order to train the crowd workers against typical mistakes.}
     \label{fig:data_collection_web:3}
 \end{figure}
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/UI-datacollection.png}
     \caption{Web UI for the actual data collection. Instead of a radio box, the input is a free-form text.}
@@ -139,7 +139,7 @@ Following each run, each elicitation was individually inspected and proofread in
 \input{assets/table/dataset-data-collection-statistics}
 Following the data collection phase, a comprehensive analysis of the results was undertaken. In total, we amassed 594 narrative elicitations. Again, using Spacy NLP Italian pipeline, we detected that excluding stop words, digits and punctuation marks the elicitations dataset is composed of 1108 unique tokens. On average, each response contained 11.81 tokens, with a standard deviation of 6.42. Additionally, our examination included an assessment of the time taken to review the guidelines, which averaged 401.41 seconds, with a standard deviation of 311.085. Furthermore, the average time taken to complete each narrative elicitation was found to be 98.06 seconds, with a standard deviation of 107.16. Overall the average time required to complete the whole task was found to be 1142.95 seconds, which is slightly below our estimated time of 1200 seconds, which confirmed a correct and fair time estimate. In Table \ref{tab:dataset-data-collection-statistics} are reported the summary of statistics collected. 
 
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/dataset-top-30-answers.png}
     \caption{Top 30 most frequent tokens in the crowdsourced answers. Extracted using Spacy NLP \textit{it\_core\_news\_lg}.}
@@ -149,13 +149,13 @@ Following the data collection phase, a comprehensive analysis of the results was
 In Figure \ref{fig:dataset-top-30-answers} we have the token distribution of the collected elicitations from the dataset. The most prevalent token is \emph{"dispiace"} which occurs disproportionately concerning the other tokens. This observation aligns coherently with the guidelines, which emphasize the importance of conveying empathy, especially within narratives of a sorrowful nature, which constitute the majority of the dataset.
 
 We also examined the correlation between the time employed by the crowd workers to complete the task and the length of their narratives. Initially, our hypothesis posited a strong correlation between the token length in the prompt dataset and the time required for completion. We anticipated that users would invest more time in comprehending the provided information, consequently resulting in increased time spent on each narrative elicitation task.
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/dataset-pearson-correlation.png}
     \caption{Correlation between length of the narrative (x-axis) and the time required to elicit (y-axis). As shown in the Figure, the data is very noisy with many outliers, however for most narratives, the completion time is not influenced by the narrative length.}
     \label{fig:dataset-pearson-correlation}
 \end{figure}
-\begin{figure}
+\begin{figure}[ht]
     \centering
         \includegraphics[width=1\linewidth]{assets//imgs/dataset-overall-correlation-workers.png}
         \caption{Correlation between length of the narrative (x-axis) and the time required to elicit (y-axis). As shown in the Figure, most annotators complete each  task within 200 seconds regardless of the narrative length.}
@@ -163,7 +163,7 @@ We also examined the correlation between the time employed by the crowd workers 
 \end{figure}
 However, we found this not to be the case, as pictured in Figure \ref{fig:dataset-pearson-correlation} and Figure \ref{fig:dataset-overall-correlation-workers}. To provide a more precise quantification of this observation, we computed the Pearson correlation between the completion time for each narrative and the respective narrative length. The resulting correlation coefficient was found to be 0.16, further supporting the notion that completion time and narrative length do not exhibit a linear relationship.
 
-\begin{figure}
+\begin{figure}[ht]
         \includegraphics[width=1\linewidth]{assets//imgs/dataset-high-correlation-workers.png}
         \caption{Correlation between length of the narrative (x-axis) and the time required to elicit (y-axis). The Figure reports the correlation for 5 workers of which their performance is heavily influenced by the narrative length.}
         \label{fig:dataset-high-correlation-workers}
@@ -432,7 +432,7 @@ While we initially believed that including colour information in some way would 
 
 \input{assets/table/personal-narrative-elicitation-wasserstein}
 We also tried comparing the models' token distributions against the reference human distribution. In this case, we have used the Wasserstein distance \cite{} as is it a common divergence metric. In Table \ref{tab:personal-narrative-elicitation-wasserstein} are reported the metrics calculated. Unfortunately, this coarse approach was unable to highlight real differences, and for most models, their distribution is very similar to the reference human distributions. Falcon models mark an exception, as their divergence is quite high. Deeper inspection reveals that indeed their distributions do not match at all the human distributions. 
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \begin{subfigure}[t]{0.25\textwidth}
         \centering
