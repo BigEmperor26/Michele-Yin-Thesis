@@ -11,7 +11,7 @@ After that, we determined that the best results were achieved through the experi
 In this experimental setup, we chose 4 models to apply human evaluation:
 \begin{itemize}
     \item Falcon 7B. This model has subpar performance and it is going to be our reference.
-    \item Gpt 3.5 turbo. Although Gpt 4 should perform better, we ultimately opted for Gpt 3.5 turbo as it displayed better behaviour with the increasing number of examples. Furthermore, it's token distribution is slightly more similar to the human reference data. With all the analysis done so far, we expect this model to perform extremely well.
+    \item ChatGPT 3.5 turbo. Although ChatGPT 4 should perform better, we ultimately opted for chatGPT 3.5 turbo as it displayed better behaviour with the increasing number of examples. Furthermore, it's token distribution is slightly more similar to the human reference data. With all the analysis done so far, we expect this model to perform extremely well.
     \item Wizard Vicuna 13B Uncensored HF. This model performed very well compared to others, especially with few shots.
     \item Vicuna 33B V1. Last model. It has some examples that are decent.
 \end{itemize}
@@ -41,9 +41,9 @@ Nevertheless, we found that the annotators do mostly agree.
 
 \input{assets/table/human-evaluation-scores}
 With those numbers, we computed the scores for each model, assigning points for each correct or incorrect label according to the annotators. In the case of narratives annotated by all three annotators, the majority vote was taken as valid. These results are shown in Table \ref{tab:human-evaluation-scores}.
-Interestingly, Gpt 3 follows very similar characteristics to humans. All other models are not on par. This is sad, as we expected much more from those models.
+Interestingly,  chatGPT 3.5 turbo follows very similar characteristics to humans. All other models are not on par. This is sad, as we expected much more from those models.
 
 It is not surprising to see that human data is not 100 in all categories, because it was collected through crowdsourcing, and neither the guidelines nor the inspection considered the criteria present in the human evaluation protocol. The one metric that is mentioned is correctness. Considering the examples that are deemed incorrect, as shown in \ref{} we have to consider the subtleties of the Italian language and the subjunctive. This problem is experienced by both human annotators and ChatGPT 3.
 
-From these results, we can conclude that Gpt 3 presents qualities that are very close to human, and human annotators do not evaluate its results differently from human real elicitations. 
+From these results, we can conclude that chatGPT 3.5 turbo presents qualities that are very close to human, and human annotators do not evaluate its results differently from human real elicitations. 
 
