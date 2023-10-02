@@ -45,7 +45,7 @@
 \usepackage{soul}
 \usepackage{makecell}
 \usepackage{titlesec}
-
+\usepackage{placeins}
 % hyperlinks for toc
 \usepackage{hyperref}
 \hypersetup{
@@ -150,7 +150,6 @@
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 
-\usepackage[section]{placeins}
 %%%%%%%%%%%%%%
 % support for accented letters
 %
@@ -265,26 +264,33 @@
       % \input or \include
       %
       \newpage
+      \FloatBarrier
       \input{chapter1}
+      \FloatBarrier
     % \clearpage
     \cleardoublepage
       \newpage
+      \FloatBarrier
       \input{chapter2}
+      \FloatBarrier
       \newpage
       \cleardoublepage
             % \clearpage
-      
+      \FloatBarrier
       \input{chapter3}
+      \FloatBarrier
       \newpage
       \cleardoublepage
             % \clearpage
-      
+      \FloatBarrier
       \input{chapter4}
+    \FloatBarrier
       \newpage
       \cleardoublepage
             % \clearpage
-      
+      \FloatBarrier
       \input{conclusion}
+      \FloatBarrier
       \newpage
       \cleardoublepage
             % \clearpage

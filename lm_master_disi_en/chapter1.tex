@@ -1,18 +1,18 @@
 \chapter{Introduction}
 \label{cha:intro}
-%[INTRODUCE TOPIC] 
-The advent of LLMs has changed many things \cite{}. They are now currently being used for tasks as \cite{}, \cite{} and \cite{} and many others. Their widespread use is due to their performance and ease of use, thanks to online tools to access it. Now \cite{} many models have also capabilities beyond simply text, thanks to extensions and other integrations with a plethora of other services \cite{}.
+%[INTRODUCE TOPIC] and [Background] 
+The advent of LLMs has changed things at an unprecedented rate. Many LLMs have been proposed, for example, some of the most famous are ChatGPT \cite{chatgpt}, LLama \cite{touvron2023llama}, LLama2 \cite{touvron2023llama} and Bard \cite{bard}.
+They are now currently being used for a variety of tasks ranging from simple coding suggestions, such as in Copilot \cite{copilot} \cite{chen2021evaluating} to LLM Powered Autonomous Agents \cite{llm-autonomous-agents}, and many others. Their widespread use is due to a combination of their performance and ease of use, thanks to the fact that many models have online tools to access them. Now, many models have also capabilities beyond simply text, thanks to extensions and other integrations with a plethora of other services, for example, Microsoft AI has announced an integrated AI suite \cite{ai-plugins} and OpenAI just announced vision and audio capabilities for their GPT-4 model \cite{chatgpt-see}. Many of these LLMs have impressive results in a large variety of fields and tasks, for instance, GPT-4 can perform well in a variety of different tasks \cite{bubeck2023sparks}.
 
-Due to their abilities in various fields, we pose the query of whether Large Language Models (LLMs) can be used to elicit personal narratives.
-%[Background] 
-Personal Narratives are ... \cite{} and eliciting it is ...\cite{} and it is used to \cite{} because it has many benefits. 
+%[research problem]
+Due to their abilities to perform well in various fields, we pose the query of whether Large Language Models (LLMs) can be used to elicit Personal Narratives.
+Personal Narratives are defined as spoken or written - recollections of facts, events, and thoughts \cite{tammewar2020annotation} and  eliciting it is ...\cite{} and it is used to \cite{} because it has many benefits. 
 
 %[Similar research] 
-Similar tasks are \emph{story cloze test} \cite{} ... where a context of 4 sentences is used and the model is tasked to predict the final 5th sentence, but as far as we know, there are no specific applications for narrative elicitation. 
+Similar tasks are \emph{story cloze test} \cite{mostafazadeh2016corpus} where a context of 4 sentences is used and the model is tasked to predict the final 5th sentence, but as far as we know, there are no specific applications for eliciting personal narratives. 
 
 %[Problems] 
-Although both story cloze test and eliciting personal narratives require an understanding of commonsense, they also have a few differences.
-Eliciting a personal narrative has a few challenges because of the inherent differences in the prose compared to story cloze test. In particular:
+Although both story cloze test and eliciting personal narratives share the requirement of understanding of commonsense, they also have a few key distinctions due to the inherent differences in the prose compared to story cloze test. In particular:
 \begin{itemize}
     \item  Eliciting a narrative implies the comprehension of two people in the narration, with one person as the narrator and the other as the listener. Compare this to the story cloze test there is only one story without other roles.
     \item  Eliciting requires a correct understanding of the context to propose appropriate topics that are both relevant and natural.
@@ -21,7 +21,7 @@ Eliciting a personal narrative has a few challenges because of the inherent diff
     \item Narratives may be incoherent and/or not follow a clear order of events. It is up to the listener to piece together these inconsistencies and come to an understanding of the topic to elicit correctly.
 \end{itemize}
 % [GOALS]
-Our main goal is to prompt Large Language Models to elicit Personal Narratives and evaluate their performances compared to human crowdworkers. This evaluation is done through both automatic metrics, such as BLEU, METEOR and other relevant statistics, and human evaluation according to Mahed et al \cite{}. 
+Our main goal is to prompt Large Language Models to elicit Personal Narratives and evaluate their performances compared to human crowd workers. This evaluation is done through both automatic metrics, such as BLEU, METEOR and other relevant statistics, and human evaluation according to Mahed et al \cite{}. 
 
 % [MAP]
 In this thesis is presented a collection of the following steps that were necessary to reach our goal:
@@ -31,7 +31,8 @@ In this thesis is presented a collection of the following steps that were necess
     \item LLMs prompting. A selection of LLMs was prompted for the task of eliciting personal narratives. 
     \item Evaluation. Both automatic and human metrics are used to evaluate the obtained results
 \end{itemize}
-
+%[Conclusion]
+Our human evaluation shows that at least for some models, it is possible to reach the performance of human crowdworkers for the task of personal narrative elicitation.
 
 % The advent of Large Language Models (LLMs) has ushered in a transformative era in technology, fundamentally altering the way people interact with and utilize digital tools. These AI-powered behemoths, including ChatGPT, LLama, Bard, and their counterparts, have swiftly become ubiquitous, orchestrating a paradigm shift in diverse domains. They have seamlessly transitioned from mere language processors to versatile autonomous agents capable of performing an array of tasks previously entrusted to human operators. From crafting engaging narratives, summarizing extensive documents, generating intricate source code, refining written text and even aiding in autocorrection, these LLMs have proven their mettle with a growing arsenal of plugins that extend their capabilities beyond the realm of mere text manipulation.
 
