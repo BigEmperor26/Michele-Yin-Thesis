@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\label{tab:human-evaluation-fleiss-kappa}
+\setlength{\tabcolsep}{3pt}
+\centering
+\caption{Fleiss-Kappa agreement metric computed over the different batches for all annotators. On the right the global agreement computed independently of metric, and on the bottom the overall metrics without accounting for batches. In the second column are also reported the number of narratives that are used to compute the metrics for each batch. Notice how correctness is lower than the other metrics due to the unbalance in distributions of correct and incorrect labels.}
+\begin{tabular}{l|c|rrrr|r}
+\toprule
+ \thead{Batch} & \thead{N° of narratives} & \thead{Correttezza} & \thead{Appropriatezza} & \thead{Contestualizzazione} & \thead{Ascolto} & \thead{Global} \\
+\midrule
+Training & 5 &{\cellcolor[HTML]{D3EEB3}} \color[HTML]{000000} 0.16 & {\cellcolor[HTML]{3EB3C4}} \color[HTML]{F1F1F1} 0.47 & {\cellcolor[HTML]{1D8DBE}} \color[HTML]{F1F1F1} 0.61 & {\cellcolor[HTML]{1D90C0}} \color[HTML]{F1F1F1} 0.60 & {\cellcolor[HTML]{216AAD}} \color[HTML]{F1F1F1} 0.70 \\
+Batch 1 & 2 &{\cellcolor[HTML]{2195C0}} \color[HTML]{F1F1F1} 0.58 & {\cellcolor[HTML]{3FB4C4}} \color[HTML]{F1F1F1} 0.47 & {\cellcolor[HTML]{24409A}} \color[HTML]{F1F1F1} 0.83 & {\cellcolor[HTML]{2260A9}} \color[HTML]{F1F1F1} 0.73  & {\cellcolor[HTML]{23499E}} \color[HTML]{F1F1F1} 0.80 \\
+Batch 2 & 1 &{\cellcolor[HTML]{FFFFD9}} \color[HTML]{000000} -0.07 & {\cellcolor[HTML]{42B6C4}} \color[HTML]{F1F1F1} 0.46 & {\cellcolor[HTML]{2B9FC2}} \color[HTML]{F1F1F1} 0.55 & {\cellcolor[HTML]{4AB9C3}} \color[HTML]{F1F1F1} 0.44 & {\cellcolor[HTML]{1E88BC}} \color[HTML]{F1F1F1} 0.62 \\
+Batch 3 & 1 &{\cellcolor[HTML]{4AB9C3}} \color[HTML]{F1F1F1} 0.44 & {\cellcolor[HTML]{2355A4}} \color[HTML]{F1F1F1} 0.76 & {\cellcolor[HTML]{71C8BD}} \color[HTML]{000000} 0.36 & {\cellcolor[HTML]{081D58}} \color[HTML]{F1F1F1} 1.00 & {\cellcolor[HTML]{24459C}} \color[HTML]{F1F1F1} 0.81 \\
+% \arrayrulecolor{white}
+\midrule  
+% \arrayrulecolor{black}
+\textbf{Overall} & 9 &{\cellcolor[HTML]{D3EEB3}} \color[HTML]{000000} 0.16 & {\cellcolor[HTML]{3EB3C4}} \color[HTML]{F1F1F1} 0.47 & {\cellcolor[HTML]{1D8DBE}} \color[HTML]{F1F1F1} 0.61 & {\cellcolor[HTML]{1D90C0}} \color[HTML]{F1F1F1} 0.60 & {\cellcolor[HTML]{216AAD}} \color[HTML]{F1F1F1} 0.70 \\
+\bottomrule
+\end{tabular}
+\setlength{\tabcolsep}{6pt}
+\end{table}

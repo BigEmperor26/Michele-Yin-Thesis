@@ -47,7 +47,7 @@ The token count in some prompts is as low as 5, while others extend well beyond 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/dataset-top-30-prompt.png}
-    \caption{Top 30 most frequent tokens in the dataset. Extracted using Spacy NLP \textit{it\_core\_news\_lg}.}
+    \caption{Barchat of the top 30 most frequent tokens in the dataset. Notice how the the most frequent tokens are related to anxiety, day, feelings, work, and family. This is aligns with the dataset's thematic focus on mental health. The tokenization is done using Spacy NLP.}
     \label{fig:dataset-top-30-prompt}
 \end{figure}
 
@@ -93,26 +93,26 @@ Table \ref{tab:dataset-crowdsourcing-guidelines} reports examples of good and ba
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/UI-guidelines.png}
-    \caption{Web UI for the guidelines. Those are shown initially to the user and are available for later review with the press of a button.}
+    \caption{In Figure is reported the Web UI that was shown to the crowdworkers for the guidelines. This page is shown initially to the user and is available for later review with the press of a button.}
     \label{fig:data_collection_web:1}
 \end{figure}
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/UI-examples-1.png}
-    \caption{Web UI for the examples. After the guidelines, four examples like this are assigned to the crowdworkers.}
+    \caption{In Figure is reported the Web UI that was shown to the crowdworkers as training examples. After the guidelines, four examples similar to this one are assigned to the crowdworkers in order to train them.}
     \label{fig:data_collection_web:2}
 \end{figure}
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/UI-examples-completed-1.png}
-    \caption{Web UI for the examples. After each answer, a correct answer is shown in order to train the crowdworkers against typical mistakes.}
+    \caption{In Figure is reported the Web UI that was shown to the crowdworkers as training examples. After each user inputs an answer, an example of a correct answer is shown to train the crowdworkers against typical mistakes.}
     \label{fig:data_collection_web:3}
 \end{figure}
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/UI-datacollection.png}
-    \caption{Web UI for the actual data collection. Instead of a radio box, the input is a free-form text.}
+    \caption{In Figure is reported the Web UI that was shown to the crowdworkers for the actual data collection.}
     \label{fig:data_collection_web:4}
 \end{figure}
 
@@ -142,7 +142,7 @@ Following the data collection phase, a comprehensive analysis of the results was
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/dataset-top-30-answers.png}
-    \caption{Top 30 most frequent tokens in the crowdsourced answers. Extracted using Spacy NLP \textit{it\_core\_news\_lg}.}
+    \caption{In Figure is shown the top 30 most frequent tokens present in the crowdsourced elicitations. Notice how tokens such as \emph{"dispiace"} are very common. This aligns with our guidelines of showing empathy for sad narratives. Computed using Spacy NLP tokenizer. }
     \label{fig:dataset-top-30-answers}
 \end{figure}
 
@@ -152,20 +152,20 @@ We also examined the correlation between the time employed by the crowdworkers t
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/dataset-pearson-correlation.png}
-    \caption{Correlation between length of the narrative (x-axis) and the time required to elicit (y-axis). As shown in the Figure, the data is very noisy with many outliers, however for most narratives, the completion time is not influenced by the narrative length.}
+    \caption{In Figure is shown a plot of the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis). The data is very noisy with many outliers, however for most narratives, the completion time is not influenced by the narrative length.}
     \label{fig:dataset-pearson-correlation}
 \end{figure}
 \begin{figure}[!htbp]
     \centering
         \includegraphics[width=1\linewidth]{assets//imgs/dataset-overall-correlation-workers.png}
-        \caption{Correlation between length of the narrative (x-axis) and the time required to elicit (y-axis). As shown in the Figure, most annotators complete each  task within 200 seconds regardless of the narrative length.}
+        \caption{In Figure is shown the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis). It is possible to notice that most annotators are able to complete each  task within 200 seconds regardless of the narrative length.}
         \label{fig:dataset-overall-correlation-workers}
 \end{figure}
 However, we found this not to be the case, as pictured in Figure \ref{fig:dataset-pearson-correlation} and Figure \ref{fig:dataset-overall-correlation-workers}. To provide a more precise quantification of this observation, we computed the Pearson correlation between the completion time for each narrative and the respective narrative length. The resulting correlation coefficient was found to be 0.16, further supporting the notion that completion time and narrative length do not exhibit a linear relationship.
 
 \begin{figure}[!htbp]
         \includegraphics[width=1\linewidth]{assets//imgs/dataset-high-correlation-workers.png}
-        \caption{Correlation between length of the narrative (x-axis) and the time required to elicit (y-axis). The Figure reports the correlation for 5 workers of which their performance is heavily influenced by the narrative length.}
+        \caption{In Figure is shown the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis) for five workers in particular. For these 4 annotators, there is a high degree of linear correlation between the narrative length and the time required for completion.}
         \label{fig:dataset-high-correlation-workers}
 \end{figure}
 Nevertheless, although this result is true on the whole and for most narratives and crowdworkers, it's important to note that we encountered a few outliers that exhibited a notably strong correlation. As illustrated in Figure \ref{fig:dataset-high-correlation-workers}, these specific users displayed a correlation exceeding 0.90. We attribute this phenomenon to the exceptional speed with which these users crafted their responses, which in turn placed a significant emphasis on the reading time as the dominant factor in their overall response time.
@@ -237,7 +237,7 @@ This set of 10 tests should allow us to evaluate the models in their ability to 
 In Table \ref{tab:language-test} and Table \ref{tab:overall-language-test} are reported the results obtained.
 Among the models subjected to testing, only a scant few demonstrated adequate Italian language proficiency, and even among this select group, occasional lapses into the English language were observed. This phenomenon can likely be attributed to the predominance of English in the training data for Large Language Models. Furthermore, there were instances where certain LLMs exhibited confusion between Italian and Spanish, a situation potentially arising from the linguistic similarities between these two languages. Given the vast number of Spanish speakers worldwide, with Spanish being the third most spoken language globally \cite{}, and the significant volume of available data in Spanish compared to Italian, such occasional confusion becomes more understandable, although still not correct.
 
-Another explanation for the presence of English in responses can be attributed to the inner structure of online live tools like Arena \cite{}, which often preemptively insert a prompt before each user message. Consequently, a message such as \emph{"Ciao, come mi puoi aiutare oggi?"} is transformed into something like \emph{"You are a helpful AI that answers questions. USER: Ciao, come mi puoi aiutare oggi?"}. This practice is implemented with clear objectives: It significantly enhances model performance and allows for more guidance of model capabilities. For instance, by explicitly prohibiting the generation of unsafe content such as topics related to weapons, fake news, violence, or similar sensitive subjects, the models can be steered in a responsible and controlled direction, although as many people have observed, often time this type of restrictions can be easily bypassed. Because the prompt that the model receives is in a mixed language, with both Italian and English, the model has a considerably harder time focusing on Italian answers.
+Another explanation for the presence of English in responses can be attributed to the inner structure of online live tools like Arena \cite{arena}, which often preemptively insert a prompt before each user message. Consequently, a message such as \emph{"Ciao, come mi puoi aiutare oggi?"} is transformed into something like \emph{"You are a helpful AI that answers questions. USER: Ciao, come mi puoi aiutare oggi?"}. This practice is implemented with clear objectives: It significantly enhances model performance and allows for more guidance of model capabilities. For instance, by explicitly prohibiting the generation of unsafe content such as topics related to weapons, fake news, violence, or similar sensitive subjects, the models can be steered in a responsible and controlled direction, although as many people have observed, often time this type of restrictions can be easily bypassed. Because the prompt that the model receives is in a mixed language, with both Italian and English, the model has a considerably harder time focusing on Italian answers.
 
 In an intriguing observation, we found that Fauno 13B \cite{fauno} stood out as the sole model fine-tuned specifically for the Italian language. Given its specialized orientation towards Italian, we had anticipated that this model might not exhibit the same English language lapses. Regrettably, our expectations were not met. Despite its Italian prompts, we postulate that a similar phenomenon may be ascribed to the fine-tuning process itself. While it effectively imparts proficiency in the Italian language to the model, it appears to struggle in fully supplanting the English language influence.
 
@@ -245,30 +245,30 @@ A significant outlier compared to all the models tested was OpenAI's ChatGPT. Th
 
 From these results, we also noticed that the bigger size of the model does not necessarily correlate with better performance. For example, Falcon 7B performs similarly to Falcon 40B in this test, probably because both models are unable to understand Italian the same way. Similarly, small models like Wizard 13B and Vicuna 13B can perform decently without exorbitant memory requirements. Although these results are not decisive for which models to use in the final personal narrative elicitation task, they provided some very helpful insights into the abilities of the models, their differences, and the effect of finetuning and prompting.
 \subsubsection{Story cloze test}
-After this initial Italian language test, we planned a similar more realistic test with the task of \emph{Story Cloze Test}. Story cloze is a task where a model is presented a four sentences that narrate an event and the model is tasked to predict the final sentence which is the outcome. In this case, we planned three prompts. A simple zero-shot prompt, a three-shot prompt and finally a three-shot prompt that specifies the answer has to be one sentence long. The dataset used for this test is the selection of 50 stories from ROC stories \cite{roc}. As our task is in Italian, this dataset was machine translated in Italian using DeepL \cite{} and then it was manually reviewed for wrong translations and lightly retouched for non-fluid translations. 
+After this initial Italian language test, we planned a similar more realistic test with the task of \emph{Story Cloze Test}. Story cloze is a task where a model is presented a four sentences that narrate an event and the model is tasked to predict the final sentence which is the outcome. In this case, we planned three prompts. A simple zero-shot prompt, a three-shot prompt and finally a three-shot prompt that specifies the answer has to be one sentence long. The dataset used for this test is the selection of 50 stories from ROC stories \cite{mostafazadeh2016corpus}. As our task is in Italian, this dataset was machine translated in Italian using DeepL \cite{} and then it was manually reviewed for wrong translations and lightly retouched for non-fluid translations. 
 \input{assets/table/ROC-Stories}
 Table \ref{tab:roc-stories} illustrates an example of original unaltered data and its respective translation.
 \subsubsubsection{Prompts and experimental details}
-The specific prompts used are the following, where the \emph{prompt} is replaced with the specific input context for every example:
+The specific prompts used are the following, where the \emph{\}prompt\}} is replaced with the specific input context for every example:
 \begin{itemize}
-    \item Zero shot prompt: \emph{''Completa la seguente storia: '{prompt}'''}
-    \item Three shot prompt: \emph{''Prendi in considerazione i seguenti esempi per completare una storia:\\
+    \item \textbf{Zero shot prompt}: \\ \emph{''Completa la seguente storia: '{prompt}'''}
+    \item \textbf{Three shot prompt}: \\ \emph{''Prendi in considerazione i seguenti esempi per completare una storia:\\
                 storia: Jennifer aveva un esame importante il giorno dopo.	Era così stressata che passò la notte in bianco.	Il giorno dopo era andata in classe, stanca morta.	L'insegnante le comunicò che l'esame è rimandato alla settimana successiva.\\
                 fine: Jennifer ne rimase amareggiata.\\
                 storia: Morgan e la sua famiglia vivevano in Florida.	Avevano sentito che stava arrivando un uragano.	Decisero di evacuare a casa di un parente.	Arrivarono e appresero dal telegiornale che si trattava di una terribile tempesta.\\
                 fine: Si sentirono fortunati ad aver evacuato in tempo.\\
                 storia: Tina aveva preparato gli spaghetti per il suo ragazzo.	Ci era voluto molto lavoro, ma lei era molto orgogliosa.	Il suo ragazzo mangiò tutto il piatto e disse che era buono.	Tina assaggiò e si rese conto che era disgustoso.\\
                 fine: Era commossa dal fatto che lui avesse fatto finta che fosse buono per non ferire i suoi sentimenti.\\
-                Completa la seguente storia: '{prompt}'\\
+                Completa la seguente storia: '\{prompt\}'\\
                 fine:''}
-    \item Three shot prompt with one sentence: \emph{''Prendi in considerazione i seguenti esempi per completare una storia:\\
+    \item \textbf{Three shot prompt with one sentence}: \\ \emph{''Prendi in considerazione i seguenti esempi per completare una storia:\\
                 storia: Jennifer aveva un esame importante il giorno dopo.	Era così stressata che passò la notte in bianco.	Il giorno dopo era andata in classe, stanca morta.	L'insegnante le comunicò che l'esame è rimandato alla settimana successiva.\\
                 fine: Jennifer ne rimase amareggiata.\\
                 storia: Morgan e la sua famiglia vivevano in Florida.	Avevano sentito che stava arrivando un uragano.	Decisero di evacuare a casa di un parente.	Arrivarono e appresero dal telegiornale che si trattava di una terribile tempesta.\\
                 fine: Si sentirono fortunati ad aver evacuato in tempo.\\
                 storia: Tina aveva preparato gli spaghetti per il suo ragazzo.	Ci era voluto molto lavoro, ma lei era molto orgogliosa.	Il suo ragazzo mangiò tutto il piatto e disse che era buono.	Tina assaggiò e si rese conto che era disgustoso.\\
                 fine: Era commossa dal fatto che lui avesse fatto finta che fosse buono per non ferire i suoi sentimenti.\\
-                Completa la seguente storia con una frase: '{prompt}'\\
+                Completa la seguente storia con una frase: '\{prompt\}'\\
                 fine:''}
 \end{itemize}
 We used the format of \emph{storia:} and \emph{fine:} as similar syntax is widely used across LLMs for their prompting.
@@ -319,7 +319,15 @@ Overall after this second evaluation, which is much closer to our planned task, 
 
 \subsection{Personal narrative elicitation}
 \label{cha:methodology-personal-narrative-elicitation}
-Finally, we repeated the experiment with a third set. The last one was done to evaluate the capabilities of the model to perform the task of narrative elicitation. As discussed in \ref{cha:methodology-LLMs-selection-story-cloze-test-results} unfortunately the previous test was unable to undoubtedly differentiate good and accurate models from worse ones. Therefore, we used the same set of models for this experiment as well:
+Finally, we repeated the experiment with a third set of experiments. The last one was done to evaluate the capabilities of the model to perform the task of \emph{personal narrative elicitation}. We define the task of personal narrative elicitation as eliciting personal narratives. It a task that very closely resembles the Story Close Test, but it has a few key differences. In particular:
+\begin{itemize}
+    \item  Eliciting a narrative implies the comprehension of two people in the narration, with one person as the narrator and the other as the listener. Compare this to the story cloze test there is only one story without other roles.
+    \item  Eliciting requires a correct understanding of the context to propose appropriate topics that are both relevant and natural.
+    \item Eliciting requires understanding of concepts such as empathy, as the narrative may be of a sorrowful or joyful nature and it is required to show empathy to the narrator.
+    \item Narratives may not always use correct language syntax and grammar.
+    \item Narratives may be incoherent and/or not follow a clear order of events. It is up to the listener to piece together these inconsistencies and come to an understanding of the topic to elicit correctly.
+\end{itemize}
+As discussed in \ref{cha:methodology-LLMs-selection-story-cloze-test-results} unfortunately the previous test was unable to undoubtedly differentiate good and accurate models from worse ones. Therefore, we used the same set of models for this experiment as well:
 \begin{itemize}
     \item   tiiuae/falcon-7b
     \item   tiiuae/falcon-40b-instruct
@@ -336,13 +344,13 @@ As a continuation of the initial results obtained in the previous experiment, we
 An example of colour information and how it is conveyed to the models is given in Table \ref{tab:personal-narrative-elicitation-color-example}. 
 \input{assets/table/personal-narrative-elicitation-experimental-setup}
 To recap, our ablation study consists of three orthogonal directions, considering the number of shots, the presence or absence of guidelines and the presence or lack thereof of colour information. In the Table \ref{tab:personal-narrative-elicitation-experimental-setup} is presented a brief recap of all the experiments. 
-Finally, in order to minimize the computational cost and at the same time reduce the complexity of the human evaluation, this set of experiments was run only on the test set from Coadapt. As future works we plan on testing the train set as well.
+Finally, in order to minimize the computational cost and at the same time reduce the complexity of the human evaluation, this set of experiments was run only on the test set from Coadapt. In future works we plan on testing the train set as well.
 \subsubsection{Prompts and experimental details}
 % \input{assets/table/personal-narrative-elicitation-prompts}
 The exact prompts used during the experiments are reported here for completeness:
 \begin{itemize}
-    \item \textbf{Without guidelines}:  \emph{''Sei una AI che deve fare una domanda su un racconto in maniera tale da ottenere più informazioni su eventi accaduti nel racconto. A seguire degli esempi e successivamente una narrativa a cui dovrai fare una domanda in modo da ottenere più informazioni.\\
-       NARRATIVA: "\hlgreen{Oggi è stata una bella giornata. Mia moglie mi ha detto che sta aspettando un bambino!} Sono super felice! Mi chiedo se sarò un bravo padre. \hlreed{Mio padre non è stato molto presente quando ero un bambino.}"\\
+    \item \textbf{Without guidelines}: \\ \emph{Sei una AI che deve fare una domanda su un racconto in maniera tale da ottenere più informazioni su eventi accaduti nel racconto. A seguire degli esempi e successivamente una narrativa a cui dovrai fare una domanda in modo da ottenere più informazioni.\\
+       NARRATIVA: "}\textit{\hlgreen{Oggi è stata una bella giornata. Mia moglie mi ha detto che sta aspettando un bambino!}} Sono super felice! Mi chiedo se sarò un bravo padre. \hlreed{Mio padre non è stato molto presente quando ero un bambino.}"\\
        DOMANDA: "Sono felice di sentirlo. Sapete già se si tratta di un maschio o di una femmina ?"\\
        NARRATIVA: "\hlred{Oggi ho litigato con Chiara, lei era arrabbiata con me perché secondo lei non io so fare le cose.}"\\
        DOMANDA: "Oh, mi spiace che tu abbia litigato. Secondo lei che cosa è che non sai fare ?"\\
@@ -352,9 +360,9 @@ The exact prompts used during the experiments are reported here for completeness
        DOMANDA: "Capisco, dove doveva andare tuo figlio?"\\
        NARRATIVA: "Mia figlia si è lasciata con il suo fidanzato ed ora ho sensi di colpa e momenti di tristezza, mi dispiace tanto e mi sento incapace di supportarla in questo. Insomma giornate un po’ grigie. Non so se il sonno disturbato e qualche episodio di insonnia siano causati da questa confusione."\\
        DOMANDA: "Mi dispiace tanto, da quanto erano insieme?"\\
-       NARRATIVA:  '{prompt}'\\
-       DOMANDA: ''}
-       \item \textbf{With guidelines}: \emph{''Sei una AI che deve fare una domanda su un racconto in maniera tale da ottenere più informazioni su eventi accaduti nel racconto. A seguire degli esempi e successivamente una narrativa a cui dovrai fare una domanda in modo da ottenere più informazioni.\\
+       NARRATIVA:  '\{prompt\}'\\
+       DOMANDA: 
+       \item \textbf{With guidelines}: \\ \textit{Sei una AI che deve fare una domanda su un racconto in maniera tale da ottenere più informazioni su eventi accaduti nel racconto. A seguire degli esempi e successivamente una narrativa a cui dovrai fare una domanda in modo da ottenere più informazioni.\\
        \\
        Istruzioni\\
        Di seguito ti verrà presentato un insieme di racconti personali e il tuo obiettivo è quello di proporre domande riguardanti alcuni aspetti degli eventi descritti nella narrativa. Queste domande hanno come obiettivo quello di approfondire il racconto e/o chiarire alcune sue parti.\\
@@ -400,7 +408,7 @@ The exact prompts used during the experiments are reported here for completeness
        DOMANDA: "Mi dispiace tanto, da quanto erano insieme?"\\
        Completa questo task\\
        NARRATIVA:  '{prompt}'\\
-       DOMANDA:''}
+       DOMANDA:}
 \end{itemize}
 On this page, two versions are provided, with and without guidelines, both of which contain 5 examples. The 0, 1,3, and 5 shot experiments all use the same base prompts, with the difference that 0, 1, 3, or 5 examples are shown respectively. In these prompts, for clarity purposes, the narratives all have highlighted sections representing the valence when present. However, as previously mentioned, the colour information is either omitted or induced with special text formatting shown in Table \ref{tab:personal-narrative-elicitation-color-example}. The text \emph{"prompt"} is replaced with the correct narrative at every inference step.
 It is also possible to notice that all prompts used in this set of experiments use impersonation. We found that impersonation was very effective \cite{impersonation}. This marks a difference compared to the previous set of story cloze experiments, in which impersonation was not applied.
@@ -438,7 +446,7 @@ We also tried comparing the models' token distributions against the reference hu
         \centering
         \captionsetup{width=.8\linewidth}%
         \includegraphics[height=18cm]{assets/imgs/dataset-test-set-top-50-answers-vertical.png}
-        \subcaption[]{Token distribution from human crowdsourced elicitations}
+        \subcaption[]{This Figure reports the top 50 most frequent tokens in the human crowdsourced elicitations.}
         \label{sub:persona-narrative-elicitation-comparison-distribution-human}
         % \includegraphics[height=10cm]{assets/imgs/tokens-vertical/token_distribution_no_color_no_guidelines_0_shot_mpt-7b.png}
     \end{subfigure}
@@ -448,7 +456,7 @@ We also tried comparing the models' token distributions against the reference hu
         \captionsetup{width=.8\linewidth}%
         % \includegraphics[width=1\textwidth]{assets/imgs/dataset-test-set-top-30-answers-vertical.png}
         \includegraphics[height=18cm]{assets/imgs/tokens-vertical/token_distribution_no_color_no_guidelines_0_shot_falcon-7b.png}
-        \subcaption[]{Token distribution from Falcon 7B, with 0-shot, no guidelines and no colour information.}
+        \subcaption[]{This Figure reports the top 50 most frequent tokens from the Falcon 7B model, prompted with no colour information, without guidelines and with 0 examples.}
         \label{sub:persona-narrative-elicitation-comparison-distribution-falcon}
     \end{subfigure}
     \hspace{-1cm}
@@ -457,7 +465,7 @@ We also tried comparing the models' token distributions against the reference hu
         \captionsetup{width=.8\linewidth}%
         % \includegraphics[width=1\textwidth]{assets/imgs/dataset-test-set-top-30-answers-vertical.png}
         \includegraphics[height=18cm]{assets/imgs/tokens-vertical/token_distribution_with_color_with_guidelines_5_shot_gpt-4.png}
-        \subcaption[]{Token distribution from ChatGPT 4, with 5-shot, with guidelines and with colour information.}
+        \subcaption[]{This Figure reports the top 50 most frequent tokens from the ChatGPT 4 model, prompted with colour information, with guidelines and with 5 examples.}
             \label{sub:persona-narrative-elicitation-comparison-distribution-gpt-4}
     \end{subfigure}
     % \begin{subfigure}[b]{1\textwidth}
@@ -469,7 +477,7 @@ We also tried comparing the models' token distributions against the reference hu
     %     \includegraphics[width=1\textwidth]{assets/imgs/dataset-test-set-top-30-answers.png}
     % \end{subfigure}
      % \subfigure[]{\includegraphics[with=.5\linewidth]{assets/imgs/tokens/token_distribution_no_color_no_guidelines_0_shot_falcon-7b.png}}{}
-    \caption{In Subfigure a), the top 50 token distribution of the human crowdsourced elicitations. In Subfigures b) and c) two examples of distributions of two different models in different experimental settings. Notice how the distribution from Gpt-4 is much closer to the human one. All distributions are computed using Spacy NLP tokenizer}
+    \caption{In Subfigure a), the top 50 most frequent token of the human crowdsourced elicitations. In Subfigures b) and c) two examples of distributions of two different models in different experimental settings. Notice how the distribution from Gpt-4 is much closer to the human one, in particular regarding to tokens like \emph{"dispiace"} and \emph{"figlia"}. All distributions are computed using Spacy NLP tokenizer.}
     \label{fig:persona-narrative-elicitation-comparison-distribution}
 \end{figure}
 
@@ -481,6 +489,6 @@ In Subfigure \ref{sub:persona-narrative-elicitation-comparison-distribution-falc
 Finally, in Table \ref{tab:personal-narrative-elicitation-token-length-std} are reported the statistics for average sentence length and standard deviation on the models' answers, compared to the human respective statistics. Similarly to what happened to the divergence, through these statistics, it is not possible to determine if a model is performing well, but it is possible to exclude models whose statistics do not match the ones we expect. Again Falcon models' statistics are very different from the human reference values. Interestingly, Gpt models' statistics are also not in line with human data. 
 
 \input{assets/table/personal-narrative-elicitation-null-answers}
-Null answers were more pronunced with colour information. See Table \ref{tab:personal-narrative-elicitation-null-answers}
+Null answers were more pronounced with colour information. See Table \ref{tab:personal-narrative-elicitation-null-answers}
 
 Combining everything together we come to understand that the best examples are obtained with guidelines, without colour and in the 5 shot examples. In the Appendix, are reported a table with examples for each experimental setup for one narrative and the respective tokens distributions.

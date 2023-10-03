@@ -4,36 +4,34 @@
 
 In this section, we will evaluate the results we obtained from the previous chapter \ref{cha:methodology}. In particular, the results obtained from \ref{cha:methodology-personal-narrative-elicitation} and \ref{cha:methodology-data-collection}. 
 Previously we have collected a dataset of narratives, for which elicitations were collected both through crowdsourcing and LLM prompting.
-Two detailed analyses were conducted on both the crowdsourcing and LLM-generated data were analyzed. 
-After that, we determined that the best results were achieved through the experimental setup with guidelines, without colour information with 5 shot examples. 
-
-
-In this experimental setup, we chose 4 models to apply human evaluation:
+Two detailed analyses were conducted on both the crowdsourcing and LLM-generated data. After that, we determined that the best results were achieved through the experimental setup with guidelines, without colour information with 5-shot examples. 
+From this experimental setup, we chose 4 models to apply human evaluation:
 \begin{itemize}
-    \item Falcon 7B. This model has subpar performance and it is going to be our reference.
+    \item Falcon 7B. This model has subpar performance and it is going to be our lower bound.
     \item ChatGPT 3.5 turbo. Although ChatGPT 4 should perform better, we ultimately opted for chatGPT 3.5 turbo as it displayed better behaviour with the increasing number of examples. Furthermore, it's token distribution is slightly more similar to the human reference data. With all the analysis done so far, we expect this model to perform extremely well.
     \item Wizard Vicuna 13B Uncensored HF. This model performed very well compared to others, especially with few shots.
     \item Vicuna 33B V1. Last model. It has some examples that are decent.
 \end{itemize}
+Alongside those 4 models, a 5th data point was added:
+\begin{itemize}
+    \item Human crowdsourced elicitations. This data is going to serve as our upper bound.
+\end{itemize}
+The human evaluation is done according to the Human Evaluation Protocol presented in \cite{mousavi-etal-2022-evaluation}. We decided to apply all 4 metrics, which are Correctness, Appropriateness, Contextualization and Listening. Aside from Correctness and Appropriateness, which are derived from language and commonsense, we are interested in models that perform well in Contextualization and Listening in particular, due to the task being personal narrative elicitation. Compared to the original Human Evaluation Protocol there is one key difference, which lies in the fact that we are applying the evaluation to narratives instead of dialogues. 
 
-The human evaluation is done according to \cite{human}. We decided to apply all 4 metrics, although in the literature many models are evaluated only for Correctness and Appropriateness. Since we are interested in narrative elicitation, we considered that Contextualization and Listening were also important criteria. 
 
-We changed one thing, which lies in the fact that we are applying the evaluation to narratives instead of dialogues.
+For the actual evaluation process, we used the same UI presented in the Human Evaluation Protocol. % A few examples of UI are presented in Figure \ref{fig:human}
+We gathered 3 workers and assigned them the narratives to be evaluated.  
+In order to prevent annotation fatigue, we split the narratives into batches. Each batch was done daily with an estimated annotation time of 40 minutes. Each of these batches contained a number from 5 to 8 narratives. Each narrative contained the selected 5 elicitations: 4 from the models and the human elicitation. We set up the batches with the first acting as training. For this reason, all narratives for all annotators were exactly the same in this batch. This allowed us to compute agreement metrics and determine if issues in the annotators' comprehension of the task were present. After this initial training task, the next batch contained only 2 narratives in common and successive batches only contained 1 narrative in common. This meant that overall we gathered 57 narratives, 9 of which were annotated by all 3 annotators, whereas the remaining 48 narratives were annotated by only one annotator. 
 
-For the actual evaluation process, we used the same UI as in Mahed et al. 
-We had 3 workers, each of whom we assigned a batch of narratives to evaluate. 
-Each of these batches contained a number from 5 to 8 narratives. Each narrative contained the elicitations from the 4 models and the human elicitation. 
-
-We set up the batches with the first acting as training. For this reason, all narratives for all annotators were exactly the same in this batch. This allowed us to compute agreement metrics and determine if issues in the annotators' comprehension of the task were present.
-
-After this initial training task, the next batches contained only 2 and 1 narrative in common. 
-
-Each batch was done daily to prevent annotation fatigue.
 
 \subsection{Results}
-Initially, we computed the Fleiss-Kappa \cite{fleiss} agreement metric for both individual batches and overall metrics. In Table \ref{} are reported the metrics. We observe that most of the annotators have a high score on all metrics, except for Correctness. Upon further investigation, we found that the low score is due to the fact that the Fleiss-Kappa metric also accounts for the distributions of the annotations labels. Since most models have correct answers, the very few instances of not correct values heavily penalize the metric.
+Initially, we computed the Fleiss-Kappa \cite{fleiss} metric for the 5 narratives contained in the first batch as soon as that annotation task was completed. This allowed us to determine that there were no particular issues in the annotators' comprehension of the guidelines for the human evaluation protocol.
+\input{assets/table/human-evaluation-fleiss-kappa}
+Afterwards, we continued to evaluate the Fleiss-Kappa \cite{fleiss} agreement metric for both individual batches and overall metrics. In Table \ref{tab:human-evaluation-fleiss-kappa} are reported the results that were obtained. We observe that most of the annotators have a high score on all metrics, except for Correctness. Upon further investigation, we found that the low score is due to the fact that the Fleiss-Kappa metric also accounts for the distributions of the annotations labels. Since most models have correct answers, the very few instances of not correct values heavily penalize the metric.
+\input{assets/table/human-evaluation-overlap}
+In order to solve this issue, we decided to compute the overlap, which accounts for how many answers are shared across annotators. In Table \ref{tab:human-evaluation-overlap} are shown the percent of overlap. This metric did show that in fact, the annotators agree on correctness with a similar ratio to the other metrics measured. 
 
-In order to solve this issue, we decided to compute the overlap, which accounts for how many answers are shared across annotators. This metric did show that in fact, the annotators agree on correctness with a similar ratio to the other metrics measured.
+
 
 We found that one annotator disagrees with the other two because some examples are ambiguous. In \ref{} are reported the problematic examples. It is possible to see that those examples have extra characters such as \emph{"} or \emph{a.} which for one annotator are marked as incorrect and the others as correct.
 
@@ -41,9 +39,10 @@ Nevertheless, we found that the annotators do mostly agree.
 
 \input{assets/table/human-evaluation-scores}
 With those numbers, we computed the scores for each model, assigning points for each correct or incorrect label according to the annotators. In the case of narratives annotated by all three annotators, the majority vote was taken as valid. These results are shown in Table \ref{tab:human-evaluation-scores}.
-Interestingly,  chatGPT 3.5 turbo follows very similar characteristics to humans. All other models are not on par. This is sad, as we expected much more from those models.
+Interestingly,  ChatGPT 3.5 turbo follows very similar characteristics to humans. All other models are not on par. This is sad, as we expected much more from those models.
 
+% add examples of subjunctive
 It is not surprising to see that human data is not 100 in all categories, because it was collected through crowdsourcing, and neither the guidelines nor the inspection considered the criteria present in the human evaluation protocol. The one metric that is mentioned is correctness. Considering the examples that are deemed incorrect, as shown in \ref{} we have to consider the subtleties of the Italian language and the subjunctive. This problem is experienced by both human annotators and ChatGPT 3.
 
-From these results, we can conclude that chatGPT 3.5 turbo presents qualities that are very close to human, and human annotators do not evaluate its results differently from human real elicitations. 
+From these results, we can conclude that ChatGPT 3.5 turbo presents qualities that are very close to human, and human annotators do not evaluate its results differently from human real elicitations. 
 

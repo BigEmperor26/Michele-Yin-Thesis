@@ -1,18 +1,18 @@
 \chapter{Introduction}
 \label{cha:intro}
 %[INTRODUCE TOPIC] and [Background] 
-The advent of LLMs has changed things at an unprecedented rate. Many LLMs have been proposed, for example, some of the most famous are ChatGPT \cite{chatgpt}, LLama \cite{touvron2023llama}, LLama2 \cite{touvron2023llama} and Bard \cite{bard}.
-They are now currently being used for a variety of tasks ranging from simple coding suggestions, such as in Copilot \cite{copilot} \cite{chen2021evaluating} to LLM Powered Autonomous Agents \cite{llm-autonomous-agents}, and many others. Their widespread use is due to a combination of their performance and ease of use, thanks to the fact that many models have online tools to access them. Now, many models have also capabilities beyond simply text, thanks to extensions and other integrations with a plethora of other services, for example, Microsoft AI has announced an integrated AI suite \cite{ai-plugins} and OpenAI just announced vision and audio capabilities for their GPT-4 model \cite{chatgpt-see}. Many of these LLMs have impressive results in a large variety of fields and tasks, for instance, GPT-4 can perform well in a variety of different tasks \cite{bubeck2023sparks}.
+A personal narrative (PN) can be defined as a recollection of an event or connected sequence of events the narrator has been part of, as an active or passive participant. Examples of PNs include personal diaries, short notes, and travelogues in digital form (speech and/or text). Compared to other text genres such as news and microblogs, spoken PNs are particularly challenging because the structure of the narrative could be complex, involving multiple sub-events and characters as well as thoughts and associated emotions perceived by the narrator.
 
-%[research problem]
-Due to their abilities to perform well in various fields, we pose the query of whether Large Language Models (LLMs) can be used to elicit Personal Narratives.
-Personal Narratives are defined as spoken or written - recollections of facts, events, and thoughts \cite{tammewar2020annotation} and  eliciting it is ...\cite{} and it is used to \cite{} because it has many benefits. 
+Gathering personal narratives can be hard due to issues with ... cite{} therefore many elicitation techniques exist.
 
-%[Similar research] 
-Similar tasks are \emph{story cloze test} \cite{mostafazadeh2016corpus} where a context of 4 sentences is used and the model is tasked to predict the final 5th sentence, but as far as we know, there are no specific applications for eliciting personal narratives. 
+Many Large Language Models have obtained impressive results in a large variety of fields and tasks \cite{bubeck2023sparks}.
 
-%[Problems] 
-Although both story cloze test and eliciting personal narratives share the requirement of understanding of commonsense, they also have a few key distinctions due to the inherent differences in the prose compared to story cloze test. In particular:
+Due to their abilities to perform well in various areas, we pose the query of whether Large Language Models (LLMS) can be used to elicit personal narratives. 
+
+This thesis presents a study on the feasibility of using LLMs to elicit personal narratives. Our main goal is to prompt LLMs to elicit personal narratives effectively. In order to do this, we define a new task of \emph{personal narrative elicitation} on a new dataset. To assess their performances, we compare the results gathered from LLM prompting to human crowdsourced elicitations on the same narratives. This evaluation is done through both automatic metrics and human evaluation. % \cite{}. 
+
+
+Similar tasks are \emph{story cloze test} \cite{mostafazadeh2016corpus} where a context of 4 sentences is used and the model is tasked to predict the final 5th sentence, but as far as our literature review, there are no specific applications for eliciting personal narratives. Although both story cloze test and eliciting personal narratives share the requirements of understanding both language and commonsense, they also have a few key distinctions. In particular:
 \begin{itemize}
     \item  Eliciting a narrative implies the comprehension of two people in the narration, with one person as the narrator and the other as the listener. Compare this to the story cloze test there is only one story without other roles.
     \item  Eliciting requires a correct understanding of the context to propose appropriate topics that are both relevant and natural.
@@ -20,19 +20,42 @@ Although both story cloze test and eliciting personal narratives share the requi
     \item Narratives may not always use correct language syntax and grammar.
     \item Narratives may be incoherent and/or not follow a clear order of events. It is up to the listener to piece together these inconsistencies and come to an understanding of the topic to elicit correctly.
 \end{itemize}
-% [GOALS]
-Our main goal is to prompt Large Language Models to elicit Personal Narratives and evaluate their performances compared to human crowdworkers. This evaluation is done through both automatic metrics, such as BLEU, METEOR and other relevant statistics, and human evaluation according to Mahed et al \cite{}. 
 
-% [MAP]
-In this thesis is presented a collection of the following steps that were necessary to reach our goal:
-\begin{itemize}
-    \item New dataset collection. Since there is no existing task of personal narrative elicitation we need to define this task with a new dataset.
-    \item Crowdsourcing. As our reference points, we gathered elicitations for the new dataset through crowdsourcing.
-    \item LLMs prompting. A selection of LLMs was prompted for the task of eliciting personal narratives. 
-    \item Evaluation. Both automatic and human metrics are used to evaluate the obtained results
-\end{itemize}
-%[Conclusion]
 Our human evaluation shows that at least for some models, it is possible to reach the performance of human crowdworkers for the task of personal narrative elicitation.
+% [GOALS]
+
+% % The advent of LLMs has changed things at an unprecedented rate. Many LLMs have been proposed, for example, some of the most famous are ChatGPT \cite{chatgpt}, LLama \cite{touvron2023llama}, LLama2 \cite{touvron2023llama} and Bard \cite{bard}.
+% % They are now currently being used for a variety of tasks ranging from simple coding suggestions, such as in Copilot \cite{copilot} \cite{chen2021evaluating} to LLM Powered Autonomous Agents \cite{llm-autonomous-agents}, and many others. Their widespread use is due to a combination of their performance and ease of use, thanks to the fact that many models have online tools to access them. Now, many models have also capabilities beyond simply text, thanks to extensions and other integrations with a plethora of other services, for example, Microsoft AI has announced an integrated AI suite \cite{ai-plugins} and OpenAI just announced vision and audio capabilities for their GPT-4 model \cite{chatgpt-see}. Many of these LLMs have impressive results in a large variety of fields and tasks, for instance, GPT-4 can perform well in a variety of different tasks \cite{bubeck2023sparks}.
+
+% %[research problem]
+% Due to their abilities to perform well in various fields, we pose the query of whether Large Language Models (LLMs) can be used to elicit personal narratives.
+% personal narratives are defined as spoken or written - recollections of facts, events, and thoughts \cite{tammewar2020annotation} and  eliciting it is ...\cite{} and it is used to \cite{} because it has many benefits. 
+
+% %[Similar research] 
+% Similar tasks are \emph{story cloze test} \cite{mostafazadeh2016corpus} where a context of 4 sentences is used and the model is tasked to predict the final 5th sentence, but as far as we know, there are no specific applications for eliciting personal narratives. 
+
+% %[Problems] 
+% Although both story cloze test and eliciting personal narratives share the requirement of understanding of commonsense, they also have a few key distinctions due to the inherent differences in the prose compared to story cloze test. In particular:
+% \begin{itemize}
+%     \item  Eliciting a narrative implies the comprehension of two people in the narration, with one person as the narrator and the other as the listener. Compare this to the story cloze test there is only one story without other roles.
+%     \item  Eliciting requires a correct understanding of the context to propose appropriate topics that are both relevant and natural.
+%     \item Eliciting requires understanding of concepts such as empathy, as the narrative may be of a sorrowful or joyful nature and it is required to show empathy to the narrator.
+%     \item Narratives may not always use correct language syntax and grammar.
+%     \item Narratives may be incoherent and/or not follow a clear order of events. It is up to the listener to piece together these inconsistencies and come to an understanding of the topic to elicit correctly.
+% \end{itemize}
+% % [GOALS]
+% Our main goal is to prompt Large Language Models to elicit personal narratives and evaluate their performances compared to human crowdworkers. This evaluation is done through both automatic metrics, such as BLEU, METEOR and other relevant statistics, and human evaluation according to Mahed et al \cite{}. 
+
+% % [MAP]
+% In this thesis is presented a collection of the following steps that were necessary to reach our goal:
+% \begin{itemize}
+%     \item New dataset collection. Since there is no existing task of personal narrative elicitation we need to define this task with a new dataset.
+%     \item Crowdsourcing. As our reference points, we gathered elicitations for the new dataset through crowdsourcing.
+%     \item LLMs prompting. A selection of LLMs was prompted for the task of eliciting personal narratives. 
+%     \item Evaluation. Both automatic and human metrics are used to evaluate the obtained results
+% \end{itemize}
+% %[Conclusion]
+% Our human evaluation shows that at least for some models, it is possible to reach the performance of human crowdworkers for the task of personal narrative elicitation.
 
 % The advent of Large Language Models (LLMs) has ushered in a transformative era in technology, fundamentally altering the way people interact with and utilize digital tools. These AI-powered behemoths, including ChatGPT, LLama, Bard, and their counterparts, have swiftly become ubiquitous, orchestrating a paradigm shift in diverse domains. They have seamlessly transitioned from mere language processors to versatile autonomous agents capable of performing an array of tasks previously entrusted to human operators. From crafting engaging narratives, summarizing extensive documents, generating intricate source code, refining written text and even aiding in autocorrection, these LLMs have proven their mettle with a growing arsenal of plugins that extend their capabilities beyond the realm of mere text manipulation.
 
