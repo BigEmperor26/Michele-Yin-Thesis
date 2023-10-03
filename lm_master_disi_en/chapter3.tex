@@ -50,12 +50,12 @@ The CoAdapt dataset was initially collected within the framework of a psychologi
 \input{assets/table/dataset-coadapt-example-ec-valence}
 An example is shown in Table \ref{tab:dataset-coadapt-example-ec-valence}
 \input{assets/table/dataset-coadapt-example}
-The dataset in question was collected in the Italian language, with the active participation of native Italian speakers as data contributors. Nonetheless, given the intrinsic variability of human responses to such inquiries, it becomes paramount to approach the dataset curation process with careful consideration. This cautious approach is necessitated by the dataset's susceptibility to potential inconsistencies and discontinuities, a point underscored by the illustrative example presented in Table \ref{tab:dataset-coadapt-example}.
+The dataset in question was collected in the Italian language, with the active participation of native Italian speakers as data contributors. Nonetheless, given the intrinsic variability of human responses to such questions, it becomes important to approach the dataset curation process with careful consideration. As shown in Table \ref{tab:dataset-coadapt-example} it is impossible to simply concatenate the texts together to obtain a narrative.
 
 \input{assets/table/dataset-coadapt-example-split}
-In light of these potential issues, a thorough manual review and refinement process was undertaken to imbue coherence and narrative fluency into the dataset. This review process encompassed the addition of conjunctions and linguistic modifications, ensuring a seamless and cohesive narrative flow. Additionally, the dataset underwent an anonymization procedure, which entailed the removal of any references to specific locations or individuals, replacing instead with randomly selected alternatives. Narratives deemed excessively brief were excluded, while longer narratives were strategically divided into distinct sections, as exemplified in Table \ref{tab:dataset-coadapt-example-split}.
+In light of this issue, a thorough manual review and refinement process was done to imbue coherence and narrative fluency into the dataset. This review process encompassed the addition of conjunctions and linguistic modifications, ensuring a seamless and cohesive narrative flow. Additionally, the dataset underwent an anonymization procedure, which entailed the removal of any references to specific locations or individuals, replacing instead with randomly selected alternatives. Narratives deemed excessively brief were removed, while longer narratives were strategically divided into multiple narratives, as exemplified in Table \ref{tab:dataset-coadapt-example-split}.
 
-The outcome of these efforts culminated in the creation of a refined dataset, better tailored for the specific task of personal narrative elicitation. Notably, this dataset comprises a total of 476 narratives, thoughtfully divided into two subsets: 419 narratives for the training set and 57 narratives for the test set.
+The outcome of these efforts culminated in the creation of a refined dataset, tailored for the specific task of personal narrative elicitation. Notably, this dataset comprises a total of 476 narratives, thoughtfully divided into two subsets: 419 narratives for the training set and 57 narratives for the test set.
 \input{assets/table/dataset-coadapt-example-short-long}
 \input{assets/table/dataset-coadapt-statistics}
 To gain further insights into the dataset's linguistic properties, an analysis of tokens was conducted using the Spacy Natural Language Processing (NLP) tokenizer. Punctuation marks, stop words, and numerical digits were excluded from this analysis, revealing the presence of 3,376 unique tokens within the dataset. On average, each narrative prompt spans 49.48 tokens, with a notably high standard deviation of 37.84. These statistics can be found in Table \ref{tab:dataset-coadapt-statistics}. 
@@ -68,10 +68,10 @@ The token count in some prompts is as low as 5, while others extend well beyond 
     \label{fig:dataset-top-30-prompt}
 \end{figure}
 
-Other than those statistics, in Figure \ref{fig:dataset-top-30-prompt} the top 30 token distribution is reported. As depicted in the figure, the most frequently occurring tokens pertain to themes such as  \emph{"giornata"}, \emph{"ansia"},  \emph{"dispiace"},  \emph{"figlia"},  \emph{"figlio"}, and  \emph{"lavoro"}, aligning seamlessly with the dataset's inherent thematic focus on mental health and it's daily collection format.
+Other than those statistics, the top most frequent 30 tokens are reported in Figure \ref{fig:dataset-top-30-prompt}. As depicted in the figure, some of the most frequently occurring tokens are \emph{"giornata"}, \emph{"ansia"},  \emph{"dispiace"},  \emph{"figlia"},  \emph{"figlio"}, and  \emph{"lavoro"}. These tokens align seamlessly with the dataset's inherent thematic focus on mental health and it's daily collection format.
 
 \section{Crowdsourcing}
-Now, a concise overview of the experimental setup for crowdsourcing. This section is comprised of:
+Now follows a concise overview of the experimental setup for crowdsourcing. This section is comprised of:
 \begin{itemize}
     \item \textbf{Guidelines design}: Drafting guidelines tailored for the crowdsourcing component of the study and iteratively reviewing them until satisfactory.
     \item \textbf{User Interface (UI) Design for Crowdsourcing}: Creation of a user-friendly interface incorporating the guidelines previously drafted, ensuring a seamless user experience.
@@ -79,11 +79,11 @@ Now, a concise overview of the experimental setup for crowdsourcing. This sectio
     \item \textbf{Data analysis}: A comprehensive data analysis on the participants' elicitations was conducted.
 \end{itemize}
 \subsection{Guidelines design}
-Like any crowdsourcing data collection endeavour, the formulation of effective guidelines was a fundamental requirement. This necessitated an iterative process involving the creation of drafts, subsequent reviews, and rigorous testing to gauge their effectiveness. This iterative cycle was repeated until the guidelines reached a level of satisfaction.
+Like any crowdsourcing data collection endeavour, the formulation of effective guidelines was a fundamental requirement. This necessitated an iterative process involving the creation of drafts, subsequent reviews, and rigorous testing of guidelines to gauge their effectiveness. This iterative cycle was repeated until the guidelines reached a level of satisfaction.
 \input{assets/table/dataset-coadapt-highlight-examples}
-Upon finalizing the guidelines, the next step involved translating them into a custom web-based user interface (UI) for the actual data collection process. One key aspect of our guidelines was the inclusion of the valence value from the Coadapt dataset. In order to represent effectively to the crowdworkers the positive and negative emotions expressed by the valence, we decided to highlight negative valences in red negative and in green positive valences. An illustrative example can be seen in Table \ref{tab:dataset-coadapt-highlight-examples}. These colours were chosen as it is universally accepted that green stands for positive and red for negative. On the other hand, we discarded the emotion carrier information. Although initially, we drafted guidelines where emotion carriers tokens were underlined with a different colour, ultimately we decided to ignore those tokens in order to keep the cognitive complexity of the task lower.
+Upon finalizing the guidelines, the next step involved translating them into a custom web-based user interface (UI) for the actual data collection process. One key aspect of our guidelines was the inclusion of the valence values from the Coadapt dataset. In order to represent effectively to the crowdworkers the positive and negative emotions expressed by the valence, a decision to highlight negative valences in red and positive valences in green was made. An illustrative example can be seen in Table \ref{tab:dataset-coadapt-highlight-examples}. These colours were chosen as it is universally accepted that green stands for positive and red for negative. On the other hand, the emotion carrier information was discarded. Although initially, guidelines with emotion carriers were drafted, ultimately those tokens were ignored in order to keep the cognitive complexity of the task lower.
 
-For this task put a large emphasis on the guidelines examples. As in many crowdsourcing tasks, it is easier for crowdworkers to learn by reading a few examples. Initially, the examples we provided were found to be ineffective, as they did not highlight the common issues faced by the crowdworkers. Therefore, after some internal testing, we came up with better examples that guide the crowdworkers through typical caveats of the task.
+This task places a large emphasis on the examples included in the guidelines. As in many crowdsourcing tasks, it is easier for crowdworkers to learn by reading a few examples. Initially, the examples that provided were found to be ineffective, as they did not highlight the common issues faced by the crowdworkers. Therefore, after some internal testing, better examples that guide the crowdworkers through typical caveats of the task were devised.
 
 The main purpose of these guidelines was to help workers in producing a good elicitation. Our goals were for the elicitation to be questions with the following properties:
 \begin{itemize}
@@ -103,9 +103,9 @@ On the other hand, we explicitly required our elicitation not to be any of the f
     \item Hypothetical questions or scenarios.
     \item Questions that move the focus of the conversation away from the narrator.
 \end{itemize}
-The reason why we decided to avoid these scenarios, is because, in the internal testing, we found that those types of questions may induce the narrator to start a new narrative with a different set of events, which is not a continuation of the previous one. 
+The reason why these scenarios should be avoided is because, in the internal testing, it was found that those types of questions may induce the narrator to start a new narrative with a different set of events. This is not a continuation of the previous one. 
 \input{assets/table/dataset-crowdsourcing-guidelines}
-Table \ref{tab:dataset-crowdsourcing-guidelines} reports examples of good and bad elicitation for a given narrative. Those examples were part of the guidelines given to the crowdworkers.
+Table \ref{tab:dataset-crowdsourcing-guidelines} reports examples of good and bad elicitation for a given narrative. Those examples were part of the guidelines that were given to the crowdworkers.
 \subsection{User Interface (UI) Design for Crowdsourcing}
 \begin{figure}[!htbp]
     \centering
@@ -133,19 +133,19 @@ Table \ref{tab:dataset-crowdsourcing-guidelines} reports examples of good and ba
     \label{fig:data_collection_web:4}
 \end{figure}
 
-For the UI the selection of the design framework was founded upon Bootstrap \cite{bootstrap}. Bootstrap was chosen due to its user-friendly nature, ease of development, and contemporary design elements. To ensure optimal user experience across diverse devices, rigorous testing was conducted on multiple platforms, encompassing mobile devices, various web browsers, and distinct operating systems.
+For the UI, the selection of the design framework was founded upon Bootstrap \cite{bootstrap}. Bootstrap was chosen due to its user-friendly nature, ease of development, and contemporary design elements. To ensure optimal user experience across diverse devices, testing was conducted on multiple platforms, encompassing mobile devices, various web browsers, and distinct operating systems.
 In Figures \ref{fig:data_collection_web:1},\ref{fig:data_collection_web:2},\ref{fig:data_collection_web:3} and \ref{fig:data_collection_web:4} are reported a few pages as examples of the UI.
 
-The colours used in the palette are material \cite{material}, with modern rounded corners and no sharp edges, keeping the design as minimal as possible. Colours for the highlighted text are a pale shade of red and green, \# F77A7B (\redbg{\hspace{1em}}) and \# 9AF288 (\greenbg{\hspace{1em}}) because their light colours have enough contrast with black that allows to easily read the text underneath the highlighted selection.
+The colours used in the palette are material \cite{material}, with modern rounded corners and no sharp edges, keeping the design as minimal as possible. Colours for the highlighted text are a pale shade of red and green, \# F77A7B (\redbg{\hspace{1em}}) and \# 9AF288 (\greenbg{\hspace{1em}}). These colours were chosen due their light tint and their contrast on black text, allowing the text underneath the highlighted selection to be read easily.
 
 
 \subsection{Data collection}
 \label{cha:methodology-data-collection}
-Subsequently, upon the successful completion and testing of the user interface, the data collection phase was initiated. Prolific, a reputable platform \cite{prolific} for data collection, was employed for this purpose, with the stipulation that participants must be native Italian speakers to undertake the task.
+Subsequently, upon the successful completion of the user interface, the data collection phase was initiated. Prolific, a reputable platform \cite{prolific} for data collection, was employed for this purpose. From the platform native Italian speakers were eligible to undertake the task.
 
-The data collection process started with an initial pilot test, serving the dual purpose of verifying accuracy and identifying any potential procedural errors. The data collection was conducted in multiple batches, remunerating participants at a rate of £12 per hour. To prevent participant fatigue, each batch included a range of 5 to 8 narratives, with an estimated completion time of approximately 20 minutes per task.
+The data collection process started with an initial pilot test, serving the dual purpose of verifying accuracy and identifying any potential procedural errors. The data collection was conducted in multiple batches, remunerating participants at a rate of £12 per hour. To prevent participant fatigue, each batch included a range from 5 to 8 narratives, with an estimated completion time of approximately 20 minutes per batch.
 
-In order to give the same load to each worker, a stratified sampling approach was used on the narrative lengths, giving each worker a similar amount of tokens to read. At the same time, to ensure consistency and elicit agreement among narrators, the initial narrative for each batch was intentionally kept uniform and shorter in length compared to subsequent narratives. This approach was employed both to foster a consensus among narrators regarding their elicitation topics on the same narrative and to serve as a warm-up exercise for crowdworkers. This meant that there were a few narratives with multiple elicitations.
+In order to give roughly the same amount of load to each worker, a stratified sampling approach was used on the narrative lengths, giving each worker a similar amount of tokens to read. At the same time, to ensure consistency and elicit agreement among narrators, the first narrative for each batch was intentionally kept identical for different annotators. This first narrative was also shorter in length compared to subsequent narratives. This approach was employed both to easily verify consensus among narrators regarding their elicitation topics on the same narrative and to serve as a warm-up exercise for the crowdworkers. This meant that there were a few narratives with multiple elicitations.
 
 Following each run, each elicitation was individually inspected and proofread in order to reject any unreliable data, resulting in the exclusion of only one set of answers.
 
@@ -154,7 +154,7 @@ Following each run, each elicitation was individually inspected and proofread in
 \subsection{Data analysis}
 
 \input{assets/table/dataset-data-collection-statistics}
-Following the data collection phase, a comprehensive analysis of the results was undertaken. In total, we amassed 594 narrative elicitations. Again, using Spacy NLP Italian pipeline, we detected that excluding stop words, digits and punctuation marks the elicitations dataset is composed of 1108 unique tokens. On average, each response contained 11.81 tokens, with a standard deviation of 6.42. Additionally, our examination included an assessment of the time taken to review the guidelines, which averaged 401.41 seconds, with a standard deviation of 311.085. Furthermore, the average time taken to complete each narrative elicitation was found to be 98.06 seconds, with a standard deviation of 107.16. Overall the average time required to complete the whole task was found to be 1142.95 seconds, which is slightly below our estimated time of 1200 seconds, which confirmed a correct and fair time estimate. In Table \ref{tab:dataset-data-collection-statistics} are reported the summary of statistics collected. 
+Following the data collection phase, a comprehensive analysis of the elicitations gathered was undertaken. In total, 594 narrative elicitations were collected. Using Spacy NLP Italian pipeline, excluding stop words, digits and punctuation marks, the elicitations dataset is composed of 1110 unique tokens. On average, each response contained 11.81 tokens, with a standard deviation of 6.42. Additionally, the examination included an assessment of the time taken to review the guidelines, which averaged 401.41 seconds, with a standard deviation of 311.085. Furthermore, the average time taken to complete each narrative elicitation was found to be 98.06 seconds, with a standard deviation of 107.16. Overall the average time required to complete the whole task was found to be 1142.95 seconds, which is slightly below the estimated time of 1200 seconds. This confirms a correct and fair time estimate and therefore retribution. In Table \ref{tab:dataset-data-collection-statistics} are reported the summary of statistics computed. 
 
 \begin{figure}[!htbp]
     \centering
@@ -163,9 +163,9 @@ Following the data collection phase, a comprehensive analysis of the results was
     \label{fig:dataset-top-30-answers}
 \end{figure}
 
-In Figure \ref{fig:dataset-top-30-answers} we have the token distribution of the collected elicitations from the dataset. The most prevalent token is \emph{"dispiace"} which occurs disproportionately concerning the other tokens. This observation aligns coherently with the guidelines, which emphasize the importance of conveying empathy, especially within narratives of a sorrowful nature, which constitute the majority of the dataset.
+In Figure \ref{fig:dataset-top-30-answers} the top 30 most frequent tokens from the collected elicitations are shown. The most prevalent token is \emph{"dispiace"} which occurs disproportionately frequently with respect to the other tokens. This observation aligns coherently with the guidelines, which emphasizes the importance of conveying empathy, especially for narratives of a sorrowful nature, which constitute the majority of the dataset.
 
-We also examined the correlation between the time employed by the crowdworkers to complete the task and the length of their narratives. Initially, our hypothesis posited a strong correlation between the token length in the prompt dataset and the time required for completion. We anticipated that users would invest more time in comprehending the provided information, consequently resulting in increased time spent on each narrative elicitation task.
+Additionally, an analysis of the time employed by the crowdworkers to complete the task and the length of their narratives was done. Initially, our hypothesis posited a strong correlation between the length of a narrative and the corresponding time required for elicitation. We anticipated that users would invest more time in comprehending the provided information, consequently resulting in increased time spent on each narrative elicitation.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/dataset-pearson-correlation.png}
@@ -178,47 +178,48 @@ We also examined the correlation between the time employed by the crowdworkers t
         \caption{In Figure is shown the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis). It is possible to notice that most annotators are able to complete each  task within 200 seconds regardless of the narrative length.}
         \label{fig:dataset-overall-correlation-workers}
 \end{figure}
-However, we found this not to be the case, as pictured in Figure \ref{fig:dataset-pearson-correlation} and Figure \ref{fig:dataset-overall-correlation-workers}. To provide a more precise quantification of this observation, we computed the Pearson correlation between the completion time for each narrative and the respective narrative length. The resulting correlation coefficient was found to be 0.16, further supporting the notion that completion time and narrative length do not exhibit a linear relationship.
+However, it was found that this is not to be the case, as pictured in Figure \ref{fig:dataset-pearson-correlation} and Figure \ref{fig:dataset-overall-correlation-workers}. To provide a more precise quantification of this observation, the Pearson correlation coefficient \cite{pearson} was computed between the completion time for each narrative and the respective narrative length. The resulting overall correlation coefficient was found to be 0.16, further supporting the notion that completion time and narrative length do not exhibit a linear relationship.
 
 \begin{figure}[!htbp]
         \includegraphics[width=1\linewidth]{assets//imgs/dataset-high-correlation-workers.png}
         \caption{In Figure is shown the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis) for five workers in particular. For these 4 annotators, there is a high degree of linear correlation between the narrative length and the time required for completion.}
         \label{fig:dataset-high-correlation-workers}
 \end{figure}
-Nevertheless, although this result is true on the whole and for most narratives and crowdworkers, it's important to note that we encountered a few outliers that exhibited a notably strong correlation. As illustrated in Figure \ref{fig:dataset-high-correlation-workers}, these specific users displayed a correlation exceeding 0.90. We attribute this phenomenon to the exceptional speed with which these users crafted their responses, which in turn placed a significant emphasis on the reading time as the dominant factor in their overall response time.
+Nevertheless, although this result is true on the whole data and for most crowdworkers, it is important to note that a few outliers were encountered. These crowdworkers exhibited a notably strong correlation. As illustrated in Figure \ref{fig:dataset-high-correlation-workers}, these specific users displayed a correlation coefficient exceeding 0.90. We attribute this phenomenon to the exceptional speed with which these users crafted their responses, which in turn placed a significant emphasis on the reading time as the dominant factor in their overall response time.
 
-We also found intriguing that in a brief analysis of the elicitations reveals that most of the annotators propose the same inquiries or topic for short narratives. An example is shown in Table \ref{}. We believe this fact is the result of a narrative not having more than one natural direction. This fact will play an important role in the evaluation of LLMs later in this chapter \ref{cha:methodology-personal-narrative-elicitation-results}.
+\input{assets/table/personal-narrative-elicitation-continuations-examples}
+A brief reading of the elicitations for a few examples of narratives, revealed that most of the annotators propose the same inquiries or topic for short narratives. An example is shown in Table \ref{tab:personal-narrative-elicitation-continuations-example}. We believe this fact is the result of a narrative not having more than one or a few natural directions. This fact will play an important role in the evaluation of LLMs, later in chapter 4.
 \section{Large Language Models prompting}
-Now that the crowdsourcing this section we discuss the steps done to prompt Large Language Models. This section is composed of:
+Following the crowdsourcing, this section presents the steps that were performed to prompt large language models. This section is composed of:
 \begin{itemize}
-    \item \textbf{Large Language Models selection}: Selection of the LLMs that would be subjected to our evaluation. This step is made of :
+    \item \textbf{Large language models selection}: Selection of the LLMs that would be subjected to our evaluation. This step is in turn made of:
     \begin{itemize}
         \item \textbf{Initial Italian language comprehension based selection}: First selection conducted on the capabilities of various LLMs to understand the Italian language.
-        \item \textbf{Story Close Test}: Second selection based on the abilities of different LLMs to perform the task of \emph{Story Cloze Test}.
+        \item \textbf{Story close test}: Second selection based on the abilities of different LLMs to perform the task of \emph{Story Cloze Test}.
     \end{itemize}
-    \item \textbf{Personal Narrative Elicitation}: Study of the abilities of personal narratives elicitation across different LLMs:
+    \item \textbf{Personal narrative elicitation}: Study of the abilities of personal narratives elicitation across different LLMs:
     \begin{itemize}
-        \item \textbf{Design and Formulation of Narrative Elicitation Prompts}: We formulated prompts aimed at eliciting narratives from the chosen LLMs.
-        \item \textbf{Experiment}: The experiment is run with the selected prompts across the chosen models.
+        \item \textbf{Design and formulation of narrative elicitation prompts}: We formulated prompts aimed at eliciting narratives from the chosen LLMs.
+        \item \textbf{Experiment}: The experiments are run with the selected prompts across the chosen models.
     \end{itemize}
     \item \textbf{Data analysis}: Results from LLMs elicitation are analyzed with various metrics.
 \end{itemize}
 \subsection{Large Language Model selection}
-To prepare the Large Language Models (LLMs) for our research task, it was imperative to select a subset of LLMs for testing and subsequent human evaluation. Given the significant time and effort required for this evaluation process, it was unfeasible to assess all available LLMs due to the continuously growing number of newly released models.
+To prepare the large language models for our research task, it was imperative to select a small subset of LLMs for testing and subsequent human evaluation. Given the significant time and effort required for the human evaluation process, it was unfeasible to assess all available LLMs due to the continuously growing number of newly released models.
 
-To address this challenge, we opted to focus our attention on well-known LLMs, including ChatGPT, LLama, and similar prominent models. To identify these models, we utilized the HuggingFace Open Source Large Language Models leaderboard \cite{huggingface-leaderboard}, a platform widely recognized for its objective evaluation of LLMs. This evaluation is based on four key benchmarks, conducted using the Eleuther AI Language Model Evaluation Harness \cite{eleuther}, which serves as a comprehensive framework for testing generative language models across a diverse array of evaluation tasks. This framework calculates an aggregate score by averaging the results of these four metrics:
+To address this challenge, the attention was focused on well-known LLMs, including ChatGPT \cite{chatgpt}, LLama \cite{touvron2023llama}, and similar prominent models. To identify good candidate models, we utilized the HuggingFace open source large language models leaderboard \cite{huggingface-leaderboard}, a platform widely recognized for its objective evaluation of LLMs. This evaluation is based on four key benchmarks, conducted using the Eleuther AI language model evaluation harness \cite{eleuther}, which serves as a comprehensive framework for testing generative language models across a diverse array of evaluation tasks. This framework calculates an aggregate score by averaging the results of these four metrics:
 \begin{itemize}
     \item {AI2 Reasoning Challenge (25-shot)} \cite{AI2} - a set of grade-school science questions.
     \item {HellaSwag (10-shot)} \cite{HellaSwag} - a test of commonsense inference, which is easy for humans (~95%) but challenging for SOTA models.
     \item {MMLU (5-shot)} \cite{MMLU} - a test to measure a text model's multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more.
     \item {TruthfulQA (0-shot)} \cite{Truthful} - a test to measure a model’s propensity to reproduce falsehoods commonly found online.
 \end{itemize}
-The most relevant metric was HellaSwag, as it is a metric that is related to commonsense reasoning, which would be required in order to elicit narratives correctly as the elicitation should be related to the narrative with commonsense. Therefore we chose the best models according to this ranking. Alongside those models, we took ChatGPT from their API as it is excluded from the ranking due to its proprietary nature. 
+The most relevant metric for our task was HellaSwag, as it is a metric that is related to commonsense reasoning, which would be required to elicit narratives correctly as the elicitation should be related to the same topics present in the narrative through commonsense. Therefore, the best models according to this ranking were chosen. Alongside those models, ChatGPT models were selected. 
 
 \subsubsection{Initial Italian language comprehension based selection }
-Since our dataset is in Italian, we needed a language model that was able to understand Italian from this initial selection of models. A simple Italian language test was designed with 10 questions. Then, the models' answers to those 10 questions were evaluated by Appropriateness and Correctness. The main tool used to test was the online LLMs Arena \cite{arena}.
+Since the dataset is in Italian, a language model that is able to understand Italian was required. A simple Italian language test was designed with 10 questions. Then, the models' answers to those 10 questions were evaluated by appropriateness and correctness. The main tool used to test was the online LLMs Arena \cite{arena}.
 \subsubsubsection{Prompts and experimental details}
-The prompts used for this analysis are the following:
+The prompts used for this initial analysis are the following:
 \begin{itemize}
     \item The first 5 prompts are designed to evaluate the models' ability to continue narratives:
     \begin{itemize}
