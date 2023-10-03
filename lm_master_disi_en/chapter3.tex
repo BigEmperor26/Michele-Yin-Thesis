@@ -350,11 +350,11 @@ Finally, in order to minimize the computational cost and at the same time reduce
 The exact prompts used during the experiments are reported here for completeness:
 \begin{itemize}
     \item \textbf{Without guidelines}: \\ \emph{Sei una AI che deve fare una domanda su un racconto in maniera tale da ottenere più informazioni su eventi accaduti nel racconto. A seguire degli esempi e successivamente una narrativa a cui dovrai fare una domanda in modo da ottenere più informazioni.\\
-       NARRATIVA: "}\textit{\hlgreen{Oggi è stata una bella giornata. Mia moglie mi ha detto che sta aspettando un bambino!}} Sono super felice! Mi chiedo se sarò un bravo padre. \hlreed{Mio padre non è stato molto presente quando ero un bambino.}"\\
+       NARRATIVA: "}\textit{\highLight[highlightgreen]{Oggi è stata una bella giornata. Mia moglie mi ha detto che sta aspettando un bambino!}} Sono super felice! Mi chiedo se sarò un bravo padre. \hlreed{Mio padre non è stato molto presente quando ero un bambino.}"\\
        DOMANDA: "Sono felice di sentirlo. Sapete già se si tratta di un maschio o di una femmina ?"\\
-       NARRATIVA: "\hlred{Oggi ho litigato con Chiara, lei era arrabbiata con me perché secondo lei non io so fare le cose.}"\\
+       NARRATIVA: "\highLight[highlightred]{Oggi ho litigato con Chiara, lei era arrabbiata con me perché secondo lei non io so fare le cose.}"\\
        DOMANDA: "Oh, mi spiace che tu abbia litigato. Secondo lei che cosa è che non sai fare ?"\\
-       NARRATIVA: "\hlgreen{Oggi è una bella giornata. Ho pattinato sul ghiaccio e poi sono andato al cinema.}"\\
+       NARRATIVA: "\highLight[highlightgreen]{Oggi è una bella giornata. Ho pattinato sul ghiaccio e poi sono andato al cinema.}"\\
        DOMANDA: "Bello sentire che è stata una buona giornata per te. Dove sei stato a pattinare ?"\\
        NARRATIVA: "Pensavo sempre a mio figlio che doveva uscire nel pomeriggio, questo è il motivo che mi ha scatenato l’ansia."\\
        DOMANDA: "Capisco, dove doveva andare tuo figlio?"\\
@@ -384,7 +384,7 @@ The exact prompts used during the experiments are reported here for completeness
        A seguire la tabella 1 che riporta una serie di esempi\\
        Tabella 1, contenente un esempio corretto e molteplici esempi errati di domande per una narrativa. Ciascun esempio è numerato.\\
        NARRATIVA:\\
-       \hlgreen{Oggi è stata una bella giornata. Mia moglie mi ha detto che sta aspettando un bambino!} Sono super felice! Mi chiedo se sarò un bravo padre. \hlreed{Mio padre non è stato molto presente quando ero un bambino.}\\
+       \highLight[highlightgreen]{Oggi è stata una bella giornata. Mia moglie mi ha detto che sta aspettando un bambino!} Sono super felice! Mi chiedo se sarò un bravo padre. \hlreed{Mio padre non è stato molto presente quando ero un bambino.}\\
        \\
        Tabella 1\\
        Esempio	Testo	Valutazione	Spiegazione\\
@@ -395,11 +395,11 @@ The exact prompts used during the experiments are reported here for completeness
        5	Oh capisco, sono felice che tuo padre non sia stato molto presente.	ERRATO	Non mostra empatia\\
        6	Oh, capisco. Per evitare questo problema ti consiglio di spendere molto tempo assieme alla tua famiglia	ERRATO	Mostra un suggerimento\\
        7	Oh capisco, come ti immagini sarà la tua vita da genitore?	ERRATO	Si tratta di una domanda ipotetica\\
-      NARRATIVA: "\hlgreen{Oggi è stata una bella giornata. Mia moglie mi ha detto che sta aspettando un bambino!} Sono super felice! Mi chiedo se sarò un bravo padre. \hlreed{Mio padre non è stato molto presente quando ero un bambino.}"\\
+      NARRATIVA: "\highLight[highlightgreen]{Oggi è stata una bella giornata. Mia moglie mi ha detto che sta aspettando un bambino!} Sono super felice! Mi chiedo se sarò un bravo padre. \hlreed{Mio padre non è stato molto presente quando ero un bambino.}"\\
        DOMANDA: "Sono felice di sentirlo. Sapete già se si tratta di un maschio o di una femmina ?"\\
-       NARRATIVA: "\hlred{Oggi ho litigato con Chiara, lei era arrabbiata con me perché secondo lei non io so fare le cose.}"\\
+       NARRATIVA: "\highLight[highlightred]{Oggi ho litigato con Chiara, lei era arrabbiata con me perché secondo lei non io so fare le cose.}"\\
        DOMANDA: "Oh, mi spiace che tu abbia litigato. Secondo lei che cosa è che non sai fare ?"\\
-       NARRATIVA: "\hlgreen{Oggi è una bella giornata. Ho pattinato sul ghiaccio e poi sono andato al cinema.}"\\
+       NARRATIVA: "\highLight[highlightgreen]{Oggi è una bella giornata. Ho pattinato sul ghiaccio e poi sono andato al cinema.}"\\
        DOMANDA: "Bello sentire che è stata una buona giornata per te. Dove sei stato a pattinare ?"\\
        \\
        NARRATIVA: "Pensavo sempre a mio figlio che doveva uscire nel pomeriggio, questo è il motivo che mi ha scatenato l’ansia."\\
