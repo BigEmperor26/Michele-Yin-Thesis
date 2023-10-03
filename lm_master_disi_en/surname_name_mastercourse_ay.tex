@@ -102,12 +102,12 @@
 % \DeclareRobustCommand{\hlred}[1]{{\sethlcolor{highlightred}\hl{#1}}}
 % \DeclareRobustCommand{\hlgreen}[1]{{\sethlcolor{highlightgreen}\hl{#1}}}
 
-% \newcommand{\redbg}[1]{%
-%   \mbox{\vphantom{#1}\smash{\colorbox{highlightred}{#1}}}%
-% }
-% \newcommand{\greenbg}[1]{%
-%   \mbox{\vphantom{#1}\smash{\colorbox{highlightgreen}{#1}}}%
-% }
+\newcommand{\redbg}[1]{%
+  \mbox{\vphantom{#1}\smash{\colorbox{highlightred}{#1}}}%
+}
+\newcommand{\greenbg}[1]{%
+  \mbox{\vphantom{#1}\smash{\colorbox{highlightgreen}{#1}}}%
+}
 
 %abstract 
 \DeclareFloatFont{small}{\small}% "scriptsize" is defined by floatrow, "tiny" not

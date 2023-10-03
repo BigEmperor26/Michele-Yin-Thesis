@@ -2,7 +2,7 @@
 \label{cha:evaluation}
 % \section{Evaluation}
 
-In this section, we will evaluate the results we obtained from the previous chapter \ref{cha:methodology}. In particular, the results obtained from \ref{cha:methodology-personal-narrative-elicitation} and \ref{cha:methodology-data-collection}. 
+In this section, we will evaluate the results we obtained from the previous chapter \ref{cha:methodology}. In particular, the results obtained from section \ref{cha:methodology-personal-narrative-elicitation} and section \ref{cha:methodology-data-collection}. 
 Previously we have collected a dataset of narratives, for which elicitations were collected both through crowdsourcing and LLM prompting.
 Two detailed analyses were conducted on both the crowdsourcing and LLM-generated data. After that, we determined that the best results were achieved through the experimental setup with guidelines, without colour information with 5-shot examples. 
 From this experimental setup, we chose 4 models to apply human evaluation:
@@ -27,6 +27,7 @@ In order to prevent annotation fatigue, we split the narratives into batches. Ea
 \subsection{Results}
 Initially, we computed the Fleiss-Kappa \cite{fleiss} metric for the 5 narratives contained in the first batch as soon as that annotation task was completed. This allowed us to determine that there were no particular issues in the annotators' comprehension of the guidelines for the human evaluation protocol.
 \input{assets/table/human-evaluation-fleiss-kappa}
+
 Afterwards, we continued to evaluate the Fleiss-Kappa \cite{fleiss} agreement metric for both individual batches and overall metrics. In Table \ref{tab:human-evaluation-fleiss-kappa} are reported the results that were obtained. We observe that most of the annotators have a high score on all metrics, except for Correctness. Upon further investigation, we found that the low score is due to the fact that the Fleiss-Kappa metric also accounts for the distributions of the annotations labels. Since most models have correct answers, the very few instances of not correct values heavily penalize the metric.
 \input{assets/table/human-evaluation-overlap}
 In order to solve this issue, we decided to compute the overlap, which accounts for how many answers are shared across annotators. In Table \ref{tab:human-evaluation-overlap} are shown the percent of overlap. This metric did show that in fact, the annotators agree on correctness with a similar ratio to the other metrics measured. 
