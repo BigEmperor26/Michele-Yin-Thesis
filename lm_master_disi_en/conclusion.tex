@@ -7,7 +7,7 @@ Unfortunately, the other models tested and other prompts did not reach such perf
     \item Many LLMs suffer from the presence of non-text characters, such as \emph{\textbackslash n} or \emph{*}. Although these characters were automatically removed using pattern-matching techniques, this solution is not ideal. Inserting the outputs of the models into a machine learning based pipeline that automatically detects non-textual characters and removes them would likely be a better solution.
     \item Some models recurrently produce either blank or non-valid characters as output. Using a machine learning pipeline to detect invalid outputs and re-prompt the model with a different random seed would extremely likely solve the issue.
     \item We find that using non-text-based characters, such as brackets \emph{"["},\emph{"]"} does significantly inhibit the performances of the tested models, except for OpenAI models. This is likely due to the fact that smaller open-source models are not trained with special characters and therefore are very likely to confuse text.
-    \item Large Language Models do have some significant issues in their abilities to understand and follow topics with commonsense reasoning. It is possible that using different prompts that specify to apply to either commonsense or perform the solution one step at a time may result in better results, in a similar way to what is possible to achieve with Chain of Thoughts \ref{wei2023chainofthought}, but that is outside the scope of this thesis. We suggest that their poor ability to understand common sense may be related to their issues with the Italian language, but the evidence is currently inconclusive.
+    \item Large Language Models do have some significant issues in their abilities to understand and follow topics with commonsense reasoning. It is possible that using different prompts that specify to apply to either commonsense or perform the solution one step at a time may result in better results, in a similar way to what is possible to achieve with Chain of Thoughts \cite{wei2023chainofthought}, but that is outside the scope of this thesis. We suggest that their poor ability to understand common sense may be related to their issues with the Italian language, but the evidence is currently inconclusive.
     \item Some LLMs have issues understanding the Italian language. This issue could be easily fixed by fine-tuning the models with an Italian dataset. However, LLMs may still lapse into English, as shown by Fauno 13B.
 \end{itemize}
 It is possible that all issues mentioned above could be solved or mitigated by fine-tuning on our custom narratives Italian dataset.
@@ -17,6 +17,9 @@ Regarding the performance discrepancy of ChatGPT 3.5 turbo and other open-source
     \item The size differences, as ChatGPT 3.5 has 175B parameters \cite{chatgpt-parameters} whereas the open-source models tested range from 7B to 40B parameters.
     \item It is very likely that OpenAI API access to their models has a built-in pipeline which includes a post-processing step in order to clean up the data.
 \end{enumerate}
+
+
+From the human evaluation, we also found that Wizard Vicuna 13B was surprisingly good considering the small size of the model and the lack of a dedicated Italian language fine-tuning.
 
 We do recognize, however, one critical aspect of our investigation is the small size of the human evaluation. Due to time constraints, we could not sample all narratives across all models, and therefore we limited our comparison with the test set of 57 narratives. Furthermore, our human evaluation has a sample size of 3 people. 
 
