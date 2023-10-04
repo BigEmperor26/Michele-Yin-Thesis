@@ -1,25 +1,26 @@
 \chapter{Introduction}
 \label{cha:intro}
 %[INTRODUCE TOPIC] and [Background] 
-A personal narrative (PN) can be defined as a recollection of an event or connected sequence of events the narrator has been part of, as an active or passive participant. Examples of PNs include personal diaries, short notes, and travelogues in digital form (speech and/or text). Compared to other text genres such as news and microblogs, spoken PNs are particularly challenging because the structure of the narrative could be complex, involving multiple sub-events and characters as well as thoughts and associated emotions perceived by the narrator.
+Personal narratives are a compelling form of storytelling, representing the recollections of events or connected sequences of events in which the narrator has played an active or passive role. These narratives, often intimate and reflective, find their expression in various mediums, from handwritten diaries to digital travelogues, encompassing both speech and text. The power of personal narratives lies in their ability to convey individual experiences, emotions, and perspectives, making them a rich source of insight into the human condition \cite{}. 
 
-Gathering personal narratives can be hard due to issues with ... cite{} therefore many elicitation techniques exist.
+The process of gathering personal narratives, however, is not a straightforward endeavor. It goes beyond merely asking the right questions; it requires a nuanced approach that involves empathetic listening and allowing the storyteller to shape their own account [13]. This delicate interplay between interviewer and interviewee underscores the complexity of capturing authentic personal narratives.
 
-Many Large Language Models have obtained impressive results in a large variety of fields and tasks \cite{bubeck2023sparks}.
+In recent years, large language models (LLMs) have emerged as a transformative force in the realm of artificial intelligence. These models, exemplified by their state-of-the-art language generation capabilities, have achieved remarkable success in a wide range of applications and domains, including natural language understanding and generation, machine translation, and even human-computer interaction [6]. Their capacity to comprehend and generate human-like text has ignited a profound question: Can LLMs be harnessed to elicit personal narratives effectively?
 
-Due to their abilities to perform well in various areas, we pose the query of whether Large Language Models (LLMS) can be used to elicit personal narratives. 
+This thesis embarks on a journey to explore the feasibility of employing LLMs as facilitators in the elicitation of personal narratives. Our primary objective is to investigate whether these models can be prompted to engage in meaningful interactions that lead to the elicitation of personal narratives with depth and authenticity. To achieve this, we introduce a novel task of personal narrative elicitation and curate a unique dataset tailored to this purpose.
 
-This thesis presents a study on the feasibility of using LLMs to elicit personal narratives. Our main goal is to prompt LLMs to elicit personal narratives effectively. In order to do this, we define a new task of \emph{personal narrative elicitation} on a new dataset. To assess their performances, we compare the results gathered from LLM prompting to human crowdsourced elicitations on the same narratives. This evaluation is done through both automatic metrics and human evaluation. % \cite{}. 
+In assessing the performance of LLMs in this task, we draw comparisons with human crowdsourced elicitation efforts targeting the same narratives. This evaluation is multifaceted, involving the application of automatic metrics as well as human evaluation. By utilizing both quantitative and qualitative measures, we aim to gain a comprehensive understanding of the LLMs' capabilities in the domain of personal narrative elicitation.
 
+The results of our human evaluation offer intriguing insights, suggesting that certain LLMs have the potential to attain performance levels on par with those of human crowdworkers in the specialized task of personal narrative elicitation. This inquiry into the intersection of artificial intelligence and personal storytelling holds promise not only for researchers and practitioners but also for the broader appreciation of how technology can enhance our understanding of human experiences.
 
-Similar tasks are \emph{story cloze test} \cite{mostafazadeh2016corpus} where a context of 4 sentences is used and the model is tasked to predict the final 5th sentence, but as far as our literature review, there are no specific applications for eliciting personal narratives. Although both story cloze test and eliciting personal narratives share the requirements of understanding both language and commonsense, they also have a few key distinctions. In particular:
-\begin{itemize}
-    \item  Eliciting a narrative implies the comprehension of two people in the narration, with one person as the narrator and the other as the listener. Compare this to the story cloze test there is only one story without other roles.
-    \item  Eliciting requires a correct understanding of the context to propose appropriate topics that are both relevant and natural.
-    \item Eliciting requires understanding of concepts such as empathy, as the narrative may be of a sorrowful or joyful nature and it is required to show empathy to the narrator.
-    \item Narratives may not always use correct language syntax and grammar.
-    \item Narratives may be incoherent and/or not follow a clear order of events. It is up to the listener to piece together these inconsistencies and come to an understanding of the topic to elicit correctly.
-\end{itemize}
+% Similar tasks are \emph{story cloze test} \cite{mostafazadeh2016corpus} where a context of 4 sentences is used and the model is tasked to predict the final 5th sentence, but as far as our literature review, there are no specific applications for eliciting personal narratives. Although both story cloze test and eliciting personal narratives share the requirements of understanding both language and commonsense, they also have a few key distinctions. In particular:
+% \begin{itemize}
+%     \item  Eliciting a narrative implies the comprehension of two people in the narration, with one person as the narrator and the other as the listener. Compare this to the story cloze test there is only one story without other roles.
+%     \item  Eliciting requires a correct understanding of the context to propose appropriate topics that are both relevant and natural.
+%     \item Eliciting requires understanding of concepts such as empathy, as the narrative may be of a sorrowful or joyful nature and it is required to show empathy to the narrator.
+%     \item Narratives may not always use correct language syntax and grammar.
+%     \item Narratives may be incoherent and/or not follow a clear order of events. It is up to the listener to piece together these inconsistencies and come to an understanding of the topic to elicit correctly.
+% \end{itemize}
 
 Our human evaluation shows that at least for some models, it is possible to reach the performance of human crowdworkers for the task of personal narrative elicitation.
 % [GOALS]
@@ -78,7 +79,7 @@ Our human evaluation shows that at least for some models, it is possible to reac
 %     \item Conclusion: conclusions are drawn.
 % \end{itemize}
 
-Our findings suggest that at least in some cases, LLMs can match the performance of a human crowdworker for the task of personal narrative elicitation.
+% Our findings suggest that at least in some cases, LLMs can match the performance of a human crowdworker for the task of personal narrative elicitation.
 
 % \section{Large Language Models}
 

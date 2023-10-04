@@ -457,30 +457,34 @@ Null answers, i.e, answers that contain only non-text based characters were more
 A comparison of the models' token distributions against the reference human distribution was also made. In this case, the Wasserstein distance \cite{wasserstein} was used as is it a common divergence metric. In Table \ref{tab:personal-narrative-elicitation-wasserstein} are reported the metrics calculated. Unfortunately, this coarse approach was unable to highlight real differences, and for most models, their distribution is very similar to the reference human distributions. Falcon models mark an exception, as their divergence is quite high. Deeper inspection reveals that indeed their distributions do not match at all the human distributions. 
 \begin{figure}[!htbp]
     \centering
+    \captionsetup[subfigure]{oneside,margin={0cm,2cm}}%
     \begin{subfigure}[t]{0.25\textwidth}
         \centering
-        \captionsetup{width=.8\linewidth}%
+        % [subfigure]}
+        %,width=1\linewidth
         \includegraphics[height=18cm]{assets/imgs/dataset-test-set-top-50-answers-vertical.png}
-        \subcaption[]{This Figure reports the top 50 most frequent tokens in the human crowdsourced elicitations.}
+        \caption{This Figure reports the top 50 most frequent tokens in the human crowdsourced elicitations.}
         \label{sub:persona-narrative-elicitation-comparison-distribution-human}
         % \includegraphics[height=10cm]{assets/imgs/tokens-vertical/token_distribution_no_color_no_guidelines_0_shot_mpt-7b.png}
     \end{subfigure}
     \hspace{-1.5cm}
+    \captionsetup[subfigure]{oneside,margin={0cm,0cm}}
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
-        \captionsetup{width=.8\linewidth}%
+        % \captionsetup{width=1\linewidth}%
         % \includegraphics[width=1\textwidth]{assets/imgs/dataset-test-set-top-30-answers-vertical.png}
         \includegraphics[height=18cm]{assets/imgs/tokens-vertical/no_color/no_guidelines/0_shot/token_distribution_no_color_no_guidelines_0_shot_falcon-7b.png}
-        \subcaption[]{This Figure reports the top 50 most frequent tokens from the Falcon 7B model, prompted with no colour information, without guidelines and with 0 examples.}
+        \caption{This Figure reports the top 50 most frequent tokens from the Falcon 7B model, prompted with no colour information, without guidelines and with 0 examples.}
         \label{sub:persona-narrative-elicitation-comparison-distribution-falcon}
     \end{subfigure}
-    \hspace{-1.5cm}
+    \hspace{-2cm}
+    \captionsetup[subfigure]{oneside,margin={2.5cm,0cm}}
     \begin{subfigure}[t]{0.3\textwidth}
         \centering
-        \captionsetup{width=0.8\linewidth}%
+        % \captionsetup{justification=raggedrigh, width=1\linewidth}%
         % \includegraphics[width=1\textwidth]{assets/imgs/dataset-test-set-top-30-answers-vertical.png}
         \includegraphics[height=18cm]{assets/imgs/tokens-vertical/with_color/with_guidelines/5_shot/token_distribution_with_color_with_guidelines_5_shot_gpt-4.png}
-        \subcaption[]{This Figure reports the top 50 most frequent tokens from the ChatGPT 4 model, prompted with colour information, with guidelines and with 5 examples.}
+        \caption{This Figure reports the top 50 most frequent tokens from the ChatGPT 4 model, prompted with colour information, with guidelines and with 5 examples.}
             \label{sub:persona-narrative-elicitation-comparison-distribution-gpt-4}
     \end{subfigure}
     % \begin{subfigure}[b]{1\textwidth}
