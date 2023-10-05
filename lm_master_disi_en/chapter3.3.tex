@@ -1,7 +1,7 @@
 \section{Large Language Models prompting}
 Following the crowdsourcing, this section presents the steps that were performed to prompt large language models.
 %  This section is composed of:
-\begin{itemize}
+% \begin{itemize}
     % \item \textbf{Large language models selection}: Selection of the LLMs that would be subjected to our evaluation. This step is in turn made of:
     % \begin{itemize}
     %     \item \textbf{Initial Italian language comprehension based selection}: First selection conducted on the capabilities of various LLMs to understand the Italian language.
@@ -13,7 +13,7 @@ Following the crowdsourcing, this section presents the steps that were performed
     %     \item \textbf{Experiment}: The experiments are run with the selected prompts across the chosen models.
     % \end{itemize}
     % \item \textbf{Data analysis}: Results from LLMs elicitation are analyzed with various metrics.
-\end{itemize}
+% \end{itemize}
 \subsection{Large Language Model selection}
 To prepare the large language models for our research task, selecting a small subset of LLMs for testing and subsequent human evaluation was imperative. Given the significant time and effort required for the human evaluation process, it was unfeasible to assess all available LLMs due to the continuously growing number of newly released models.
 
@@ -113,8 +113,8 @@ This experimental setup was applied to this selection of models:
     \item   ChatGPT-4 \cite{openai2023gpt4}
     \item   mosaicml/mpt-7b \cite{mpt7b}
     \item   mosaicml/mpt-30b-chat \cite{mpt30b}
-    \item   lmsys/vicuna-13b-v1.3 \cite{touvron2023llama}
-    \item   lmsys/vicuna-33b-v1.3 \cite{touvron2023llama}
+    \item   lmsys/vicuna-13b-v1.3 \cite{touvronllama}
+    \item   lmsys/vicuna-33b-v1.3 \cite{touvronllama}
     \item   TheBloke/Wizard-Vicuna-13B-Uncensored-HF \cite{wizard-vicuna}
 \end{itemize}
 These models were chosen because they provided a broad scope, considering two different sizes of the same architecture when available. We had also planned to test both the Guanaco family of models and Fauno 13B but we were unable to test it due to issues with the HuggingFace implementations. Similar issues prevented us from running the experiments with other non-previously tested models as well, such as LLama and others.
@@ -156,8 +156,8 @@ As discussed in the previous section, unfortunately, the previous test could not
     \item   ChatGPT-4 \cite{openai2023gpt4}
     \item   mosaicml/mpt-7b \cite{mpt7b}
     \item   mosaicml/mpt-30b-chat \cite{mpt30b}
-    \item   lmsys/vicuna-13b-v1.3 \cite{touvron2023llama}
-    \item   lmsys/vicuna-33b-v1.3 \cite{touvron2023llama}
+    \item   lmsys/vicuna-13b-v1.3 \cite{touvronllama}
+    \item   lmsys/vicuna-33b-v1.3 \cite{touvronllama}
     \item   TheBloke/Wizard-Vicuna-13B-Uncensored-HF \cite{wizard-vicuna}
 \end{itemize}
 As a continuation of the initial results obtained in the previous section, a decision to structure the experiments with a deeper focus on the effect of the number of examples given to each model was made. In this case, tests for 0-shot, 1-shot, 3-shot and 5-shot prompts were designed with 0,1,3, and 5 examples, respectively. These 5 examples are taken from the examples in the guidelines that the users read and are not included in the narratives. Therefore, those examples do not falsify the data. Similarly, it was deemed interesting to investigate the effect of the guidelines by testing models according to prompts with and without guidelines. The goal was to test whether LLMs can understand guidelines and adapt their responses accordingly. Lastly, as the guidelines require colour information because the valence information is highlighted in either green or red, for positive and negative emotions, respectively, a decision to add a third direction of the investigation was made. This third direction consists on replacing the coloured highlighted text with parenthesis encapsulated text with a specific format.
