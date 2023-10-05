@@ -13,7 +13,7 @@ These narratives should be elicited through the interview technique, which means
 
 To achieve this objective, we introduce the novel task of eliciting continuations of personal narratives, which is paired with a new curated dataset tailored to this purpose. This task consists of a narrative which is given as input. The model should prompt questions to elicit the continuation of the narrative, focusing on topics mentioned in the narrative and conveying the feeling of active and interested listening to the narrator.
 
-This dataset was derived from the mental health dataset presented in \cite{coadapt}. The original data was not in a narrative format, so it was manually reviewed to obtain cohesive narratives. As reference points, human crowdsourced elicitations for continuation of the narratives presented in this dataset were also collected through Prolific \cite{prolific}. Notably, like the original data, this dataset is in Italian. After this dataset preparation, an initial test on the LLMs abilities to understand the Italian language was conducted to assess if a model can understand Italian prompts quickly. This revealed that many open-source LLMs do not correctly understand the Italian language due to the significant bias in English as the most widespread language in the world \cite{spanish-speakers}. The few models that could answer in Italian were subjected to the \emph{story cloze test} \cite{mostafazadeh2016corpus} because this task requires a correct understanding of commonsense knowledge to predict the story closure correctly. This commonsense inference and reasoning ability is a proxy for the key listening requirement in eliciting continuations of personal narratives. 
+This dataset was derived from the mental health dataset presented in \cite{coadapt}. The original data was not in a narrative format, so it was manually reviewed to obtain cohesive narratives. As reference points, human crowdsourced eliciting questions for continuation of the narratives presented in this dataset were also collected through Prolific \cite{prolific}. Notably, like the original data, this dataset is in Italian. After this dataset preparation, an initial test on the LLMs abilities to understand the Italian language was conducted to assess if a model can understand Italian prompts quickly. This revealed that many open-source LLMs do not correctly understand the Italian language due to the significant bias in English as the most widespread language in the world \cite{spanish-speakers}. The few models that could answer in Italian were subjected to the \emph{story cloze test} \cite{mostafazadeh2016corpus} because this task requires a correct understanding of commonsense knowledge to predict the story closure correctly. This commonsense inference and reasoning ability is a proxy for the key listening requirement in eliciting continuations of personal narratives. 
 
 Finally, we proceeded with eliciting continuations of personal narratives, analysing the effect of different prompts. In assessing their performances, we draw comparisons with the human crowdsourced elicitation for continuation targeting the same narratives. This evaluation involves the use of automatic metrics as well as human evaluation. By utilising quantitative and qualitative measures, we aim to comprehensively understand the capabilities of large language models in eliciting continuations of personal narratives. The results of our evaluation suggest that with some prompts, specific large language models have the potential to attain performance levels on par with those of human crowdworkers in the task of eliciting continuations of personal narratives. 
 % Similar tasks are \emph{story cloze test} \cite{mostafazadeh2016corpus} where a context of 4 sentences is used and the model is tasked to predict the final 5th sentence, but as far as our literature review, there are no specific applications for eliciting personal narratives. Although both story cloze test and eliciting personal narratives share the requirements of understanding both language and commonsense, they also have a few key distinctions. In particular:
@@ -54,7 +54,7 @@ Finally, we proceeded with eliciting continuations of personal narratives, analy
 % In this thesis is presented a collection of the following steps that were necessary to reach our goal:
 % \begin{itemize}
 %     \item New dataset collection. Since there is no existing task of personal narrative elicitation we need to define this task with a new dataset.
-%     \item Crowdsourcing. As our reference points, we gathered elicitations for the new dataset through crowdsourcing.
+%     \item Crowdsourcing. As our reference points, we gathered eliciting questions for the new dataset through crowdsourcing.
 %     \item LLMs prompting. A selection of LLMs was prompted for the task of eliciting personal narratives. 
 %     \item Evaluation. Both automatic and human metrics are used to evaluate the obtained results
 % \end{itemize}
@@ -75,10 +75,10 @@ Finally, we proceeded with eliciting continuations of personal narratives, analy
 %     \item Literature review
 %     \item \begin{itemize}
 %         \item Dataset: we prepare a new dataset of personal narratives.
-%         \item Crowdsourcing: elicitations for the personal narratives within the dataset are crowdsourced.
+%         \item Crowdsourcing: eliciting questions for the personal narratives within the dataset are crowdsourced.
 %         \item Large Language Models Prompting: a selection of large language models is prompted to elicit the same set of personal narratives.
 %     \end{itemize}
-%     \item Evaluation: both automatic metrics and human evaluation are applied to both the crowdsourced and LLMs generated elicitations. 
+%     \item Evaluation: both automatic metrics and human evaluation are applied to both the crowdsourced and LLMs generated eliciting questions. 
 %     \item Conclusion: conclusions are drawn.
 % \end{itemize}
 

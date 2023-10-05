@@ -3,9 +3,9 @@
 % \section{Evaluation}
 
 In this section, an evaluation of the results obtained from the previous chapter \ref{cha:methodology} is conducted. In particular, the results obtained from section \ref{cha:methodology-personal-narrative-elicitation} and section \ref{cha:methodology-data-collection}. 
-Previously, a dataset of narratives was crafted, for which elicitations were collected both through crowdsourcing and LLM prompting.
+Previously, a dataset of narratives was crafted, for which eliciting questions were collected both through crowdsourcing and LLM prompting.
 Two detailed analyses were conducted on both the crowdsourcing and LLM-generated data in sections \ref{cha:methodology-crowdsourcing-data-analysis} \ref{cha:methodology-personal-narrative-elicitation-results}. After that, it was determined that the best results were achieved through the experimental setup with guidelines, without colour information with 5-shot examples. 
-From this experimental setup, four models elicitations were chosen to apply human evaluation:
+From this experimental setup, four models eliciting questions were chosen to apply human evaluation:
 \begin{itemize}
     \item Falcon 7B. This model has subpar performance, and it is going to be the lower bound.
     \item ChatGPT 3.5 turbo. Although ChatGPT 4 should perform better, we ultimately opted for ChatGPT 3.5 turbo as it displayed better behaviour with the increasing number of examples. Furthermore, its token distribution is slightly more similar to the human reference data. With all the analysis done so far, this model is expected to perform extremely well.
@@ -14,7 +14,7 @@ From this experimental setup, four models elicitations were chosen to apply huma
 \end{itemize}
 Alongside those four models, a fifth data point was added:
 \begin{itemize}
-    \item Human crowdsourced elicitations. This data is going to serve as the upper bound.
+    \item Human crowdsourced eliciting questions. This data is going to serve as the upper bound.
 \end{itemize}
 The human evaluation is done according to the human evaluation protocol presented in \cite{mousavi-etal-2022-evaluation}. It was decided to apply all 4 metrics presented in the human evaluation protocol: correctness, appropriateness, contextualisation and listening. Aside from correctness and appropriateness, which are derived from language and commonsense, we are interested in models that p
 perform well in contextualisation and listening in particular, due to the task being eliciting continuation of personal narratives. Compared to the original human evaluation protocol there is one key difference, which lies in the fact that the evaluation is being applied to narratives instead of dialogues. 
@@ -24,7 +24,7 @@ For the actual evaluation process, the same UI presented in the human evaluation
 Three workers were gathered, and they were assigned narratives to be evaluated.  
 In order to prevent annotation fatigue, the narratives were split into batches. Each batch was done daily with an estimated annotation time of 40 minutes. Each of these batches contained a number from five to eight narratives. Each narrative contained the selected five elicitation questions: four from the models and the human elicitation. In the batches, the first one acted as a training example. For this reason, all narratives for all annotators were exactly the same in this initial batch. This fact allowed the computation of agreement metrics and determined if issues in the annotators' comprehension of the task were present. After this initial training task, the next batch contained only two narratives in common and successive batches only contained one narrative in common. In total four batches were evaluated.
 
-Overall, this meant that of the 57 narratives, 285 total elicitations were annotated. Of those narratives, nine were evaluated by all three annotators, whereas the remaining 48 narratives were annotated by only one annotator. Considering this redundancy and the fact that there are four metrics for each elicitation, a total of 1500 data points were collected.
+Overall, this meant that of the 57 narratives, 285 total eliciting questions were annotated. Of those narratives, nine were evaluated by all three annotators, whereas the remaining 48 narratives were annotated by only one annotator. Considering this redundancy and the fact that there are four metrics for each elicitation, a total of 1500 data points were collected.
 
 
 \subsection{Results}
@@ -46,7 +46,7 @@ Reported in Table \ref{tab:human-evaluation-fleiss-kappa-pairs} and Table \ref{t
 Overall it was found that the annotators do mostly agree on their annotations.
 
 \input{assets/table/human-evaluation-scores}
-With the notion that all annotators do mostly agree, with those numbers, a scoring system was implemented. The scores were computed for each model, counting the times the models' elicitaons were evaluated as correct, appropriate, contextualised, and listening. The same scoring system was applied for incorrect, inappropriate, contextualised, not listening, and unsure labels. In the case of elicitations annotated by all 3 annotators, the majority vote was taken as valid. These results are shown in Table \ref{tab:human-evaluation-scores}.
+With the notion that all annotators do mostly agree, with those numbers, a scoring system was implemented. The scores were computed for each model, counting the times the models' elicitaons were evaluated as correct, appropriate, contextualised, and listening. The same scoring system was applied for incorrect, inappropriate, contextualised, not listening, and unsure labels. In the case of eliciting questions annotated by all 3 annotators, the majority vote was taken as valid. These results are shown in Table \ref{tab:human-evaluation-scores}.
 Interestingly, only ChatGPT 3.5 turbo follows very similar characteristics to humans. All other models are significantly subpar compared to human annotators. 
 
 % add examples of subjunctive
@@ -55,7 +55,7 @@ Interestingly, only ChatGPT 3.5 turbo follows very similar characteristics to hu
 It is not surprising to see that human data is not 100 in all categories, because it was collected through crowdsourcing, and neither the guidelines nor the inspection considered the criteria present in the human evaluation protocol. 
 % However, there is one metric that is mentioned which is correctness. Considering the examples that are deemed incorrect, as shown in Tables \ref{tab:human-evaluation-examples} and \ref{tab:human-evaluation-examples-1} we have to consider the subtleties of the Italian language and the subjunctive. This problem is experienced by both human annotators and ChatGPT 3. 
 
-In the Tables \ref{tab:human-evaluation-examples} and \ref{tab:human-evaluation-examples-1} are reported two examples of narratives and respective elicitations, with their evaluations. It is possible to notice that ChatGPT 3 performs extremely well, whereas Falcon 7B is mostly incoherent. Wizard Vicuna is a surprisingly good model in the examples reported, although it does sometimes have issues with the logical coherence of its output to the narrative, which results in low listening scores. Vicuna 33B has similar issues, with occasional narratives that are incohesive. 
+In the Tables \ref{tab:human-evaluation-examples} and \ref{tab:human-evaluation-examples-1} are reported two examples of narratives and respective eliciting questions, with their evaluations. It is possible to notice that ChatGPT 3 performs extremely well, whereas Falcon 7B is mostly incoherent. Wizard Vicuna is a surprisingly good model in the examples reported, although it does sometimes have issues with the logical coherence of its output to the narrative, which results in low listening scores. Vicuna 33B has similar issues, with occasional narratives that are incohesive. 
 
-From these results, we can conclude that ChatGPT 3.5 turbo presents qualities that are very close to human, and human annotators do not evaluate its results differently from human real elicitations. 
+From these results, we can conclude that ChatGPT 3.5 turbo presents qualities that are very close to human, and human annotators do not evaluate its results differently from human real eliciting questions. 
 

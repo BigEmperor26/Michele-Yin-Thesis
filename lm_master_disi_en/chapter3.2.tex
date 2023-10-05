@@ -6,7 +6,7 @@ This section reports a concise overview of the experimental setup for crowdsourc
 %     \item \textbf{Guidelines design}: Drafting guidelines tailored for the crowdsourcing component of the study and iteratively reviewing them until satisfactory.
 %     \item \textbf{User Interface (UI) Design for Crowdsourcing}: Creation of a user-friendly interface incorporating the guidelines previously drafted, ensuring a seamless user experience.
 %     \item \textbf{Data collection}: Engaging human crowdworkers to participate in the data collection process, and collection of responses to our narrative prompts.
-%     \item \textbf{Data analysis}: A comprehensive data analysis on the participants' elicitations was conducted.
+%     \item \textbf{Data analysis}: A comprehensive data analysis on the participants' eliciting questions was conducted.
 % \end{itemize}
 \subsection{Guidelines design}
 The formulation of effective guidelines was a fundamental requirement. This step necessitated an iterative process involving the creation of drafts, subsequent reviews, and pilot tests of guidelines to gauge their effectiveness. This iterative cycle was repeated until the guidelines reached a level of satisfaction.
@@ -38,7 +38,7 @@ A brief recap of the desired properties of the elicitation is reported in Table 
 %     \item Hypothetical questions or scenarios.
 %     \item Questions that move the focus of the conversation away from the narrator.
 % \end{itemize}
-The table reports a few scenarios, such as requests for personal opinions or hypothetical scenarios, which should be avoided because, in the internal testing, it was found that those types of questions may induce the narrator to start a new narrative with a different set of events. This is not desirable as the goal of the elicitations is to explore the current narrative and not to start a new one.
+The table reports a few scenarios, such as requests for personal opinions or hypothetical scenarios, which should be avoided because, in the internal testing, it was found that those types of questions may induce the narrator to start a new narrative with a different set of events. This is not desirable as the goal of the eliciting questions is to explore the current narrative and not to start a new one.
 \input{assets/table/dataset-crowdsourcing-guidelines}
 Table \ref{tab:dataset-crowdsourcing-guidelines} reports examples of good and bad elicitation questions for a given narrative. 
 % Those examples were part of the guidelines that were given to the crowdworkers.
@@ -91,16 +91,16 @@ Following each run, each elicitation question was individually inspected and pro
 \label{cha:methodology-crowdsourcing-data-analysis}
 
 \input{assets/table/dataset-data-collection-statistics}
-Following the data collection phase, a comprehensive analysis of the elicitations gathered was undertaken. In total, 594 narrative elicitations were collected. Using Spacy, the elicitations dataset is composed of 1110 unique tokens. On average, each response contained 11.81 tokens, with a standard deviation of 6.42. Overall, the average time required to complete the whole task was found to be 1143 seconds, which is slightly below the estimated time of 1200 seconds. This confirms a correct and fair time estimate and, therefore, retribution. In Table \ref{tab:dataset-data-collection-statistics} are reported the summary of statistics computed. 
+Following the data collection phase, a comprehensive analysis of the eliciting questions gathered was undertaken. In total, 594 narrative eliciting questions were collected. Using Spacy, the eliciting questions dataset is composed of 1110 unique tokens. On average, each response contained 11.81 tokens, with a standard deviation of 6.42. Overall, the average time required to complete the whole task was found to be 1143 seconds, which is slightly below the estimated time of 1200 seconds. This confirms a correct and fair time estimate and, therefore, retribution. In Table \ref{tab:dataset-data-collection-statistics} are reported the summary of statistics computed. 
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/dataset-top-30-answers.png}
-    \caption{In Figure is shown the top 30 most frequent tokens present in the crowdsourced elicitations. Notice how tokens such as \emph{``dispiace"} are very common. This aligns with our guidelines of showing empathy for sad narratives. }
+    \caption{In Figure is shown the top 30 most frequent tokens present in the crowdsourced eliciting questions. Notice how tokens such as \emph{``dispiace"} are very common. This aligns with our guidelines of showing empathy for sad narratives. }
     \label{fig:dataset-top-30-answers}
 \end{figure}
 
-In Figure \ref{fig:dataset-top-30-answers} the top 30 most frequent tokens from the collected elicitations are shown. The most prevalent token is \emph{``dispiace"}, which occurs disproportionately frequently with respect to the other tokens. This observation aligns coherently with the guidelines, which emphasise the importance of conveying empathy, especially for narratives of a sorrowful nature, which constitute the majority of the dataset.
+In Figure \ref{fig:dataset-top-30-answers} the top 30 most frequent tokens from the collected eliciting questions are shown. The most prevalent token is \emph{``dispiace"}, which occurs disproportionately frequently with respect to the other tokens. This observation aligns coherently with the guidelines, which emphasise the importance of conveying empathy, especially for narratives of a sorrowful nature, which constitute the majority of the dataset.
 
 Additionally, an analysis of the time employed by the crowdworkers to complete the task and the length of their narratives was done. Initially, our hypothesis posited a strong correlation between the length of a narrative and the corresponding time required for elicitation. We anticipated that users would invest more time comprehending the provided information, resulting in increased time spent on each narrative elicitation.
 \begin{figure}[!htbp]
@@ -125,4 +125,4 @@ However, it was found that this is not to be the case, as pictured in Figure \re
 Nevertheless, although this result is true on the whole data and for most crowdworkers, it is important to note that a few outliers were encountered. These crowdworkers exhibited a notably strong correlation. As illustrated in Figure \ref{fig:dataset-high-correlation-workers}, these specific users displayed a correlation coefficient exceeding 0.90. We attribute this phenomenon to the exceptional speed with which these users crafted their responses, which in turn placed a significant emphasis on the reading time as the dominant factor in their overall response time.
 
 \input{assets/table/personal-narrative-elicitation-continuations-examples}
-A brief reading of the elicitations for a few examples of narratives, revealed that most of the annotators propose the same inquiries or topic for short narratives. An example is shown in Table \ref{tab:personal-narrative-elicitation-continuations-example}. We believe this fact is the result of a narrative not having more than one or a few natural directions.% This fact will play an important role in the evaluation of LLMs, later in chapter 4.
+A brief reading of the eliciting questions for a few examples of narratives, revealed that most of the annotators propose the same inquiries or topic for short narratives. An example is shown in Table \ref{tab:personal-narrative-elicitation-continuations-example}. We believe this fact is the result of a narrative not having more than one or a few natural directions.% This fact will play an important role in the evaluation of LLMs, later in chapter 4.
