@@ -1,6 +1,6 @@
 
 \section{Crowdsourcing}
-In this section is reported a concise overview of the experimental setup for crowdsourcing.
+This section reports a concise overview of the experimental setup for crowdsourcing.
 %  This section is comprised of:
 % \begin{itemize}
 %     \item \textbf{Guidelines design}: Drafting guidelines tailored for the crowdsourcing component of the study and iteratively reviewing them until satisfactory.
@@ -12,10 +12,10 @@ In this section is reported a concise overview of the experimental setup for cro
 The formulation of effective guidelines was a fundamental requirement. This step necessitated an iterative process involving the creation of drafts, subsequent reviews, and pilot tests of guidelines to gauge their effectiveness. This iterative cycle was repeated until the guidelines reached a level of satisfaction.
 \input{assets/table/dataset-coadapt-highlight-examples}
 After finalising the guidelines, the next step involved translating them into a custom web-based user interface (UI) for the data collection process. One key aspect of our guidelines was the inclusion of the valence values from the CoAdapt dataset. 
-A previously mentioned, effective elicitation requires empathy, in particular for sorrowful events. In order to facilitate the crowdworkers in pivoting their questions to emotionally charged events, the valence values were highlighted in the text with the recommendation to focus on those parts of the narrative. In order to represent effectively to the crowdworkers the positive and negative emotions expressed by the valence, it was decided to highlight negative valences in red and positive valences in green. 
+As mentioned, effective elicitation requires empathy, particularly for sorrowful events. In order to facilitate the crowdworkers in pivoting their questions to emotionally charged events, the valence values were highlighted in the text with the recommendation to focus on those parts of the narrative. In order to represent effectively to the crowdworkers the positive and negative emotions expressed by the valence, it was decided to highlight negative valences in red and positive valences in green. 
 
 An illustrative example can be seen in Table \ref{tab:dataset-coadapt-highlight-examples}. These colours were chosen as it is universally accepted that green stands for positive and red for negative. Furthermore, to limit the crowdworkers' cognitive workload, the ECs have not been added.
-
+\input{assets/table/dataset-crowdsourcing-guidelines-properties}
 This task places a large emphasis on the examples included in the guidelines because during a pilot test it was found that many crowdworkers try to complete the task as quickly as possible, giving only a light read to the guidelines and skipping directly to the examples. 
 A brief recap of the desired properties of the elicitation is reported in Table \ref{tab:dataset-crowdsourcing-guidelines-properties}.
 %Initially, the examples that provided were found to be ineffective, as they did not highlight the common issues faced by the crowdworkers. Therefore, after some internal testing, better examples that guide the crowdworkers through typical caveats of the task were devised.
@@ -38,9 +38,9 @@ A brief recap of the desired properties of the elicitation is reported in Table 
 %     \item Hypothetical questions or scenarios.
 %     \item Questions that move the focus of the conversation away from the narrator.
 % \end{itemize}
-The reason why these scenarios should be avoided is because, in the internal testing, it was found that those types of questions may induce the narrator to start a new narrative with a different set of events. This is not desirable as the goal of the elicitation is to explore the current narrative and not to start a new one.
+The table reports a few scenarios, such as requests for personal opinions or hypothetical scenarios, which should be avoided because, in the internal testing, it was found that those types of questions may induce the narrator to start a new narrative with a different set of events. This is not desirable as the goal of the elicitations is to explore the current narrative and not to start a new one.
 \input{assets/table/dataset-crowdsourcing-guidelines}
-Table \ref{tab:dataset-crowdsourcing-guidelines} reports examples of good and bad elicitation for a given narrative. 
+Table \ref{tab:dataset-crowdsourcing-guidelines} reports examples of good and bad elicitation questions for a given narrative. 
 % Those examples were part of the guidelines that were given to the crowdworkers.
 \subsection{User Interface (UI) Design for Crowdsourcing}
 \begin{figure}[!htbp]
@@ -69,8 +69,8 @@ Table \ref{tab:dataset-crowdsourcing-guidelines} reports examples of good and ba
     \label{fig:data_collection_web:4}
 \end{figure}
 
-For the UI, the selection of the design framework was founded upon Bootstrap \cite{bootstrap}. Bootstrap was chosen due to its user-friendly nature, ease of development, and contemporary design elements. To ensure optimal user experience across diverse devices, testing was conducted on multiple platforms, encompassing mobile devices, various web browsers, and distinct operating systems.
-In Figures \ref{fig:data_collection_web:1},\ref{fig:data_collection_web:2},\ref{fig:data_collection_web:3} and \ref{fig:data_collection_web:4} are reported a few pages as examples of the UI.
+For the UI, the selection of the design framework was founded upon Bootstrap \cite{bootstrap}. Bootstrap was chosen due to its user-friendly nature, ease of development, and contemporary design elements. Testing was conducted on multiple platforms, encompassing mobile devices, various web browsers, and distinct operating systems to ensure optimal user experience across diverse devices.
+A few pages of the UI are reported. In Figure \ref{fig:data_collection_web:1} is shown the UI used to convey the guidelines, in Figure \ref{fig:data_collection_web:2} and \ref{fig:data_collection_web:3} are shown the examples that were used as training examples for the users. Finally in Figure \ref{fig:data_collection_web:4} is reported the UI used for the actual data collection.
 
 The colours used in the palette are material \cite{material}, with modern rounded corners and no sharp edges, keeping the design as minimal as possible. Colours for the highlighted text are a pale shade of red and green, \# F77A7B (\redbg{\hspace{1em}}) and \# 9AF288 (\greenbg{\hspace{1em}}). These colours were chosen due their light tint and their contrast on black text, allowing the text underneath the highlighted selection to be read easily.
 
@@ -79,9 +79,9 @@ The colours used in the palette are material \cite{material}, with modern rounde
 \label{cha:methodology-data-collection}
 Subsequently, upon the successful completion of the user interface, the data collection phase was initiated. Prolific, a reputable platform \cite{prolific} for data collection, was employed for this purpose. From the platform native Italian speakers were eligible to undertake the task.
 
-The data collection process started with an initial pilot test, serving the dual purpose of verifying accuracy and identifying any potential procedural errors. The data collection was conducted in multiple batches, remunerating participants at a rate of £12 per hour. To prevent participant fatigue, each batch included a range from 5 to 8 narratives, with an estimated completion time of approximately 20 minutes per batch.
+The data collection process started with an initial pilot test, verifying accuracy and identifying any potential procedural errors. The data collection was conducted in multiple batches, remunerating participants at a rate of £12 per hour. To prevent participant fatigue, each batch included a range from 5 to 8 narratives, with an estimated completion time of approximately 20 minutes per batch.
 
-In order to give roughly the same amount of load to each worker, a stratified sampling approach was used on the narrative lengths, giving each worker a similar amount of tokens to read. At the same time, to ensure consistency and elicit agreement among narrators, the first narrative for each batch was intentionally kept identical for different annotators. This first narrative was also shorter in length compared to subsequent narratives. This approach was employed both to easily verify consensus among narrators regarding their elicitation topics on the same narrative and to serve as a warm-up exercise for the crowdworkers. This meant that there were a few narratives with multiple elicitations.
+In order to give roughly the same amount of load to each worker, a stratified sampling approach was used on the narrative lengths, giving each worker a similar amount of tokens to read. At the same time, to ensure consistency and elicit agreement among narrators, the first narrative for each batch was intentionally kept identical for different annotators. This first narrative was also shorter in length compared to subsequent narratives. This approach was employed to easily verify consensus among narrators regarding their elicitation topics on the same narrative and serve as a warm-up exercise for the crowdworkers. This meant that there were a few narratives with multiple elicitations.
 
 Following each run, each elicitation was individually inspected and proofread in order to reject any unreliable data, resulting in the exclusion of only one set of answers.
 
@@ -91,22 +91,22 @@ Following each run, each elicitation was individually inspected and proofread in
 \label{cha:methodology-crowdsourcing-data-analysis}
 
 \input{assets/table/dataset-data-collection-statistics}
-Following the data collection phase, a comprehensive analysis of the elicitations gathered was undertaken. In total, 594 narrative elicitations were collected. Using Spacy NLP Italian pipeline, excluding stop words, digits and punctuation marks, the elicitations dataset is composed of 1110 unique tokens. On average, each response contained 11.81 tokens, with a standard deviation of 6.42. Additionally, the examination included an assessment of the time taken to review the guidelines, which averaged 401.41 seconds, with a standard deviation of 311.085. Furthermore, the average time taken to complete each narrative elicitation was found to be 98.06 seconds, with a standard deviation of 107.16. Overall the average time required to complete the whole task was found to be 1142.95 seconds, which is slightly below the estimated time of 1200 seconds. This confirms a correct and fair time estimate and therefore retribution. In Table \ref{tab:dataset-data-collection-statistics} are reported the summary of statistics computed. 
+Following the data collection phase, a comprehensive analysis of the elicitations gathered was undertaken. In total, 594 narrative elicitations were collected. Using Spacy, the elicitations dataset is composed of 1110 unique tokens. On average, each response contained 11.81 tokens, with a standard deviation of 6.42. Overall, the average time required to complete the whole task was found to be 1143 seconds, which is slightly below the estimated time of 1200 seconds. This confirms a correct and fair time estimate and, therefore, retribution. In Table \ref{tab:dataset-data-collection-statistics} are reported the summary of statistics computed. 
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/dataset-top-30-answers.png}
-    \caption{In Figure is shown the top 30 most frequent tokens present in the crowdsourced elicitations. Notice how tokens such as \emph{"dispiace"} are very common. This aligns with our guidelines of showing empathy for sad narratives. Computed using Spacy NLP tokenizer. }
+    \caption{In Figure is shown the top 30 most frequent tokens present in the crowdsourced elicitations. Notice how tokens such as \emph{"dispiace"} are very common. This aligns with our guidelines of showing empathy for sad narratives. }
     \label{fig:dataset-top-30-answers}
 \end{figure}
 
-In Figure \ref{fig:dataset-top-30-answers} the top 30 most frequent tokens from the collected elicitations are shown. The most prevalent token is \emph{"dispiace"} which occurs disproportionately frequently with respect to the other tokens. This observation aligns coherently with the guidelines, which emphasizes the importance of conveying empathy, especially for narratives of a sorrowful nature, which constitute the majority of the dataset.
+In Figure \ref{fig:dataset-top-30-answers} the top 30 most frequent tokens from the collected elicitations are shown. The most prevalent token is \emph{"dispiace"}, which occurs disproportionately frequently with respect to the other tokens. This observation aligns coherently with the guidelines, which emphasise the importance of conveying empathy, especially for narratives of a sorrowful nature, which constitute the majority of the dataset.
 
-Additionally, an analysis of the time employed by the crowdworkers to complete the task and the length of their narratives was done. Initially, our hypothesis posited a strong correlation between the length of a narrative and the corresponding time required for elicitation. We anticipated that users would invest more time in comprehending the provided information, consequently resulting in increased time spent on each narrative elicitation.
+Additionally, an analysis of the time employed by the crowdworkers to complete the task and the length of their narratives was done. Initially, our hypothesis posited a strong correlation between the length of a narrative and the corresponding time required for elicitation. We anticipated that users would invest more time comprehending the provided information, resulting in increased time spent on each narrative elicitation.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/dataset-pearson-correlation.png}
-    \caption{In Figure is shown a plot of the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis). The data is very noisy with many outliers, however for most narratives, the completion time is not influenced by the narrative length.}
+    \caption{In Figure is shown a plot of the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis). The data is very noisy with many outliers; however, for most narratives, the narrative length does not influence the completion time.}
     \label{fig:dataset-pearson-correlation}
 \end{figure}
 % \begin{figure}[!htbp]
@@ -115,7 +115,7 @@ Additionally, an analysis of the time employed by the crowdworkers to complete t
 %         \caption{In Figure is shown the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis). It is possible to notice that most annotators are able to complete each  task within 200 seconds regardless of the narrative length.}
 %         \label{fig:dataset-overall-correlation-workers}
 % \end{figure}
-However, it was found that this is not to be the case, as pictured in Figure \ref{fig:dataset-pearson-correlation} and Figure \ref{fig:dataset-overall-correlation-workers}. To provide a more precise quantification of this observation, the Pearson correlation coefficient \cite{pearson} was computed between the completion time for each narrative and the respective narrative length. The resulting overall correlation coefficient was found to be 0.16, further supporting the notion that completion time and narrative length do not exhibit a linear relationship.
+However, it was found that this is not to be the case, as pictured in Figure \ref{fig:dataset-pearson-correlation}. To provide a more precise quantification of this observation, the Pearson correlation coefficient \cite{pearson} was computed between the completion time for each narrative and the respective narrative length. The resulting overall correlation coefficient was found to be 0.16, further supporting the notion that completion time and narrative length do not exhibit a linear relationship. This is likely the result of the human annotators spending time carefully considering their answers after reading the narrative, rather than simply reading the narrative and immediately responding. This is further supported by the fact that the majority of the crowdworkers completed the task within 200 seconds, regardless of the narrative length.
 
 \begin{figure}[!htbp]
         \includegraphics[width=1\linewidth]{assets//imgs/dataset-high-correlation-workers.png}
@@ -126,18 +126,3 @@ Nevertheless, although this result is true on the whole data and for most crowdw
 
 \input{assets/table/personal-narrative-elicitation-continuations-examples}
 A brief reading of the elicitations for a few examples of narratives, revealed that most of the annotators propose the same inquiries or topic for short narratives. An example is shown in Table \ref{tab:personal-narrative-elicitation-continuations-example}. We believe this fact is the result of a narrative not having more than one or a few natural directions.% This fact will play an important role in the evaluation of LLMs, later in chapter 4.
-\section{Large Language Models prompting}
-Following the crowdsourcing, this section presents the steps that were performed to prompt large language models. This section is composed of:
-\begin{itemize}
-    \item \textbf{Large language models selection}: Selection of the LLMs that would be subjected to our evaluation. This step is in turn made of:
-    \begin{itemize}
-        \item \textbf{Initial Italian language comprehension based selection}: First selection conducted on the capabilities of various LLMs to understand the Italian language.
-        \item \textbf{Story close test}: Second selection based on the abilities of different LLMs to perform the task of \emph{Story Cloze Test}.
-    \end{itemize}
-    \item \textbf{Personal narrative elicitation}: Study of the abilities of personal narratives elicitation across different LLMs:
-    \begin{itemize}
-        \item \textbf{Design and formulation of narrative elicitation prompts}: We formulated prompts aimed at eliciting narratives from the chosen LLMs.
-        \item \textbf{Experiment}: The experiments are run with the selected prompts across the chosen models.
-    \end{itemize}
-    \item \textbf{Data analysis}: Results from LLMs elicitation are analyzed with various metrics.
-\end{itemize}
