@@ -109,12 +109,12 @@ Additionally, an analysis of the time employed by the crowdworkers to complete t
     \caption{In Figure is shown a plot of the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis). The data is very noisy with many outliers, however for most narratives, the completion time is not influenced by the narrative length.}
     \label{fig:dataset-pearson-correlation}
 \end{figure}
-\begin{figure}[!htbp]
-    \centering
-        \includegraphics[width=1\linewidth]{assets//imgs/dataset-overall-correlation-workers.png}
-        \caption{In Figure is shown the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis). It is possible to notice that most annotators are able to complete each  task within 200 seconds regardless of the narrative length.}
-        \label{fig:dataset-overall-correlation-workers}
-\end{figure}
+% \begin{figure}[!htbp]
+%     \centering
+%         \includegraphics[width=1\linewidth]{assets//imgs/dataset-overall-correlation-workers.png}
+%         \caption{In Figure is shown the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis). It is possible to notice that most annotators are able to complete each  task within 200 seconds regardless of the narrative length.}
+%         \label{fig:dataset-overall-correlation-workers}
+% \end{figure}
 However, it was found that this is not to be the case, as pictured in Figure \ref{fig:dataset-pearson-correlation} and Figure \ref{fig:dataset-overall-correlation-workers}. To provide a more precise quantification of this observation, the Pearson correlation coefficient \cite{pearson} was computed between the completion time for each narrative and the respective narrative length. The resulting overall correlation coefficient was found to be 0.16, further supporting the notion that completion time and narrative length do not exhibit a linear relationship.
 
 \begin{figure}[!htbp]
@@ -125,7 +125,7 @@ However, it was found that this is not to be the case, as pictured in Figure \re
 Nevertheless, although this result is true on the whole data and for most crowdworkers, it is important to note that a few outliers were encountered. These crowdworkers exhibited a notably strong correlation. As illustrated in Figure \ref{fig:dataset-high-correlation-workers}, these specific users displayed a correlation coefficient exceeding 0.90. We attribute this phenomenon to the exceptional speed with which these users crafted their responses, which in turn placed a significant emphasis on the reading time as the dominant factor in their overall response time.
 
 \input{assets/table/personal-narrative-elicitation-continuations-examples}
-A brief reading of the elicitations for a few examples of narratives, revealed that most of the annotators propose the same inquiries or topic for short narratives. An example is shown in Table \ref{tab:personal-narrative-elicitation-continuations-example}. We believe this fact is the result of a narrative not having more than one or a few natural directions. This fact will play an important role in the evaluation of LLMs, later in chapter 4.
+A brief reading of the elicitations for a few examples of narratives, revealed that most of the annotators propose the same inquiries or topic for short narratives. An example is shown in Table \ref{tab:personal-narrative-elicitation-continuations-example}. We believe this fact is the result of a narrative not having more than one or a few natural directions.% This fact will play an important role in the evaluation of LLMs, later in chapter 4.
 \section{Large Language Models prompting}
 Following the crowdsourcing, this section presents the steps that were performed to prompt large language models. This section is composed of:
 \begin{itemize}
