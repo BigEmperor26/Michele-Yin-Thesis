@@ -1,13 +1,12 @@
-\chapter{Evaluation}
-\label{cha:evaluation}
-% \section{Evaluation}
 
-In this section, an evaluation of the results obtained from the previous chapter \ref{cha:methodology} is conducted. In particular, the results obtained from section \ref{cha:methodology-personal-narrative-elicitation} and section \ref{cha:methodology-data-collection}. 
-Previously, a dataset of narratives was crafted, for which eliciting questions were collected both through crowdsourcing and LLM prompting.
-Two detailed analyses were conducted on both the crowdsourcing and LLM-generated data in sections \ref{cha:methodology-crowdsourcing-data-analysis} \ref{cha:methodology-personal-narrative-elicitation-results}. After that, it was determined that the best results were achieved through the experimental setup with guidelines, without colour information with 5-shot examples. 
-From this experimental setup, four models eliciting questions were chosen to apply human evaluation:
+\section{Human evaluation}
+After the comparison of the models, it was decided to proceed with a human evaluation. This evaluation aims to understand if the liciting questions from LLMs are comparable to human eliciting questions. In order to do so, the human evaluation protocol presented in \cite{mousavi-etal-2022-evaluation} was followed. 
+
+It was decided to apply all 4 metrics presented in the human evaluation protocol: correctness, appropriateness, contextualisation and listening. Aside from correctness and appropriateness, which are derived from language and commonsense, we are interested in models that perform well in contextualisation and listening in particular, due to the task of eliciting continuation of personal narratives. Compared to the original human evaluation protocol there is one key difference, which lies in the fact that the evaluation is being applied to narratives instead of dialogues. 
+
+We decided to apply the human evaluation protocol to four models, using the elicitations gathered from the experimental setting that included 5-shot examples, the use of guidelines but not the use of colour information. The models selected are:
 \begin{itemize}
-    \item Falcon 7B. This model has subpar performance, and it is going to be the lower bound.
+\item Falcon 7B. This model has subpar performance, and it is going to be the lower bound.
     \item ChatGPT 3.5 turbo. Although ChatGPT 4 should perform better, we ultimately opted for ChatGPT 3.5 turbo as it displayed better behaviour with the increasing number of examples. Furthermore, its token distribution is slightly more similar to the human reference data. With all the analysis done so far, this model is expected to perform extremely well.
     \item Wizard Vicuna 13B Uncensored HF. This model performed very well compared to others, especially with few shots and considering its smaller size.
     \item Vicuna 33B V1. Last tested model. This model also performs well according to our analysis, although not as well as ChatGPT.
@@ -16,8 +15,6 @@ Alongside those four models, a fifth data point was added:
 \begin{itemize}
     \item Human crowdsourced eliciting questions. This data is going to serve as the upper bound.
 \end{itemize}
-The human evaluation is done according to the human evaluation protocol presented in \cite{mousavi-etal-2022-evaluation}. It was decided to apply all 4 metrics presented in the human evaluation protocol: correctness, appropriateness, contextualisation and listening. Aside from correctness and appropriateness, which are derived from language and commonsense, we are interested in models that p
-perform well in contextualisation and listening in particular, due to the task being eliciting continuation of personal narratives. Compared to the original human evaluation protocol there is one key difference, which lies in the fact that the evaluation is being applied to narratives instead of dialogues. 
 
 
 For the actual evaluation process, the same UI presented in the human evaluation protocol was used. % A few examples of UI are presented in Figure \ref{fig:human}
