@@ -12,12 +12,11 @@
 The formulation of effective guidelines was a fundamental requirement. This step necessitated an iterative process involving the creation of drafts, subsequent reviews, and pilot tests of guidelines to gauge their effectiveness. This iterative cycle was repeated until the guidelines reached a level of satisfaction.
 \input{assets/table/dataset-coadapt-highlight-examples}
 After finalising the guidelines, the next step involved translating them into a custom web-based user interface (UI) for the data collection process. One key aspect of our guidelines was the inclusion of the valence values from the CoAdapt dataset. 
-As mentioned, effective elicitation requires empathy, particularly for sorrowful events. In order to facilitate the crowdworkers in pivoting their questions to emotionally charged events, the valence values were highlighted in the text with the recommendation to focus on those parts of the narrative. In order to represent effectively to the crowdworkers the positive and negative emotions expressed by the valence, it was decided to highlight negative valences in red and positive valences in green. 
-
-An illustrative example can be seen in Table \ref{tab:dataset-coadapt-highlight-examples}. These colours were chosen as it is universally accepted that green stands for positive and red for negative. Furthermore, to limit the crowdworkers' cognitive workload, the ECs have not been added.
+As mentioned, effective elicitation requires empathy, particularly for sorrowful events. In order to facilitate the crowdworkers in pivoting their questions to emotionally charged events, the valence values were highlighted in the text with the recommendation to focus on those parts of the narrative. In order to represent effectively to the crowdworkers the positive and negative emotions expressed by the valence, it was decided to highlight negative valences in red and positive valences in green. An illustrative example can be seen in Table \ref{tab:dataset-coadapt-highlight-examples}. These colours were chosen as it is universally accepted that green stands for positive and red for negative. Furthermore, to limit the crowdworkers' cognitive workload, the ECs have not been added.
 \input{assets/table/dataset-crowdsourcing-guidelines-properties}
 This task places a large emphasis on the examples included in the guidelines because, during a pilot test, it was found that many crowdworkers try to complete the task as quickly as possible, giving only a light read to the guidelines and skipping directly to the examples. 
-A brief recap of the desired properties of the elicitation is reported in Table \ref{tab:dataset-crowdsourcing-guidelines-properties}.
+\input{assets/table/dataset-crowdsourcing-guidelines}
+Table \ref{tab:dataset-crowdsourcing-guidelines} reports examples of good and bad elicitation questions for a given narrative that were given to the crowdworkers. 
 %Initially, the examples provided were found to be ineffective, as they did not highlight the common issues faced by the crowdworkers. Therefore, after some internal testing, better examples that guide the crowdworkers through typical caveats of the task were devised.
 
 % The main purpose of these guidelines was to help workers in producing a good elicitation. Our goals were for the elicitation to be questions with the following properties:
@@ -38,50 +37,47 @@ A brief recap of the desired properties of the elicitation is reported in Table 
 %     \item Hypothetical questions or scenarios.
 %     \item Questions that move the focus of the conversation away from the narrator.
 % \end{itemize}
+A brief recap of the desired properties of the elicitation is reported in Table \ref{tab:dataset-crowdsourcing-guidelines-properties}.
 The table reports a few scenarios, such as requests for personal opinions or hypothetical scenarios, which should be avoided because, in the internal testing, it was found that those types of questions may induce the narrator to start a new narrative with a different set of events. This is not desirable as the goal of the eliciting questions is to explore the current narrative and not to start a new one.
-\input{assets/table/dataset-crowdsourcing-guidelines}
-Table \ref{tab:dataset-crowdsourcing-guidelines} reports examples of good and bad elicitation questions for a given narrative. 
 % Those examples were part of the guidelines that were given to the crowdworkers.
 \subsection{User Interface (UI) Design for Crowdsourcing}
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/UI-guidelines.png}
-    \caption{In Figure is reported the Web UI that was shown to the crowdworkers for the guidelines. This page is shown initially to the user and is available for later review with the press of a button.}
+    \caption{Image of the Web UI that was shown to the crowdworkers for the guidelines. This page was shown initially to the user and was available for later review with the press of a button.}
     \label{fig:data_collection_web:1}
 \end{figure}
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/UI-examples-1.png}
-    \caption{In Figure is reported the Web UI that was shown to the crowdworkers as training examples. After the guidelines, four examples similar to this one are assigned to the crowdworkers in order to train them.}
+    \caption{Image of the Web UI that was shown to the crowdworkers as training examples. After the guidelines, 4 examples similar to this one were assigned to the crowdworkers in order to train them.}
     \label{fig:data_collection_web:2}
 \end{figure}
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/UI-examples-completed-1.png}
-    \caption{In Figure is reported the Web UI that was shown to the crowdworkers as training examples. After each user inputs an answer, an example of a correct answer is shown to train the crowdworkers against typical mistakes.}
+    \caption{Image of the Web UI that was shown to the crowdworkers as training examples. After each user inputs an answer, an example of a correct answer this the motivation was shown to train the crowdworkers against typical mistakes.}
     \label{fig:data_collection_web:3}
 \end{figure}
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/UI-datacollection.png}
-    \caption{In Figure is reported the Web UI that was shown to the crowdworkers for the actual data collection.}
+    \caption{Image of the Web UI that was shown to the crowdworkers for the actual data collection process.}
     \label{fig:data_collection_web:4}
 \end{figure}
 
 For the UI, the selection of the design framework was founded upon Bootstrap \cite{bootstrap}. Bootstrap was chosen due to its user-friendly nature, ease of development, and contemporary design elements. Testing was conducted on multiple platforms, encompassing mobile devices, various web browsers, and distinct operating systems to ensure optimal user experience across diverse devices.
 A few pages of the UI are reported. In Figure \ref{fig:data_collection_web:1} is shown the UI used to convey the guidelines, in Figure \ref{fig:data_collection_web:2} and \ref{fig:data_collection_web:3} are shown the examples that were used as training examples for the users. Finally, in Figure \ref{fig:data_collection_web:4} is reported the UI used for the actual data collection.
 
-The colours used in the palette are material \cite{material}, with modern rounded corners and no sharp edges, keeping the design as minimal as possible. Colours for the highlighted text are a pale shade of red and green, \# F77A7B (\redbg{\hspace{1em}}) and \# 9AF288 (\greenbg{\hspace{1em}}). These colours were chosen due to their light tint and their contrast on black text, allowing the text underneath the highlighted selection to be read easily.
+The colours used in the palette are material \cite{material}, with modern rounded corners and no sharp edges, keeping the design as minimal as possible. Colours for the highlighted text are a pale shade of red and green, \# F77A7B (\redbg{\hspace{1em}}) and \# 9AF288 (\greenbg{\hspace{1em}}). These colours were chosen due to their light tint and their high contrast on black text, allowing the text underneath the highlighted selection to be read easily.
 
 
 \subsection{Data Collection}
 \label{cha:methodology-data-collection}
-Subsequently, upon the successful completion of the user interface, the data collection phase was initiated. Prolific, a reputable platform \cite{prolific} for data collection, was employed for this purpose. From the platform, native Italian speakers were eligible to undertake the task.
+Subsequently, upon the successful completion of the user interface, the data collection phase was initiated. Prolific, a reputable platform \cite{prolific} for data collection, was employed for this purpose. From this platform, only native Italian speakers were selected as eligible to undertake the task, due to the fact that our corpus is written in the Italian language.
 
-The data collection process started with an initial pilot test, verifying accuracy and identifying any potential procedural errors. The data collection was conducted in multiple batches, remunerating participants at a rate of £12 per hour. To prevent participant fatigue, each batch included a range from 5 to 8 narratives, with an estimated completion time of approximately 20 minutes per batch.
-
-In order to give roughly the same amount of load to each worker, a stratified sampling approach was used on the narrative lengths, giving each worker a similar amount of tokens to read. At the same time, to ensure consistency and elicit agreement among narrators, the first narrative for each batch was intentionally kept identical for different annotators. This first narrative was also shorter in length compared to subsequent narratives. This approach was employed to manually verify consensus among narrators regarding their elicitation topics on the same narrative and serve as a warm-up exercise for the crowdworkers. This meant that there were a few narratives with multiple eliciting questions.
+The data collection process started with an initial pilot test, verifying accuracy and identifying any potential procedural errors. The data collection was conducted in multiple batches, remunerating participants at a rate of £12 per hour. To prevent participant fatigue, each batch included a range from 5 to 8 narratives, with an estimated completion time of approximately 20 minutes per batch. In order to give roughly the same amount of load to each worker, a stratified sampling approach was used on the narrative lengths, giving each worker a similar amount of tokens to read. At the same time, to ensure consistency and elicit agreement among narrators, the first narrative for each batch across a set of batches was intentionally kept identical for different annotators. This first narrative was also shorter in length compared to subsequent narratives. This approach was employed for the dual purpose of manually verifying consensus among narrators regarding their elicitation topics on the same narrative and also serve as a warm-up exercise for the crowdworkers. This meant that there were a few narratives with multiple eliciting questions.
 
 Following each run, each elicitation question was individually inspected and proofread in order to reject any unreliable data, resulting in the exclusion of only one set of answers.
 
@@ -91,22 +87,22 @@ Following each run, each elicitation question was individually inspected and pro
 \label{cha:methodology-crowdsourcing-data-analysis}
 
 \input{assets/table/dataset-data-collection-statistics}
-A comprehensive analysis of the eliciting questions was undertaken following the data collection phase. In total, 594 narrative eliciting questions were collected. Using Spacy, the eliciting questions dataset is composed of 1110 unique tokens. On average, each response contained 11.81 tokens, with a standard deviation of 6.42. Overall, the average time required to complete the whole task was found to be 1143 seconds, which is slightly below the estimated time of 1200 seconds. This confirms a correct and fair time estimate and, therefore, retribution. In Table \ref{tab:dataset-data-collection-statistics} are reported the summary of statistics computed. 
+A comprehensive analysis of the eliciting questions was undertaken following the data collection phase. In total, 594 narrative eliciting questions were collected. Using Spacy, the eliciting questions dataset is composed of 1110 unique tokens. On average, each response contained 11.8 tokens, with a standard deviation of 6.4. Overall, the average time required to complete the whole task was found to be 1143 seconds, which is slightly below the estimated time of 1200 seconds. This confirms a correctbeh vez, and fair time estimate and, therefore, retribution. In Table \ref{tab:dataset-data-collection-statistics} are reported the summary of statistics computed. 
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/dataset-top-30-answers.png}
-    \caption{In Figure is shown the top 30 most frequent tokens present in the crowdsourced eliciting questions. Notice how tokens such as \emph{``dispiace"} are very common. This aligns with our guidelines of showing empathy for sad narratives. }
+    \caption{Bar chart showing the top 30 most frequent tokens present in the crowdsourced eliciting questions. Notice how tokens such as \emph{``dispiace"} are very common. This aligns with our guidelines of showing empathy for sad narratives. }
     \label{fig:dataset-top-30-answers}
 \end{figure}
 
 In Figure \ref{fig:dataset-top-30-answers}, the top 30 most frequent tokens from the collected eliciting questions are shown. The most prevalent token is \emph{``dispiace"}, which occurs disproportionately frequently with respect to the other tokens. This observation aligns coherently with the guidelines, which emphasise the importance of conveying empathy, especially for narratives of a sorrowful nature, which constitute the majority of the dataset.
 
-Additionally, an analysis of the time employed by the crowdworkers to complete the task and the length of their narratives was done. Initially, our hypothesis posited a strong correlation between the length of a narrative and the corresponding time required for elicitation. We anticipated that users would invest more time comprehending the provided information, resulting in increased time spent on each narrative elicitation.
+Additionally, an analysis of the time employed by the crowdworkers to complete the task and the length of their assigned narratives was done. Initially, our hypothesis posited a strong correlation between the length of a narrative and the corresponding time required for eliciting it. We anticipated that users would invest more time comprehending the provided information, resulting in increased time spent on each narrative eliciting question.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=1\linewidth]{assets//imgs/dataset-pearson-correlation.png}
-    \caption{In Figure is shown a plot of the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis). The data is very noisy, with many outliers; however, for most narratives, the narrative length does not influence the completion time.}
+    \caption{Image showing the plot of the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis). The data is very noisy, with many outliers; however, for most narratives, the narrative length does not influence the completion time.}
     \label{fig:dataset-pearson-correlation}
 \end{figure}
 % \begin{figure}[!htbp]
@@ -119,10 +115,10 @@ However, it was found that this is not to be the case, as pictured in Figure \re
 
 \begin{figure}[!htbp]
         \includegraphics[width=1\linewidth]{assets//imgs/dataset-high-correlation-workers.png}
-        \caption{In Figure is shown the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis) for five workers in particular. For these 4 annotators, there is a high degree of linear correlation between the narrative length and the time required for completion.}
+        \caption{Image reporting the correlation between lengths of the narratives (x-axis) and the corresponding time required to elicit (y-axis) for five workers in particular. For these 4 annotators, there is a high degree of linear correlation between the narrative length and the time required for completion.}
         \label{fig:dataset-high-correlation-workers}
 \end{figure}
-Nevertheless, although this result is true on the whole data and for most crowdworkers, it is important to note that a few outliers were encountered. These crowdworkers exhibited a notably strong correlation. As illustrated in Figure \ref{fig:dataset-high-correlation-workers}, these specific users displayed a correlation coefficient exceeding 0.90. We attribute this phenomenon to the exceptional speed with which these users crafted their responses, which in turn placed a significant emphasis on the reading time as the dominant factor in their overall response time.
+Nevertheless, although this result is true on the whole dataset and for most crowdworkers, it is important to note that a few outliers were encountered. These crowdworkers exhibited a notably strong correlation. As illustrated in Figure \ref{fig:dataset-high-correlation-workers}, these specific users displayed a correlation coefficient exceeding 0.90. We attribute this phenomenon to the exceptional speed with which these users crafted their responses, which in turn placed a significant emphasis on the reading time as the dominant factor in their overall response time.
 
 \input{assets/table/personal-narrative-elicitation-continuations-examples}
 A brief reading of the eliciting questions for a few examples of narratives revealed that most of the annotators propose the same inquiries or topics for short narratives. An example is shown in Table \ref{tab:personal-narrative-elicitation-continuations-example}. We believe this fact is the result of a narrative not having more than one or a few natural directions.% This fact will play an important role in the evaluation of LLMs later in chapter 4.

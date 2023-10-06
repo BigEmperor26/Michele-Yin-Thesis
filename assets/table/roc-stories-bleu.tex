@@ -1,12 +1,12 @@
 \begin{table}[!htbp]
     \centering
-    \caption{BLEU 1 scores across the tested models. On the left the different models and on the right are reported the results for each of the 3 experimental settings. 3-shot performs significantly better than zero shot. No stark differences in specifying one-sentence answers.}
+    \caption{BLEU 1 scores across the tested models. On the left the different models and on the right are reported the results for each of the 3 experimental settings. 3-shot performs significantly better than zero shot. No stark differences in specifying one-sentence endings.}
     \label{tab:roc-stories-bleu}
     \begin{tabular}{l|rrr}
         \toprule
         \multicolumn{4}{c}{\thead{BLEU}} \\
         \midrule
-       \thead{Model name}  & \thead{0-shot} & \thead{3-shot} & \thead{3-shot \\ that specifies one sentence answer}\\
+       \thead{Model name}  & \thead{0-shot} & \thead{3-shot} & \thead{3-shot \\ that specifies one sentence ending}\\
 \midrule
 Falcon 7B & {\cellcolor[HTML]{E2EDF8}} \color[HTML]{000000} 0.03 & {\cellcolor[HTML]{2777B8}} \color[HTML]{F1F1F1} 0.10 & {\cellcolor[HTML]{57A0CE}} \color[HTML]{F1F1F1} 0.09 \\
 Falcon 40B Instruct & {\cellcolor[HTML]{60A7D2}} \color[HTML]{F1F1F1} 0.08 & {\cellcolor[HTML]{6FB0D7}} \color[HTML]{F1F1F1} 0.08 & {\cellcolor[HTML]{3181BD}} \color[HTML]{F1F1F1} 0.10 \\
