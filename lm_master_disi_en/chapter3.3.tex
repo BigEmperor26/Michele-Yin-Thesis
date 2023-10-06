@@ -2,7 +2,7 @@
 Following the crowdsourcing, this section presents the steps that were performed to prompt large language models.
 %  This section is composed of:
 % \begin{itemize}
-    % \item \textbf{Large language models selection}: Selection of the LLMs that would be subjected to our evaluation. This step is in turn made of:
+    % \item \textbf{Large language models selection}: Selection of the LLMs that would be subjected to our evaluation. This step is, in turn, made of:
     % \begin{itemize}
     %     \item \textbf{Initial Italian language comprehension based selection}: First selection conducted on the capabilities of various LLMs to understand the Italian language.
     %     \item \textbf{Story close test}: Second selection based on the abilities of different LLMs to perform the task of \emph{Story Cloze Test}.
@@ -12,7 +12,7 @@ Following the crowdsourcing, this section presents the steps that were performed
     %     \item \textbf{Design and formulation of narrative elicitation prompts}: We formulated prompts aimed at eliciting narratives from the chosen LLMs.
     %     \item \textbf{Experiment}: The experiments are run with the selected prompts across the chosen models.
     % \end{itemize}
-    % \item \textbf{Data analysis}: Results from LLMs elicitation are analyzed with various metrics.
+    % \item \textbf{Data analysis}: Results from LLMs elicitation are analysed with various metrics.
 % \end{itemize}
 \subsection{Large Language Model Selection}
 To prepare the large language models for our research task, selecting a small subset of LLMs for testing and subsequent human evaluation was imperative. Given the significant time and effort required for the human evaluation process, it was unfeasible to assess all available LLMs due to the continuously growing number of newly released models.
@@ -24,12 +24,12 @@ To address this challenge, the attention was focused on well-known LLMs, includi
     \item {MMLU (5-shot)} \cite{MMLU} - a test to measure the text multitask accuracy of a model. The test covers 57 tasks, including elementary mathematics, US history, computer science, law, and more.
     \item {TruthfulQA (0-shot)} \cite{Truthful} - a test to measure the propensity of a model to reproduce falsehoods commonly found online.
 \end{itemize}
-The most relevant metric for our task was HellaSwag, a metric related to commonsense reasoning, which would be required to correctly elicit narratives continuations, as the questions should be related to the same topics present in the narrative through commonsense. Therefore, the best models according to this ranking were chosen. Alongside those models, ChatGPT models were also selected. 
+The most relevant metric for our task was HellaSwag, a metric related to commonsense reasoning, which would be required to correctly elicit narrative continuations, as the questions should be related to the same topics present in the narrative through commonsense. Therefore, the best models according to this ranking were chosen. Alongside those models, ChatGPT models were also selected. 
 
 \subsubsection{Model Selection}
-As previously mentioned, our dataset is in the Italian language. We found that although there are an ever increasing number of LLMs, only a scant few are able to answer in the Italian language. Therefore, we decided to focus on the models that are able to understand Italian.
+As previously mentioned, our dataset is in the Italian language. We found that although there are an ever-increasing number of LLMs, only a scant few are able to answer in the Italian language. Therefore, we decided to focus on the models that are able to understand Italian.
 
-In order to filter out the models that are not able to understand Italian, we designed a simple Italian language test with 10 questions. Then, the answers of the models to those 10 questions were evaluated by appropriateness and correctness. The main tool used to test was the online LLMs Arena \cite{arena}. After this initial selection, the few models that are able to understand the Italian language were subjected to the \emph{story cloze test}, a more realistic test.
+In order to filter out the models that are not able to understand Italian, we designed a simple Italian language test with 10 questions. Then, the answers of the models to those 10 questions were evaluated by appropriateness and correctness. The main tool used to test was the online LLMs Arena \cite{arena}. After this initial selection, the few models that were able to understand the Italian language were subjected to the \emph{story cloze test}, a more realistic test.
 
 The \emph{story cloze test} \cite{mostafazadeh2016corpus} is a test designed to test the ability of various LLMs to understand and continue a short story. The test consists of a set of four sentences that narrate an event, and the model is tasked to predict the final sentence, which is the outcome. In this case, three prompts were planned. A simple 0-shot prompt with no examples and a 3-shot prompt with three examples were designed to test how the ability of different models to answer correctly would change in response to the number of examples. A final third prompt was designed after we noticed that the models would answer with story closures that consisted of more than one sentence. This prompt is a 3-shot prompt with three examples, but with the specification that the answer has to be one sentence long. The dataset used for this test is the selection of 50 stories from ROC stories \cite{mostafazadeh2016corpus}. Because our goal is to apply these models in the task of personal narrative elicitation on an Italian dataset, this dataset was machine translated in Italian using DeepL \cite{deepl}. Then, it was manually reviewed for wrong translations and lightly retouched for non-fluid translations.
 \input{assets/table/ROC-Stories}
@@ -65,7 +65,7 @@ An example of original and translated data is reported in Table \ref{tab:roc-sto
 %         \item[] \textbf{10)} \emph{``Come uccidere una persona e farla franca''}
 %     \end{itemize}
 % \end{itemize}
-% This set of 10 tests should allow us to evaluate the models in their ability to complete the task and in their Italian language capabilities. Each prompt was asked three times, and each result was evaluated by appropriateness (A) and correctness (C). These two metrics were chosen as they represent, on one hand, the quality of being suitable, conforming to social norms, adhering to ethical standards, and fitting the context and, on the other, referring to the accuracy and absence of grammatical, spelling, or logical errors in written content. 
+% This set of 10 tests should allow us to evaluate the models in their ability to complete the task and in their Italian language capabilities. Each prompt was asked three times, and each result was evaluated by appropriateness (A) and correctness (C). These two metrics were chosen as they represent, on one hand, the quality of being suitable, conforming to social norms, adhering to ethical standards, and fitting the context and, on the other, referring to the accuracy and absence of grammatical spelling, or logical errors in written content. 
 
 % \subsubsubsection{Results}
 % % \input{assets/table/language-test}
@@ -111,7 +111,7 @@ An example of original and translated data is reported in Table \ref{tab:roc-sto
 % For this test, instead of using the online live chats available for most models, the code was run locally. This gives two main advantages:
 % \begin{itemize}
 %     \item It is possible to run very large models. Most online demos do not allow the run of large models due to their cost.
-%     \item More control over the model. It is possible to tune the prompt, temperature, number of samples, output size and more parameters related to the language generation. With full control of the prompt, in which there are no English references, it is expected diminished English lapses or none at all.
+%     \item More control over the model. It is possible to tune the prompt, temperature, number of samples, output size and more parameters related to the language generation. With full control of the prompt, in which there are no English references, diminished English lapses or none is expected.
 % \end{itemize}
 % This experimental setup was applied to this selection of models:
 % \begin{itemize}
