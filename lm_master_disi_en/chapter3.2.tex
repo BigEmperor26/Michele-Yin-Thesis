@@ -16,7 +16,7 @@ As mentioned, effective elicitation requires empathy, particularly for sorrowful
 \input{assets/table/dataset-crowdsourcing-guidelines-properties}
 This task places a large emphasis on the examples included in the guidelines because, during a pilot test, it was found that many crowdworkers try to complete the task as quickly as possible, giving only a light read to the guidelines and skipping directly to the examples. 
 \input{assets/table/dataset-crowdsourcing-guidelines}
-Table \ref{tab:dataset-crowdsourcing-guidelines} reports examples of good and bad elicitation questions for a given narrative that were given to the crowdworkers. 
+Table \ref{tab:dataset-crowdsourcing-guidelines} reports examples of good and bad elicitating questions for a given narrative that were given to the crowdworkers. 
 %Initially, the examples provided were found to be ineffective, as they did not highlight the common issues faced by the crowdworkers. Therefore, after some internal testing, better examples that guide the crowdworkers through typical caveats of the task were devised.
 
 % The main purpose of these guidelines was to help workers in producing a good elicitation. Our goals were for the elicitation to be questions with the following properties:
@@ -38,7 +38,7 @@ Table \ref{tab:dataset-crowdsourcing-guidelines} reports examples of good and ba
 %     \item Questions that move the focus of the conversation away from the narrator.
 % \end{itemize}
 A brief recap of the desired properties of the elicitation is reported in Table \ref{tab:dataset-crowdsourcing-guidelines-properties}.
-The table reports a few scenarios, such as requests for personal opinions or hypothetical scenarios, which should be avoided because, in the internal testing, it was found that those types of questions may induce the narrator to start a new narrative with a different set of events. This is not desirable as the goal of the eliciting questions is to explore the current narrative and not to start a new one.
+The table reports a few scenarios, such as requests for personal opinions or hypothetical scenarios, which should be avoided because, in the internal testing, it was found that those types of questions may induce the narrator to start a new narrative with a different set of events. This is not desirable as the goal of those eliciting questions is to explore the current narrative and not to start a new one.
 % Those examples were part of the guidelines that were given to the crowdworkers.
 \subsection{User Interface (UI) Design for Crowdsourcing}
 \begin{figure}[!htbp]
@@ -79,7 +79,7 @@ Subsequently, upon the successful completion of the user interface, the data col
 
 The data collection process started with an initial pilot test, verifying accuracy and identifying any potential procedural errors. The data collection was conducted in multiple batches, remunerating participants at a rate of £12 per hour. To prevent participant fatigue, each batch included a range from 5 to 8 narratives, with an estimated completion time of approximately 20 minutes per batch. In order to give roughly the same amount of load to each worker, a stratified sampling approach was used on the narrative lengths, giving each worker a similar amount of tokens to read. At the same time, to ensure consistency and elicit agreement among narrators, the first narrative for each batch across a set of batches was intentionally kept identical for different annotators. This first narrative was also shorter in length compared to subsequent narratives. This approach was employed for the dual purpose of manually verifying consensus among narrators regarding their elicitation topics on the same narrative and also serve as a warm-up exercise for the crowdworkers. This meant that there were a few narratives with multiple eliciting questions.
 
-Following each run, each elicitation question was individually inspected and proofread in order to reject any unreliable data, resulting in the exclusion of only one set of answers.
+Following each run, each elicitating question was individually inspected and proofread in order to reject any unreliable data, resulting in the exclusion of only one set of answers.
 
 % In total, a sum of $\sim$ £400 was disbursed as compensation for participant contributions.
 
@@ -87,7 +87,7 @@ Following each run, each elicitation question was individually inspected and pro
 \label{cha:methodology-crowdsourcing-data-analysis}
 
 \input{assets/table/dataset-data-collection-statistics}
-A comprehensive analysis of the eliciting questions was undertaken following the data collection phase. In total, 594 narrative eliciting questions were collected. Using Spacy, the eliciting questions dataset is composed of 1110 unique tokens. On average, each response contained 11.8 tokens, with a standard deviation of 6.4. Overall, the average time required to complete the whole task was found to be 1143 seconds, which is slightly below the estimated time of 1200 seconds. This confirms a correctbeh vez, and fair time estimate and, therefore, retribution. In Table \ref{tab:dataset-data-collection-statistics} are reported the summary of statistics computed. 
+A comprehensive analysis of the eliciting questions was undertaken following the data collection phase. In total, 594 narrative eliciting questions were collected. Using Spacy, the eliciting questions dataset is composed of 1110 unique words. On average, each response contained 11.8 tokens, with a standard deviation of 6.4. Overall, the average time required to complete the whole task was found to be 1143 seconds, which is slightly below the estimated time of 1200 seconds. This confirms a correctbeh vez, and fair time estimate and, therefore, retribution. In Table \ref{tab:dataset-data-collection-statistics} are reported the summary of statistics computed. 
 
 \begin{figure}[!htbp]
     \centering

@@ -2,12 +2,12 @@
 \label{cha:evaluation}
 % \section{Evaluation}
 
-In this section, an evaluation of the results obtained from the previous chapter \ref{cha:methodology} is conducted. In this section, we will evaluate the results of the experiments involving LLMs selection, LLMs prompting, and human evaluation of the LLMs elicitating questions, comparing their results against the human crowdsourced ones.
+In this section, an evaluation of the results obtained from the previous chapter \ref{cha:methodology} is conducted. In this section, we will evaluate the results of the experiments involving LLMs selection, LLMs prompting, and human evaluation of the LLMs in the task of \emph{Automatic Narrative Elicitation}, comparing their results against the human crowdsourced ones.
 
 \section{LLMs Selection}
 \label{cha:evaluation-LLMs-selection}
 
-Because our corpus is in the Italian language, we required models that were able to understand Italian. The first experiment was conducted to determine which models could understand Italian and which were not in order to filter out the models that could not understand Italian. After this filtering, the resulting models were tested with the story cloze test, a very similar task we are trying to achieve. The good-performing models were chosen to elicit continuations of personal narratives.
+Because our corpus is in the Italian language, we required models that were able to understand Italian. The first experiment was conducted to determine which models could understand Italian and which were not in order to filter out the models that could not understand Italian. After this filtering, the resulting models were tested with the \emph{Story cloze Test}, a similar task we are trying to achieve. The good-performing models were chosen for the task of \emph{Automatic Narrative Elicitation}.
 
 \subsection{Italian Language Test}
 
@@ -21,7 +21,7 @@ A significant outlier compared to all the models tested was OpenAI's ChatGPT. Th
 This initial evaluation showed that the bigger model size does not necessarily correlate with better performances. For instance, Falcon 7B performed similarly to Falcon 40B, probably because both models cannot understand Italian the same way. Conversely, small models like Wizard 13B and Vicuna 13B can perform decently without exorbitant memory requirements. Although these results are not decisive for which models to use in the final personal narrative elicitation task, they provided some helpful insights into the abilities of the models, their differences, and the effect of finetuning and prompting.
 
 \subsection{Story Cloze Test}
-After this initial filtering based on the understanding capabilities of the Italian language, a second test was conducted to determine which models could perform well in a task similar to the one we are trying to achieve. The story cloze test is a task that requires the model to select the correct ending of a short story. This task requirement of understanding the story and providing a coherent ending is a proxy for the requirement of understanding the personal narrative and providing a coherent eliciting question.
+After this initial filtering based on the understanding capabilities of the Italian language, a second test was conducted to determine which models could perform well in a task similar to the one we are trying to achieve. The story cloze test is a task that requires the model to select the correct ending of a short story. This task requirement of understanding the story and providing a coherent ending is a proxy for the requirement of understanding the personal narrative and providing a coherent eliciting question in the  \emph{Automatic Narrative Elicitation} task.
 
 % \subsubsubsection{Results}
 % \label{cha:methodology-LLMs-selection-story-cloze-test-results}
