@@ -1,4 +1,4 @@
-\section{Large Language Models prompting}
+\section{Large Language Models Prompting}
 Following the crowdsourcing, this section presents the steps that were performed to prompt large language models.
 %  This section is composed of:
 % \begin{itemize}
@@ -14,7 +14,7 @@ Following the crowdsourcing, this section presents the steps that were performed
     % \end{itemize}
     % \item \textbf{Data analysis}: Results from LLMs elicitation are analyzed with various metrics.
 % \end{itemize}
-\subsection{Large Language Model selection}
+\subsection{Large Language Model Selection}
 To prepare the large language models for our research task, selecting a small subset of LLMs for testing and subsequent human evaluation was imperative. Given the significant time and effort required for the human evaluation process, it was unfeasible to assess all available LLMs due to the continuously growing number of newly released models.
 
 To address this challenge, the attention was focused on well-known LLMs, including ChatGPT \cite{chatgpt}, LLama \cite{touvronllama}, and similar prominent models. To identify good candidate models, we utilised the HuggingFace open source large language models leaderboard \cite{huggingface-leaderboard}, a platform widely recognised for its objective evaluation of LLMs. This evaluation is based on four key benchmarks, conducted using the Eleuther AI language model evaluation harness \cite{eleuther}, which serves as a comprehensive framework for testing generative language models across a diverse array of evaluation tasks. This framework calculates an aggregate score by averaging the results of these four metrics:
@@ -26,7 +26,7 @@ To address this challenge, the attention was focused on well-known LLMs, includi
 \end{itemize}
 The most relevant metric for our task was HellaSwag, a metric related to commonsense reasoning, which would be required to correctly elicit narratives continuations, as the questions should be related to the same topics present in the narrative through commonsense. Therefore, the best models according to this ranking were chosen. Alongside those models, ChatGPT models were also selected. 
 
-\subsubsection{Model selection}
+\subsubsection{Model Selection}
 As previously mentioned, our dataset is in the Italian language. We found that although there are an ever increasing number of LLMs, only a scant few are able to answer in the Italian language. Therefore, we decided to focus on the models that are able to understand Italian.
 
 In order to filter out the models that are not able to understand Italian, we designed a simple Italian language test with 10 questions. Then, the answers of the models to those 10 questions were evaluated by appropriateness and correctness. The main tool used to test was the online LLMs Arena \cite{arena}. After this initial selection, the few models that are able to understand the Italian language were subjected to the \emph{story cloze test}, a more realistic test.

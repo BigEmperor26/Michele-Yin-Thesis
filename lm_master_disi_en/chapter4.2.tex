@@ -1,4 +1,4 @@
-\section{Eliciting continuations of personal narratives}
+\section{Eliciting Continuations of Personal Narratives}
 \label{cha:methodology-personal-narrative-elicitation-results}
 In this section, an analysis of the results is conducted with different automatic metrics. However, as a marked difference from the experiments using story cloze test, a comparison of the LLM-generated data with the human crowdsourced data is also made.
 
@@ -14,10 +14,10 @@ The first type of evaluation results are automatic evaluation metrics, such as B
 %  Previously, it was mentioned that story cloze has an issue with multiple possible story closures, of which only one is deemed correct. Similarly, for eliciting personal narratives, here is also a problem with different possibilities of elicitation. It is clear that for a generic narrative, there are different directions of eliciting the narrator, as shown in the examples provided in Table \ref{tab:personal-narrative-elicitation-continuations-example}. This issue can be partially mitigated by analysing shorter narratives, as their shorter nature tends to limit the directions of a natural elicitation. This fact aligns nicely with the fact that in the data collection, more than one elicitation was sampled for a few select short narratives. 
 
 \input{assets/table/personal-narrative-elicitation-bleu}
-\input{assets/table/personal-narrative-elicitation-meteor}
-\input{assets/table/personal-narrative-elicitation-rouge}
+% \input{assets/table/personal-narrative-elicitation-meteor}
+% \input{assets/table/personal-narrative-elicitation-rouge}
 
-Looking at BLEU, METEOR and ROGUE scores, it is possible to notice that the models improve on average with the number of examples. Although this is not always the case, most models exhibit clearly improved performances with the number of examples. This effect is particularly strongly observed with ChatGPT 3.5 turbo. This confirms the initial findings on the positive effect of the number of examples given to the model in the quality of the answers.
+Looking at BLEU scores, it is possible to notice that the models improve on average with the number of examples. Although this is not always the case, most models exhibit clearly improved performances with the number of examples. This effect is particularly strongly observed with ChatGPT 3.5 turbo. This confirms the initial findings on the positive effect of the number of examples given to the model in the quality of the answers.
 By focusing on the presence and/or absence of guidelines, there are some mixed results. Some models seem to perform better with guidelines, while others do not. We hypothesise that smaller models may have a hard time understanding longer contexts since those are near their length limits. 
 %It has to be noted that although the longest prompt is no longer than a 1000 words, the tokenisers of most models split words in more than one token. Additionally, special characters that are used often are tokenised individually. This means that many models tokenise the longest prompts at $\sim$1700 tokens, which, combined with the text of the longest narrative, is slightly over $\sim$1900 tokens. This high value is indeed very close to the maximum context window of many open-source models, which have 2048 tokens as context.
 

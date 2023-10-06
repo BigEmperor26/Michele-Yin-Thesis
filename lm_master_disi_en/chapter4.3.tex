@@ -1,5 +1,5 @@
 
-\section{Human evaluation}
+\section{Human Evaluation}
 After the comparison of the models, it was decided to proceed with a human evaluation. This evaluation aims to understand if the liciting questions from LLMs are comparable to human eliciting questions. In order to do so, the human evaluation protocol presented in \cite{mousavi-etal-2022-evaluation} was followed. 
 
 It was decided to apply all 4 metrics presented in the human evaluation protocol: correctness, appropriateness, contextualisation and listening. Aside from correctness and appropriateness, which are derived from language and commonsense, we are interested in models that perform well in contextualisation and listening in particular, due to the task of eliciting continuation of personal narratives. Compared to the original human evaluation protocol there is one key difference, which lies in the fact that the evaluation is being applied to narratives instead of dialogues. 
@@ -48,11 +48,11 @@ Interestingly, only ChatGPT 3.5 turbo follows very similar characteristics to hu
 
 % add examples of subjunctive
 \input{assets/table/human-evaluation-examples}
-\input{assets/table/human-evaluation-examples-1}
+% \input{assets/table/human-evaluation-examples-1}
 It is not surprising to see that human data is not 100 in all categories, because it was collected through crowdsourcing, and neither the guidelines nor the inspection considered the criteria present in the human evaluation protocol. 
 % However, there is one metric that is mentioned which is correctness. Considering the examples that are deemed incorrect, as shown in Tables \ref{tab:human-evaluation-examples} and \ref{tab:human-evaluation-examples-1} we have to consider the subtleties of the Italian language and the subjunctive. This problem is experienced by both human annotators and ChatGPT 3. 
 
-In the Tables \ref{tab:human-evaluation-examples} and \ref{tab:human-evaluation-examples-1} are reported two examples of narratives and respective eliciting questions, with their evaluations. It is possible to notice that ChatGPT 3 performs extremely well, whereas Falcon 7B is mostly incoherent. Wizard Vicuna is a surprisingly good model in the examples reported, although it does sometimes have issues with the logical coherence of its output to the narrative, which results in low listening scores. Vicuna 33B has similar issues, with occasional narratives that are incohesive. 
+In the Tables \ref{tab:human-evaluation-examples} are reported two examples of narratives and respective eliciting questions, with their evaluations. It is possible to notice that ChatGPT 3 performs extremely well, whereas Falcon 7B is mostly incoherent. Wizard Vicuna is a surprisingly good model in the examples reported, although it does sometimes have issues with the logical coherence of its output to the narrative, which results in low listening scores. Vicuna 33B has similar issues, with occasional narratives that are incohesive. 
 
 From these results, we can conclude that ChatGPT 3.5 turbo presents qualities that are very close to human, and human annotators do not evaluate its results differently from human real eliciting questions. 
 
