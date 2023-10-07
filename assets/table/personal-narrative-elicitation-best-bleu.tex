@@ -1,34 +1,28 @@
 \begin{table}[!htbp]
 \centering
-\caption{This table reports a few of the best eliciting questions for the models. In the first column the model in question, in the second column the narrative and in the third column the elicitation of the model for that specific narrative. The reference crowdsourced eliciting question is reported in the rightmost column. Notice how ChatGPT 3.5 and 4 predict almost word by word the same eliciting question as crowdworkers. All the examples are obtained with 5 shots as examples, with guidelines and without colour information.}
+\caption{This table reports a few of the best eliciting questions for the models. In the first column the model in question, in the second column the narrative, and in the third column the eliciting question of the model for that specific narrative. The reference crowdsourced eliciting question is reported in the rightmost column. Notice how ChatGPT 3.5 and 4 predict almost word by word the same eliciting questions as crowdworkers. All the examples are obtained with 5 shots as examples, with guidelines and without colour information.}
 \label{tab:personal-narrative-elicitation-best-bleu}
     \centering
     \begin{tabularx}{\linewidth}{l|X|X|X}
     \toprule
      \thead{Model name} & \thead{Narrative} & \thead{Model \\eliciting question} & \thead{Human eliciting questions}\\
     \midrule
+     \arrayrulecolor{lightgray}
     %\multirow{6}{*}{Gpt-4}
     ChatGPT 4
-    & Mi sento leggero. Sono in viaggio per andare a trovare mia figlia. & Oh, che bello! Dove vive tua figlia? & Oh, che bello! Come mai stai andando a trovare tua figlia?\\[2em]
-    &&&Sono contento. Dove si trova tua figlia?\\[2em]
-    &&&Sono molto felice per te,dove abita tua figlia?\\[2em]
-    &&&Mi fa piacere, dove abita tua figlia?\\
+    & Mi sento leggero. Sono in viaggio per andare a trovare mia figlia. & Oh, che bello! Dove vive tua figlia? & Mi fa piacere, dove abita tua figlia?\\
         \midrule
     ChatGPT 3 & Ciao. Oggi giornata abbastanza tranquilla. Non si lavora ma si hanno faccende domestiche e giardinaggio & Che tipo di faccende domestiche devi fare oggi? & Che bello, che faccende devi fare a casa?\\
     % lmsys/vicuna-13b-v1.3 & {'value': 0.5, 'model_answer': 'A) Cosa hai mangiato in libreria?', 'human_answer': ['hai fatto acquisti in libreria?']} \\
     % mosaicml/mpt-30b-chat & {'value': 0.4043537974357605, 'model_answer': 'Capisco, dove doveva andare tuo figlio?', 'human_answer': ['Non deve essere stato per niente bello. Questi attacchi di panico ti capitano spesso?', 'Oh cavolo, mi spiace. Dove doveva andare tuo figlio?']} \\
         \midrule
-    Falcon 40B &  Mi sento leggero. Sono in viaggio per andare a trovare mia figlia & Come ti senti quando sei in viaggio? & Oh, che bello! Come mai stai andando a trovare tua figlia?\\[2em]
-    &&&Sono contento. Dove si trova tua figlia?\\[2em]
-    &&&Sono molto felice per te,dove abita tua figlia?\\[2em]
-    &&&Mi fa piacere, dove abita tua figlia?\\
+    Falcon 40B &  Mi sento leggero. Sono in viaggio per andare a trovare mia figlia & Come ti senti quando sei in viaggio? &  Mi fa piacere, dove abita tua figlia?\\
         \midrule
-Vicuna 33B & Mi è dispiaciuto stamattina non aver avuto pazienza con mio padre. Mi sono resa conto che è davvero difficile, ma ripensandoci dopo, magari invece avrei potuto riuscirci &  Sì, capisco. Cosa ti ha fatto perdere pazienza? & Posso capirti. Cosa ti ha fatto perdere la pazienza?\\[2em]
-    &&&Mi spiace, che cosa ti ha fatto perdere la pazienza? \\
+Vicuna 33B & Mi è dispiaciuto stamattina non aver avuto pazienza con mio padre. Mi sono resa conto che è davvero difficile, ma ripensandoci dopo, magari invece avrei potuto riuscirci &  Sì, capisco. Cosa ti ha fatto perdere pazienza? & Posso capirti. Cosa ti ha fatto perdere la pazienza? \\
     \midrule
-    Wiz. Vic. & Mi è dispiaciuto stamattina non aver avuto pazienza con mio padre. Mi sono resa conto che è davvero difficile, ma ripensandoci dopo, magari invece avrei potuto riuscirci & Mi dispiace che tu ti sia sentito male dopo la conversazione. Mi hai spiegato cosa hai appreso da questo episodio? & Posso capirti. Cosa ti ha fatto perdere la pazienza?\\[2em]
-    &&&Mi spiace, che cosa ti ha fatto perdere la pazienza? \\
+    Wiz. Vic. & Mi è dispiaciuto stamattina non aver avuto pazienza con mio padre. Mi sono resa conto che è davvero difficile, ma ripensandoci dopo, magari invece avrei potuto riuscirci & Mi dispiace che tu ti sia sentito male dopo la conversazione. Mi hai spiegato cosa hai appreso da questo episodio? & Posso capirti. Cosa ti ha fatto perdere la pazienza?\\
     % tiiuae/falcon-7b & {'value': 0.19999998807907104, 'model_answer': 'Dovevi intervenire, è una cosa importante, perché lo hai fatto?', 'human_answer': ['Mi dispiace sentirlo, come lo hai difeso?']} \\
+    \arrayrulecolor{black}
     \bottomrule
     \end{tabularx}
 \end{table}

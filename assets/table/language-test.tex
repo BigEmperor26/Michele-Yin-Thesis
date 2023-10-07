@@ -2,14 +2,18 @@
     \centering
     \caption{LLMs test results for the set of 10 prompts. Each prompt was asked 3 times. Reported are the number of times each model answered Appropriately (A) or Correctly (C).}
     \label{tab:language-test}
+    \setlength{\tabcolsep}{4pt}
     \setlength{\tabcolsep}{3pt}
-        \begin{tabular}{l|rrrrrrrrrrrrrrrrrrrr}
+        \begin{tabular}{l|cccccccccccccccccccc|c|r}
         % \begin{tabularx}{\linewidth}{l| }
             
             \toprule
-             \thead{Test number} & \multicolumn{2}{|r|}{\thead{1}} & \multicolumn{2}{|r|}{\thead{2}} & \multicolumn{2}{|r|}{\thead{3}} & \multicolumn{2}{|r|}{\thead{4}} & \multicolumn{2}{|r|}{\thead{5}} & \multicolumn{2}{|r|}{\thead{6}} & \multicolumn{2}{|r|}{\thead{7}} & \multicolumn{2}{|r|}{\thead{8}} & \multicolumn{2}{|r|}{\thead{9}} & \multicolumn{2}{|r}{\thead{10}} \\
-            \midrule
-            \diagbox[]{\thead{Model name}}{\thead{Metric}} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} \\
+             \thead{Test number} & \multicolumn{2}{|c|}{\thead{1}} & \multicolumn{2}{|c|}{\thead{2}} & \multicolumn{2}{|c|}{\thead{3}} & \multicolumn{2}{|c|}{\thead{4}} & \multicolumn{2}{|c|}{\thead{5}} & \multicolumn{2}{|c|}{\thead{6}} & \multicolumn{2}{|c|}{\thead{7}} & \multicolumn{2}{|c|}{\thead{8}} & \multicolumn{2}{|c|}{\thead{9}} & \multicolumn{2}{|c|}{\thead{10}} & \multirow{2}{*}{\thead{Total}} & \multirow{2}{*}{\thead{Model size}}  \\
+            % \midrule
+            \cmidrule{1-21}
+            % \diagbox[]{\thead{Model name}}{\thead{Metric}}
+            \thead{Model name}
+            & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} & \thead{A} & \thead{C} \\
             \midrule
             ChatGPT free & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 60 &  $\sim$ \\
             Falcon 7B & 2 & 0 & 2 & 0 & 1 & 2 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 2 & 0 & 0 & 0 & 3 & 0  & 14 & 14GB \\
@@ -35,4 +39,5 @@
             Wizard mega 13b & 0 & 0 & 0 & 3 & 3 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 8 & 26GB \\
             \bottomrule
         \end{tabular}
+        \setlength{\tabcolsep}{6pt}
 \end{table}
