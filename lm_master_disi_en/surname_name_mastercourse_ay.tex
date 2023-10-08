@@ -48,7 +48,10 @@
 \usepackage{titlesec}
 \usepackage{placeins}
 % hyperlinks for toc
+\usepackage[hyphens]{url}
 \usepackage{hyperref}
+\usepackage{breakurl}
+% \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -62,43 +65,45 @@
 \newcommand{\cmark}{\ding{51}}%
 \newcommand{\xmark}{\ding{55}}%
 
-% % babel multi language support
-% \usepackage{fontspec}
-% % \setmainfont{Times New Roman}
-% \usepackage{iftex}
+% babel multi language support
+\usepackage{fontspec}
+% \setmainfont{Times New Roman}
+\usepackage{iftex}
 
-% \ifluatex
-%   \usepackage[bidi=basic]{babel}
-%   \usepackage{fontspec}
-%   \defaultfontfeatures{ Scale=MatchLowercase,
-%                         Ligatures=TeX,
-%                         Renderer=HarfBuzz }
-% \else
-%   \usepackage[bidi=default]{babel}
-%   \usepackage{fontspec}
-%   \defaultfontfeatures{ Scale=MatchLowercase,
-%                         Ligatures=TeX }
-% \fi
+\ifluatex
+  \usepackage[bidi=basic]{babel}
+  \usepackage{fontspec}
+  \defaultfontfeatures{ Scale=MatchLowercase,
+                        Ligatures=TeX,
+                        Renderer=HarfBuzz }
+\else
+  \usepackage[bidi=default]{babel}
+  \usepackage{fontspec}
+  \defaultfontfeatures{ Scale=MatchLowercase,
+                        Ligatures=TeX }
+\fi
 
-% \babelprovide[import, onchar=ids fonts]{chinese-simplified}
-% \babelprovide[import, onchar=ids fonts]{chinese-traditional}
+\babelprovide[import, onchar=ids fonts]{chinese-simplified}
+\babelprovide[import, onchar=ids fonts]{chinese-traditional}
 
 % \babelfont{rm}
 %           [Scale=1.0, Ligatures=Common]{Latin Modern Roman}
 % \babelfont{sf}
 %           [Ligatures=Common]{Latin Modern Sans}
-% \babelfont[chinese-simplified]{rm}
-%           % {Noto Serif CJK SC}
-%           % {Kai}
-%           {FandolKai}
-% \babelfont[chinese-simplified]{sf}
-%           % {Noto Sans CJK SC}
-%           % {Kai}
-%           {FandolKai}
-% \babelfont[chinese-traditional]{rm}
-%           {Noto Serif CJK TC}
-% \babelfont[chinese-traditional]{sf}
-%           {Noto Sans CJK TC}
+\babelfont[chinese-simplified]{rm}
+          % {Noto Serif CJK SC}
+          % {Kai}
+          {FandolKai}
+\babelfont[chinese-simplified]{sf}
+          % {Noto Sans CJK SC}
+          % {Kai}
+          {FandolKai}
+\babelfont[chinese-traditional]{rm}
+          % {Noto Sans CJK SC}
+          {FandolKai}
+\babelfont[chinese-traditional]{sf}
+          % {Noto Sans CJK SC}
+          {FandolKai}
 
 % colors for highlight
 \definecolor{highlightred}{RGB}{247,122,123}
