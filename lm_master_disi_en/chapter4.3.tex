@@ -42,14 +42,14 @@ In order to solve this issue, a decision to compute the overlap was made. This m
 
 % We found that one annotator disagrees with the other two because some examples are ambiguous. In \ref{} are reported the problematic examples. It is possible to see that those examples have extra characters such as \emph{``} or \emph{a.}, which for one annotator are marked as incorrect and the others as correct.
 
-These two metrics were computed for each of the three pairs of annotators to highlight with more detail if there were issues in their agreement. 
-\input{assets/table/human-evaluation-fleiss-kappa-pairs}
-\input{assets/table/human-evaluation-overlap-pairs}
-Reported in Table \ref{tab:human-evaluation-fleiss-kappa-pairs} and Table \ref{tab:human-evaluation-overlap-pairs} are the resulting data. From both metrics, it is possible to understand that all annotators have a high agreement over all metrics.
-Therefore it was found that the annotators do mostly agree on their annotations.
+These two metrics were also computed for each of the three pairs of annotators to highlight with more detail if there were issues in their agreement. 
+% \input{assets/table/human-evaluation-fleiss-kappa-pairs}
+% \input{assets/table/human-evaluation-overlap-pairs}
+% Reported in Table \ref{tab:human-evaluation-fleiss-kappa-pairs} and Table \ref{tab:human-evaluation-overlap-pairs} are the resulting data. From both metrics, it is possible to understand that all annotators have a high agreement over all metrics.
+It was found that the annotators do mostly agree on their annotations.
 
-\input{assets/table/human-evaluation-scores}
-With the notion that all annotators mostly agree with each other, highlighting no issues in the understanding of their evaluation task, a scoring system was implemented. The scores were computed for each model, counting the times the eliciting questions proposed by the model were evaluated as Correct, Appropriate, Contextualised, and Listening. The same scoring system was applied for the opposite cases of Incorrect, Inappropriate, Not Contextualised, Not Listening, and Uncertain labels. In the case of eliciting questions annotated by all 3 annotators, the majority vote was taken as valid. These results are shown in Table \ref{tab:human-evaluation-scores}.
+\input{assets/table/human-evaluation-positive-scores}
+With the notion that all annotators mostly agree with each other, highlighting no issues in the understanding of their evaluation task, a scoring system was implemented. The scores were computed for each model, counting the times the eliciting questions proposed by the model were evaluated as Correct, Appropriate, Contextualised, and Listening. The same scoring system was applied for the opposite cases of Incorrect, Inappropriate, Not Contextualised, Not Listening, and Uncertain labels. In the case of eliciting questions annotated by all 3 annotators, the majority vote was taken as valid. These results are shown in Table \ref{tab:human-evaluation-positive-scores}.
 Interestingly, only ChatGPT follows very similar characteristics to humans. All other models are significantly subpar compared to human annotators. 
 
 % add examples of subjunctive

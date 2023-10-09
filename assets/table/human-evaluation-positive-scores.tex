@@ -1,0 +1,27 @@
+\begin{table}[!htbp]
+\setlength{\tabcolsep}{3pt}
+\centering
+\caption{Table reporting the percentage of positive, negative and uncertain values for the 4 models evaluated by 3 human annotators. Each subcolumn represent the evaluation for a different task, Correctness, Appropriateness, Contextualisation, and Listening. A value of 0.90 in Correctness means that for all narrative eliciting questions of that model, 90\% of them were evaluated by 3 human annotators as correct. Notice how ChatGPt is very close to human}
+\label{tab:human-evaluation-positive-scores}
+\begin{tabular}{l|rrrr|@{\hspace{2\tabcolsep}}r}
+\toprule
+\multicolumn{6}{c}{\thead{\% of  votes according to human annotators for the different metrics}}\\
+\midrule
+ % \thead{Model} & \multicolumn{5}{c}{\thead{Positive}}  \\
+ \thead{Model} & \thead{Cor.} & \thead{App.} & \thead{Con.} & \thead{Lis.} & \thead{Mean} \\
+\midrule
+% \vspace{1em}
+Human & {\cellcolor[HTML]{006737}} \color[HTML]{F1F1F1} 0.90 & {\cellcolor[HTML]{006737}} \color[HTML]{F1F1F1} 0.90 & {\cellcolor[HTML]{0A703A}} \color[HTML]{F1F1F1} 0.86 & {\cellcolor[HTML]{1C7E40}} \color[HTML]{F1F1F1} 0.81 & {\cellcolor[HTML]{096F3A}} \color[HTML]{F1F1F1} 0.87   \\
+% \midrule
+% &&&&&&&&&&&&\\
+\arrayrulecolor{white}
+\midrule  
+\arrayrulecolor{black}
+ChatGPT & {\cellcolor[HTML]{30954F}} \color[HTML]{F1F1F1} 0.74 & {\cellcolor[HTML]{0A703A}} \color[HTML]{F1F1F1} 0.86 & {\cellcolor[HTML]{004529}} \color[HTML]{F1F1F1} 1.00 & {\cellcolor[HTML]{056C39}} \color[HTML]{F1F1F1} 0.88 & {\cellcolor[HTML]{086E3A}} \color[HTML]{F1F1F1} 0.87 \\
+Wiz. Vic. 13B & {\cellcolor[HTML]{A7DB8C}} \color[HTML]{000000} 0.48 & {\cellcolor[HTML]{8ED082}} \color[HTML]{000000} 0.53 & {\cellcolor[HTML]{4FB264}} \color[HTML]{F1F1F1} 0.66 & {\cellcolor[HTML]{BEE596}} \color[HTML]{000000} 0.43 & {\cellcolor[HTML]{92D183}} \color[HTML]{000000} 0.53  \\
+Vicuna 33B V1 & {\cellcolor[HTML]{DFF3A8}} \color[HTML]{000000} 0.34 & {\cellcolor[HTML]{BEE596}} \color[HTML]{000000} 0.43 & {\cellcolor[HTML]{58B669}} \color[HTML]{F1F1F1} 0.64 & {\cellcolor[HTML]{8ED082}} \color[HTML]{000000} 0.53 & {\cellcolor[HTML]{A6DA8B}} \color[HTML]{000000} 0.49  \\
+Falcon 7B & {\cellcolor[HTML]{9FD788}} \color[HTML]{000000} 0.50 & {\cellcolor[HTML]{FAFDC9}} \color[HTML]{000000} 0.22 & {\cellcolor[HTML]{F3FAB6}} \color[HTML]{000000} 0.28 & {\cellcolor[HTML]{FFFFE5}} \color[HTML]{000000} 0.16 & {\cellcolor[HTML]{EFF9B3}} \color[HTML]{000000} 0.29   \\
+\bottomrule
+\end{tabular}
+\setlength{\tabcolsep}{6pt}
+\end{table}
