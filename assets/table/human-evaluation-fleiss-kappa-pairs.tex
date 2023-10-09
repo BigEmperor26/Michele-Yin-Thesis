@@ -3,9 +3,11 @@
 \centering
 \caption{Fleiss-Kappa agreement metric computed over the different batches for all pairs of annotators. On the left are reported the batches while on the right are reported the Fleiss-Kappa agreements for each pair of annotators. A value of 1 for Batch 3 under column User1-User2 for subcolumn App. means that both User 1 and Eser 2 totally agree on their evaluations for the Appropriateness metric for all models in Batch 3. The last row on the bottom represents the values computed aggregating all batches together.}
 \label{tab:human-evaluation-fleiss-kappa-pairs}
-\begin{tabular}{l|rrrr|r|rrrr|r|rrrr|r}
+\begin{tabular}{l|@{\hspace{2\tabcolsep}}rrrr|@{\hspace{2\tabcolsep}}r@{\hspace{2\tabcolsep}}|@{\hspace{2\tabcolsep}}rrrr|@{\hspace{2\tabcolsep}}r@{\hspace{2\tabcolsep}}|@{\hspace{2\tabcolsep}}rrrr|@{\hspace{2\tabcolsep}}r}
 \toprule
- \thead{Batch} & \multicolumn{5}{c|}{\thead{User 1-User 2}} & \multicolumn{5}{c|}{\thead{User 1-User 3}} & \multicolumn{5}{c}{\thead{User 2-User 3}} \\
+\multicolumn{16}{c}{\thead{Fleiss' Kappa agreement metric over pairs of annotators}} \\
+\midrule
+ \thead{Batch} & \multicolumn{5}{c|@{\hspace{2\tabcolsep}}}{\thead{User 1-User 2}} & \multicolumn{5}{c|@{\hspace{2\tabcolsep}}}{\thead{User 1-User 3}} & \multicolumn{5}{c}{\thead{User 2-User 3}} \\
  & \thead{Cor.} & \thead{App.} & \thead{Con.} & \thead{Lis.} & \thead{Glob.} & \thead{Cor.} & \thead{App.} & \thead{Con.} & \thead{Lis.} & \thead{Glob.} & \thead{Cor.} & \thead{App.} & \thead{Con.} & \thead{Lis.} & \thead{Glob.}\\
 \midrule
 Training & {\cellcolor[HTML]{63C3BF}} \color[HTML]{000000} 0.11 & {\cellcolor[HTML]{FFFFD9}} \color[HTML]{000000} 0.34 & {\cellcolor[HTML]{1F7BB6}} \color[HTML]{F1F1F1} 0.64 & {\cellcolor[HTML]{99D7B8}} \color[HTML]{000000} 0.68 & {\cellcolor[HTML]{C4E8B4}} \color[HTML]{000000} 0.67 & {\cellcolor[HTML]{34A9C3}} \color[HTML]{F1F1F1} 0.07 & {\cellcolor[HTML]{2355A4}} \color[HTML]{F1F1F1} 0.55 & {\cellcolor[HTML]{1D90C0}} \color[HTML]{F1F1F1} 0.60 & {\cellcolor[HTML]{FFFFD9}} \color[HTML]{000000} 0.59 & {\cellcolor[HTML]{1E86BB}} \color[HTML]{F1F1F1} 0.69 & {\cellcolor[HTML]{FFFFD9}} \color[HTML]{000000} 0.34 & {\cellcolor[HTML]{6FC7BD}} \color[HTML]{000000} 0.52 & {\cellcolor[HTML]{40B5C4}} \color[HTML]{F1F1F1} 0.57 & {\cellcolor[HTML]{61C2BF}} \color[HTML]{000000} 0.53 & {\cellcolor[HTML]{FFFFD9}} \color[HTML]{000000} 0.74 \\

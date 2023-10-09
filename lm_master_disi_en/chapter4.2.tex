@@ -28,9 +28,9 @@ By focusing on the presence and/or absence of guidelines, there are some mixed r
 It is also possible to observe that the presence of guidelines for both ChatGPT 3.5 turbo and ChatGPT 4, as it improves the baseline 0-shot experimental setting, although the 5-shot results are mostly unchanged. We believe this result is because in the guidelines, there are a few examples that contribute as learning examples for the models.  
 
 % While initially, our belief was that including colour information in some way would very likely increase the performance of our models and in the worst case, get the same result, that belief was unexpectedly wrong. 
-Except for both ChatGPT models, all models perform worse when given colour information than when not given colour information. By analysing their outputs, it is possible to make an educated guess as to what is happening. The text formatting used to represent colour information is likely confusing the models, which assimilate parenthesis to source code. Therefore, the models try to generate source code of some programming language. Another confirmation of this issue is given by the number of null answers. 
+Except for both ChatGPT models, all models perform worse when given colour information than when not given colour information. By analysing their outputs, it is possible to make an educated guess as to what is happening. The text formatting used to represent colour information is likely confusing the models, which assimilate parenthesis to source code. Therefore, the models try to generate source code of some programming language. Another confirmation of this issue is given by the number of invalid answers. 
 \input{assets/table/personal-narrative-elicitation-null-answers}
-Null answers, i.e., answers that contain only non-text-based characters, were more pronounced with colour information. See Table \ref{tab:personal-narrative-elicitation-null-answers}.
+Invalid answers, i.e., answers that contain only non-text-based characters, were more pronounced with colour information. See Table \ref{tab:personal-narrative-elicitation-null-answers}.
  We believe this fact is caused by the presence of brackets in prompt for those experiments. It is likely that brackets are uncommon in the training sets for the tested models, resulting in confusion in the models.
 % [ONLY SHORT NARRATIVES]
 
