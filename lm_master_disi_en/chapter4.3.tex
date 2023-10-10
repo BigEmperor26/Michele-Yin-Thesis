@@ -36,7 +36,7 @@ Initially, the Fleiss' Kappa \cite{fleiss} metric was calculated for the 5 narra
 
 Afterwards, the Fleiss' Kappa agreement metric was computed each time for both individual batches and overall metrics. In Table \ref{tab:human-evaluation-fleiss-kappa} are reported the results that were obtained. It is possible to observe that most of the annotators have a high agreement on all metrics except for correctness. Upon further investigation, it was found that the low score is due to the fact that the Fleiss' Kappa metric also accounts for the distributions of the annotations labels. Since most models have correct answers, the very few instances of incorrect values heavily penalise the resulting metric.
 \input{assets/table/human-evaluation-overlap}
-In order to solve this issue, a decision to compute the overlap was made. This metric accounts for how many answers are shared across annotators. In Table \ref{tab:human-evaluation-overlap} are shown the percent of overlap. This metric did show that, in fact, the annotators agree on correctness with a similar ratio to the other metrics measured. 
+In order to solve this issue, a decision to compute the percent of agrement was made. This metric accounts for how many answers are shared across annotators. In Table \ref{tab:human-evaluation-overlap} are shown the percent of agreement. This metric did show that, in fact, the annotators agree on correctness with a similar ratio to the other metrics measured. 
 
 
 
