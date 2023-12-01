@@ -1,6 +1,6 @@
 # Michele-Yin-Thesis
 
-This repo contains my master's thesis, which is a work on the use of Large Language Models for the task of ANE ( Automatic Narrative Elicitation )
+This repo contains my master's thesis pdf ( no data and no models, only .tex source ), which is a work on the use of Large Language Models for the task of ANE ( Automatic Narrative Elicitation )
 
 **keywords**:
 
